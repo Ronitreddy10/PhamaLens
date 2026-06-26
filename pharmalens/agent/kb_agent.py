@@ -21,6 +21,13 @@ CROSS_REF_RE = re.compile(r"\bsee\s+(?:section\s+)?(\d+(?:\.\d+)+)\b|\[CROSS_REF
 SECTION_REF_RE = re.compile(r"\bsection\s+(\d+(?:\.\d+)+)\b|(\d+(?:\.\d+)+)", re.I)
 
 
+def _env_int(name: str, default: int) -> int:
+    try:
+        return int(os.getenv(name, str(default)))
+    except ValueError:
+        return default
+
+
 def detect_query_filters(query: str) -> dict:
     lower = query.lower()
     filters = {}
@@ -191,13 +198,10 @@ def _retrieve_with_fallbacks(user_query: str, metadata_filters: dict | None = No
     return []
 
 
-def _extractive_answer(chunks: list[RetrievedChunk]) -> str:
+def _extractive_answer(chunks: list[RetrievedChunk], reason: str | None = None) -> str:
     """Grounded fallback when the Groq key is not loaded in the API process."""
-    lines = [
-        "I found relevant source excerpts. Add `GROQ_API_KEY` to `.env` and restart the API for a synthesized Groq answer.",
-        "",
-        "Top excerpts:",
-    ]
+    intro = reason or "I found relevant source excerpts, but synthesized answering is not available right now."
+    lines = [intro, "", "Top excerpts:"]
     for chunk in chunks[:3]:
         meta = chunk.metadata
         citation = f"[{meta.get('filename', 'Unknown')}, Section {meta.get('section_number', '')} {meta.get('section_title', '')}, p.{meta.get('page_number', '?')}]"
@@ -228,7 +232,7 @@ def _call_groq(messages: list[dict], model: str) -> str:
         return ""
     from groq import Groq
     response = Groq(api_key=api_key).chat.completions.create(
-        model=model, max_completion_tokens=LLM_CONFIG["max_tokens"],
+        model=model, max_completion_tokens=_env_int("PHARMALENS_MAX_COMPLETION_TOKENS", LLM_CONFIG["max_tokens"]),
         messages=messages, temperature=0.2,
     )
     return response.choices[0].message.content or ""
@@ -266,16 +270,34 @@ def query(user_query: str, conversation_history: list[dict] | None = None,
     if not chunks:
         return QueryResponse(answer="I could not find relevant information in the knowledge base for your query.", sources=[])
     chunks = _append_cross_reference_chunks(chunks)
+    if max_context_chunks is None:
+        max_context_chunks = _env_int("PHARMALENS_MAX_CONTEXT_CHUNKS", 4)
     if max_context_chunks is not None:
         chunks = chunks[:max_context_chunks]
     provider = (llm_provider or LLM_CONFIG.get("provider", "groq")).lower()
-    model = llm_model or LLM_CONFIG["model"]
+    model = llm_model or os.getenv("PHARMALENS_LLM_MODEL") or os.getenv("GROQ_MODEL") or LLM_CONFIG["model"]
     if provider == "groq" and not os.getenv("GROQ_API_KEY"):
-        return QueryResponse(answer=_extractive_answer(chunks), sources=chunks)
+        return QueryResponse(
+            answer=_extractive_answer(
+                chunks,
+                "I found relevant source excerpts. Add `GROQ_API_KEY` to the backend environment and restart the API for a synthesized Groq answer.",
+            ),
+            sources=chunks,
+        )
     messages = _build_messages(user_query, chunks, conversation_history)
-    if provider == "ollama":
-        answer = _call_ollama(messages, model)
-    else:
-        answer = _call_groq(messages, model)
+    try:
+        if provider == "ollama":
+            answer = _call_ollama(messages, model)
+        else:
+            answer = _call_groq(messages, model)
+    except Exception as exc:
+        detail = str(exc)
+        if "rate_limit" in detail.lower() or "429" in detail:
+            answer = _extractive_answer(
+                chunks,
+                "Groq is temporarily rate-limited for this backend, so I am showing grounded source excerpts instead of a synthesized answer.",
+            )
+        else:
+            raise
     alerts = ["RegDelta: version differences may be relevant; see cited versions."] if is_delta_query(user_query) else []
     return QueryResponse(answer=answer, sources=chunks, delta_alerts=alerts)

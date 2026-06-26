@@ -62,6 +62,14 @@ GROQ_API_KEY=your_key_here
 
 Embeddings run locally with Sentence Transformers, so an OpenAI embedding key is not required for the current setup.
 
+For hosted demos, the default Groq model is the lighter `llama-3.1-8b-instant` with a smaller context window to avoid burning through free daily token limits. You can override it with:
+
+```bash
+PHARMALENS_LLM_MODEL=llama-3.1-8b-instant
+PHARMALENS_MAX_COMPLETION_TOKENS=900
+PHARMALENS_MAX_CONTEXT_CHUNKS=4
+```
+
 ## Run locally
 
 Start the API:

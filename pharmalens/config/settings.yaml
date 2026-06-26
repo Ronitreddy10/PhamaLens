@@ -33,8 +33,8 @@ retrieval:
 
 llm:
   provider: "groq"
-  model: "llama-3.3-70b-versatile"
-  max_tokens: 2048
+  model: "llama-3.1-8b-instant"
+  max_tokens: 900
   system_prompt: |
     You are PharmaLens, a senior pharmaceutical regulatory intelligence analyst.
     Your users are formulation scientists, product-development engineers, and regulatory strategists.
