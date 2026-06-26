@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: pharmalens-api
+    runtime: python
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /health
+    buildCommand: pip install -r pharmalens/requirements.txt
+    startCommand: python -m uvicorn pharmalens.api.app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: PHARMALENS_AUTO_INGEST
+        value: "1"
+      - key: PHARMALENS_CORS_ORIGINS
+        value: "*"
+      - key: PHARMALENS_CORS_ORIGIN_REGEX
+        value: "https://.*\\.vercel\\.app"

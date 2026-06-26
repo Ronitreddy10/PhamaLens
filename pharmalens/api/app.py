@@ -1,5 +1,6 @@
 """FastAPI REST API for PharmaLens."""
 
+import os
 from pathlib import Path
 
 from fastapi import BackgroundTasks, FastAPI, HTTPException
@@ -12,11 +13,34 @@ from pharmalens.agent.kb_agent import query as kb_query
 from pharmalens.ingest.watcher import ingest_file
 from pharmalens.paths import DATA_DIR, PACKAGE_ROOT
 
+DEFAULT_CORS_ORIGINS = [
+    "http://127.0.0.1:8501",
+    "http://localhost:8501",
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
+]
+
+
+def _cors_origins() -> list[str]:
+    """Return allowed browser origins.
+
+    Set PHARMALENS_CORS_ORIGINS to a comma-separated list, for example:
+    https://your-app.vercel.app,https://preview-url.vercel.app
+    Use * only for public/demo deployments where credentialed browser auth is not used.
+    """
+    configured = [origin.strip() for origin in os.getenv("PHARMALENS_CORS_ORIGINS", "").split(",") if origin.strip()]
+    return configured or DEFAULT_CORS_ORIGINS
+
+
+cors_origins = _cors_origins()
+cors_origin_regex = os.getenv("PHARMALENS_CORS_ORIGIN_REGEX")
+
 app = FastAPI(title="PharmaLens", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:8501", "http://localhost:8501", "http://127.0.0.1:8000", "http://localhost:8000"],
-    allow_credentials=True,
+    allow_origins=cors_origins,
+    allow_origin_regex=cors_origin_regex,
+    allow_credentials="*" not in cors_origins,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -31,6 +55,27 @@ class QueryRequest(BaseModel):
 
 class IngestRequest(BaseModel):
     filepath: str
+
+
+@app.on_event("startup")
+def ensure_index_ready() -> None:
+    """Optionally build the vector store when a cloud instance starts empty."""
+    if os.getenv("PHARMALENS_AUTO_INGEST", "1").lower() in {"0", "false", "no"}:
+        return
+    try:
+        from pharmalens.ingest.embedder import get_collection
+        collection = get_collection(with_embedding_function=False)
+        if collection.count() > 0:
+            return
+    except Exception:
+        pass
+    try:
+        from pharmalens.ingest.watcher import WATCH_DIR, ingest_directory
+        results = ingest_directory(WATCH_DIR)
+        indexed = sum(item.get("chunks", 0) for item in results)
+        print(f"[startup] Auto-ingest complete: {indexed} chunks indexed")
+    except Exception as exc:
+        print(f"[startup] Auto-ingest skipped/failed: {exc}")
 
 
 @app.get("/health")

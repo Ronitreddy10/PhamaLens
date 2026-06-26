@@ -138,6 +138,37 @@ PHARMALENS_API_URL=https://your-backend-url.example.com
 
 Without that variable, the dashboard uses same-origin API calls, which works locally but not on a static-only Vercel site.
 
+## Backend deployment
+
+The FastAPI backend can be deployed on Render using `render.yaml`.
+
+After pushing to GitHub:
+
+1. Open Render.
+2. Create a new **Blueprint** from this repository.
+3. Render will use `render.yaml`.
+4. Add the secret environment variable:
+
+```bash
+GROQ_API_KEY=your_key_here
+```
+
+The Render build command installs Python dependencies:
+
+```bash
+pip install -r pharmalens/requirements.txt
+```
+
+On first startup, the API auto-ingests the bundled PDFs into a local Chroma vector store if the store is empty. This can make the first boot slower, but it keeps the deployed API self-contained.
+
+After Render gives you a backend URL, add it to Vercel:
+
+```bash
+PHARMALENS_API_URL=https://your-render-service.onrender.com
+```
+
+Then redeploy the Vercel frontend.
+
 ## GitHub push note
 
 If GitHub already has an initial README commit and `git push` says `fetch first`, run:
