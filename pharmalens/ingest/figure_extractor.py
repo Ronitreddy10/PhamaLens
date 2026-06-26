@@ -17,7 +17,15 @@ FIGURE_CAPTION_RE = re.compile(r"(Figure\s+\d+[A-Za-z]?\s*[:\-–]?\s*.{10,260})
 with (CONFIG_DIR / "settings.yaml").open() as handle:
     SETTINGS = yaml.safe_load(handle)
 
-VISION_ENABLED = bool(SETTINGS.get("retrieval", {}).get("vision_enabled", False))
+
+def _env_bool(name: str, default: bool) -> bool:
+    raw = os.getenv(name)
+    if raw is None:
+        return default
+    return raw.strip().lower() not in {"0", "false", "no", "off"}
+
+
+VISION_ENABLED = _env_bool("PHARMALENS_VISION_ENABLED", bool(SETTINGS.get("retrieval", {}).get("vision_enabled", False)))
 VISION_MODEL = SETTINGS.get("retrieval", {}).get("vision_model", "meta-llama/llama-4-scout-17b-16e-instruct")
 VISION_FALLBACK_MODEL = SETTINGS.get("retrieval", {}).get("vision_fallback_model", "qwen/qwen3.6-27b")
 VISION_DPI = int(SETTINGS.get("retrieval", {}).get("vision_dpi", 300))

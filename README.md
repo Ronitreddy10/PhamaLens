@@ -68,7 +68,10 @@ For hosted demos, the default Groq model is the lighter `llama-3.1-8b-instant` w
 PHARMALENS_LLM_MODEL=llama-3.1-8b-instant
 PHARMALENS_MAX_COMPLETION_TOKENS=900
 PHARMALENS_MAX_CONTEXT_CHUNKS=4
+PHARMALENS_VISION_ENABLED=0
 ```
+
+`PHARMALENS_VISION_ENABLED=0` is recommended for hosted free-tier demos because Groq vision calls during startup ingestion can quickly exhaust daily token limits. Figure captions are still indexed when vision is disabled.
 
 ## Run locally
 
