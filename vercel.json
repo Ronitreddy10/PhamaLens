@@ -1,0 +1,14 @@
+{
+  "buildCommand": "node pharmalens/ui/write-config.js",
+  "outputDirectory": "pharmalens/ui",
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/dashboard.html"
+    },
+    {
+      "source": "/static/dashboard.html",
+      "destination": "/dashboard.html"
+    }
+  ]
+}

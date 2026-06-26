@@ -28,7 +28,7 @@ pharmalens/
   retrieval/      Hybrid search, reranking, filters, structured table lookup
   tests/          Unit tests
   ui/             Static dashboard and legacy Streamlit app
-netlify.toml      Netlify static dashboard configuration
+vercel.json       Vercel static dashboard deployment config
 ```
 
 ## Setup
@@ -115,25 +115,28 @@ Recent POC evaluation results are stored under:
 pharmalens/eval/results/
 ```
 
-## Netlify deployment
+## Vercel deployment
 
-This repo includes a Netlify config for the static dashboard:
+The static dashboard is designed to deploy cleanly on Vercel.
 
-```toml
-[build]
-  command = "node pharmalens/ui/write-config.js"
-  publish = "pharmalens/ui"
-```
+After pushing this repo to GitHub:
 
-Important: Netlify only hosts the frontend. The chat/API features need the FastAPI backend deployed separately.
+1. Open Vercel.
+2. Import the GitHub repo.
+3. Use **Other** as the framework preset.
+4. Keep the settings from `vercel.json`:
+   - Build command: `node pharmalens/ui/write-config.js`
+   - Output directory: `pharmalens/ui`
 
-If the backend is deployed somewhere else, set this Netlify environment variable:
+Important: Vercel is hosting the frontend dashboard only. The chat/API features need the FastAPI backend deployed separately.
+
+If the backend is deployed somewhere else, add this Vercel environment variable:
 
 ```bash
 PHARMALENS_API_URL=https://your-backend-url.example.com
 ```
 
-Without that variable, the dashboard uses same-origin API calls, which works locally but not on a static-only Netlify site.
+Without that variable, the dashboard uses same-origin API calls, which works locally but not on a static-only Vercel site.
 
 ## GitHub push note
 
