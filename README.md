@@ -170,7 +170,7 @@ The Docker Space exposes the API on port `7860` and starts:
 python -m uvicorn pharmalens.api.app:app --host 0.0.0.0 --port 7860
 ```
 
-On first startup, the API auto-ingests the bundled PDFs into a local Chroma vector store if the store is empty. This can make the first boot slower, but Hugging Face Spaces has enough memory for this workload.
+On first startup, the API auto-ingests the bundled PDFs into a local Chroma vector store if the store is empty. If the PDFs are not present in the Space repository, it downloads them from the GitHub repo first. This avoids Hugging Face's plain-git binary-file rejection while keeping the deployed API self-contained.
 
 After Hugging Face gives you a backend URL, add it to Vercel:
 

@@ -6,4 +6,5 @@ __pycache__
 .DS_Store
 .env*
 pharmalens/data/vector_store
+pharmalens/data/documents/*.pdf
 pharmalens/eval/results

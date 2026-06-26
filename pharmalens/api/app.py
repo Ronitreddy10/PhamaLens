@@ -70,7 +70,9 @@ def ensure_index_ready() -> None:
     except Exception:
         pass
     try:
+        from pharmalens.ingest.document_bootstrap import ensure_demo_documents
         from pharmalens.ingest.watcher import WATCH_DIR, ingest_directory
+        ensure_demo_documents(WATCH_DIR)
         results = ingest_directory(WATCH_DIR)
         indexed = sum(item.get("chunks", 0) for item in results)
         print(f"[startup] Auto-ingest complete: {indexed} chunks indexed")

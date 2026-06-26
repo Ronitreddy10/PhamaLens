@@ -11,6 +11,7 @@ ENV HOME=/home/user \
     PATH=/home/user/.local/bin:$PATH \
     PORT=7860 \
     PHARMALENS_AUTO_INGEST=1 \
+    PHARMALENS_DOWNLOAD_DEMO_DOCS=1 \
     PHARMALENS_CORS_ORIGINS=* \
     PHARMALENS_CORS_ORIGIN_REGEX=https://.*\\.vercel\\.app \
     PYTHONUNBUFFERED=1
