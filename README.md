@@ -1,3 +1,12 @@
+---
+title: PharmaLens API
+emoji: 💊
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 7860
+---
+
 # PharmaLens
 
 PharmaLens is a local proof-of-concept knowledge system for pharmaceutical product lifecycle documents. It indexes regulatory PDFs, retrieves grounded evidence, and answers product questions with citations instead of relying on model memory.
@@ -29,6 +38,7 @@ pharmalens/
   tests/          Unit tests
   ui/             Static dashboard and legacy Streamlit app
 vercel.json       Vercel static dashboard deployment config
+Dockerfile        Hugging Face Spaces backend deployment config
 ```
 
 ## Setup
@@ -138,33 +148,34 @@ PHARMALENS_API_URL=https://your-backend-url.example.com
 
 Without that variable, the dashboard uses same-origin API calls, which works locally but not on a static-only Vercel site.
 
-## Backend deployment
+## Hugging Face Spaces backend deployment
 
-The FastAPI backend can be deployed on Render using `render.yaml`.
+The FastAPI backend can be deployed as a Hugging Face Docker Space. This is a better fit than Render free tier for this app because the RAG stack needs more than 512MB RAM.
 
 After pushing to GitHub:
 
-1. Open Render.
-2. Create a new **Blueprint** from this repository.
-3. Render will use `render.yaml`.
-4. Add the secret environment variable:
+1. Open Hugging Face Spaces.
+2. Create a new Space.
+3. Choose **Docker** as the Space SDK.
+4. Add the repo files to the Space, or push this repo to the Space git remote.
+5. Add this Space secret:
 
 ```bash
 GROQ_API_KEY=your_key_here
 ```
 
-The Render build command installs Python dependencies:
+The Docker Space exposes the API on port `7860` and starts:
 
 ```bash
-pip install -r pharmalens/requirements.txt
+python -m uvicorn pharmalens.api.app:app --host 0.0.0.0 --port 7860
 ```
 
-On first startup, the API auto-ingests the bundled PDFs into a local Chroma vector store if the store is empty. This can make the first boot slower, but it keeps the deployed API self-contained.
+On first startup, the API auto-ingests the bundled PDFs into a local Chroma vector store if the store is empty. This can make the first boot slower, but Hugging Face Spaces has enough memory for this workload.
 
-After Render gives you a backend URL, add it to Vercel:
+After Hugging Face gives you a backend URL, add it to Vercel:
 
 ```bash
-PHARMALENS_API_URL=https://your-render-service.onrender.com
+PHARMALENS_API_URL=https://your-space-name.hf.space
 ```
 
 Then redeploy the Vercel frontend.
