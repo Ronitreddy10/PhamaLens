@@ -1,0 +1,53 @@
+{
+  "table_id": "49b81293_p20_t0",
+  "doc_id": "49b812930b88efda31e215a88160df9cfd39abddb37cbb7f8d8bac18c4090d4e",
+  "filename": "wegovy-epar-product-information_en.pdf",
+  "page_number": 20,
+  "headers": [
+    "",
+    "Semaglutide 2.4 mg",
+    "Liraglutide 3 mg"
+  ],
+  "rows": [
+    {
+      "Semaglutide 2.4 mg": "126",
+      "Liraglutide 3 mg": "127"
+    },
+    {
+      "Semaglutide 2.4 mg": "",
+      "Liraglutide 3 mg": ""
+    },
+    {
+      "Semaglutide 2.4 mg": "102.5",
+      "Liraglutide 3 mg": "103.7"
+    },
+    {
+      "Semaglutide 2.4 mg": "-15.8",
+      "Liraglutide 3 mg": "-6.4"
+    },
+    {
+      "Semaglutide 2.4 mg": "-9.4 [-12.0;-6.8]*",
+      "Liraglutide 3 mg": "-"
+    },
+    {
+      "Semaglutide 2.4 mg": "-15.3",
+      "Liraglutide 3 mg": "-6.8"
+    },
+    {
+      "Semaglutide 2.4 mg": "-8.5 [-11.2;-5.7]",
+      "Liraglutide 3 mg": "-"
+    },
+    {
+      "Semaglutide 2.4 mg": "69.4*",
+      "Liraglutide 3 mg": "27.2"
+    },
+    {
+      "Semaglutide 2.4 mg": "54.0*",
+      "Liraglutide 3 mg": "13.4"
+    },
+    {
+      "Semaglutide 2.4 mg": "37.4*",
+      "Liraglutide 3 mg": "7.0"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "table_id": "49b81293_p9_t0",
+  "doc_id": "49b812930b88efda31e215a88160df9cfd39abddb37cbb7f8d8bac18c4090d4e",
+  "filename": "wegovy-epar-product-information_en.pdf",
+  "page_number": 9,
+  "headers": [
+    "MedDRA\nsystem\norgan class",
+    "Very\ncommon",
+    "Common",
+    "Uncommon",
+    "Rare",
+    "Very Rare",
+    "Not\nknown"
+  ],
+  "rows": [
+    {
+      "MedDRA\nsystem\norgan class": "Immune\nsystem\ndisorders",
+      "Very\ncommon": "",
+      "Common": "",
+      "Uncommon": "",
+      "Rare": "Anaphylact\nic reaction",
+      "Very Rare": "",
+      "Not\nknown": ""
+    },
+    {
+      "MedDRA\nsystem\norgan class": "Metabolism\nand\nnutrition\ndisorders",
+      "Very\ncommon": "",
+      "Common": "Hypoglycae\nmia in\npatients with\ntype 2\ndiabetesa",
+      "Uncommon": "",
+      "Rare": "",
+      "Very Rare": "",
+      "Not\nknown": ""
+    },
+    {
+      "MedDRA\nsystem\norgan class": "Nervous\nsystem\ndisorders",
+      "Very\ncommon": "Headacheb",
+      "Common": "Dizzinessb\nDysgeusiab,c\nDysaesthesia\na",
+      "Uncommon": "",
+      "Rare": "",
+      "Very Rare": "",
+      "Not\nknown": ""
+    },
+    {
+      "MedDRA\nsystem\norgan class": "Eye\ndisorders",
+      "Very\ncommon": "",
+      "Common": "Diabetic\nretinopathy\nin patients\nwith type 2\ndiabetesa",
+      "Uncommon": "",
+      "Rare": "",
+      "Very Rare": "Non-\narteritic\nanterior\nischaemic\noptic\nneuropathy\n(NAION)",
+      "Not\nknown": ""
+    },
+    {
+      "MedDRA\nsystem\norgan class": "Cardiac\ndisorders",
+      "Very\ncommon": "",
+      "Common": "",
+      "Uncommon": "Hypotension\nOrthostatic\nhypotension\nIncreased\nheart ratea,c",
+      "Rare": "",
+      "Very Rare": "",
+      "Not\nknown": ""
+    }
+  ]
+}

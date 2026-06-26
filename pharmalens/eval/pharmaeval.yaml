@@ -1,0 +1,460 @@
+questions:
+  - id: T1_001
+    type: factual_lookup
+    difficulty: easy
+    question: "What is the approved starting dose of Ozempic for type 2 diabetes?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.2"}
+    gold_answer: "0.25 mg once weekly for first 4 weeks"
+    gold_terms: ["0.25 mg", "once weekly", "4 weeks"]
+    modality: null
+  - id: T1_002
+    type: factual_lookup
+    difficulty: easy
+    question: "What is the approved posology for Wegovy in adults?"
+    gold_chunks:
+      - {file: "wegovy-epar-product-information_en.pdf", section: "4.2"}
+    gold_answer: "maintenance dose 2.4 mg once weekly after dose escalation"
+    gold_terms: ["2.4 mg", "once weekly", "week 17"]
+    modality: null
+  - id: T2_001
+    type: numerical_table
+    difficulty: medium
+    question: "What was the HbA1c reduction with semaglutide 1mg in SUSTAIN 1?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", page: 13}
+    gold_answer: "HbA1c reduction in SUSTAIN 1"
+    gold_terms: ["SUSTAIN 1", "week 30", "-1.6"]
+    modality: null
+  - id: T2_007
+    type: numerical_table
+    difficulty: medium
+    question: "How many in vivo BE studies are required under PSG Option I for oral semaglutide?"
+    gold_chunks:
+      - {file: "PSG_213051.pdf", section: "2"}
+    gold_answer: "six studies with pharmacokinetic endpoints"
+    gold_terms: ["six in vivo", "pharmacokinetic endpoints", "bioequivalence"]
+    modality: MANDATORY
+  - id: T3_001
+    type: regulatory_modality
+    difficulty: medium
+    question: "Is a parallel study design required for the 3mg oral semaglutide BE study?"
+    gold_chunks:
+      - {file: "PSG_213051.pdf", page: 2}
+    gold_answer: "not required; may be considered if crossover is not feasible"
+    gold_terms: ["parallel", "may be considered", "crossover"]
+    modality: OPTIONAL
+  - id: T3_004
+    type: regulatory_modality
+    difficulty: hard
+    question: "Does FDA require or just recommend that PSG guidance documents be followed?"
+    gold_chunks:
+      - {file: "PSG_213051.pdf", page: 1}
+    gold_answer: "guidance recommendations are not binding; alternative approaches may be acceptable"
+    gold_terms: ["does not establish any rights", "not binding", "alternative approach"]
+    modality: RECOMMENDED
+  - id: T4_001
+    type: cross_document
+    difficulty: hard
+    question: "What are the differences between Ozempic and Wegovy in their approved indications?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.1"}
+      - {file: "wegovy-epar-product-information_en.pdf", section: "4.1"}
+    gold_answer: "Ozempic is for type 2 diabetes; Wegovy is for weight management"
+    gold_terms: ["type 2 diabetes", "weight management", "obesity"]
+    modality: null
+  - id: T4_005
+    type: cross_document
+    difficulty: medium
+    question: "How many PSG documents in the corpus cover semaglutide and what formulations do they address?"
+    gold_chunks:
+      - {file: "PSG_209637.pdf", page: 1}
+      - {file: "PSG_215256.pdf", page: 1}
+      - {file: "PSG_213051.pdf", page: 1}
+    gold_answer: "three PSGs; subcutaneous solution and oral tablet"
+    gold_terms: ["PSG_209637", "PSG_215256", "PSG_213051"]
+    modality: null
+  - id: T5_002
+    type: version_aware
+    difficulty: medium
+    question: "Which is the most recent FDA guidance for subcutaneous semaglutide in the knowledge base?"
+    gold_chunks:
+      - {file: "PSG_215256.pdf", page: 1}
+    gold_answer: "PSG_215256 dated December 2025"
+    gold_terms: ["PSG_215256", "December 2025"]
+    modality: null
+  - id: T6_006
+    type: figure
+    difficulty: medium
+    question: "Are there any figures in the FDA PSG documents?"
+    gold_chunks: []
+    gold_answer: "No, the PSG documents are text guidance documents in this corpus"
+    expected_no_sources: false
+    modality: null
+  - id: T8_002
+    type: negative
+    difficulty: easy
+    question: "What is the price of Ozempic in India?"
+    gold_chunks: []
+    gold_answer: "Not in knowledge base"
+    expected_no_sources: true
+    modality: null
+  - id: T8_003
+    type: negative
+    difficulty: medium
+    question: "Is tirzepatide covered anywhere in these documents?"
+    gold_chunks: []
+    gold_answer: "Not in knowledge base"
+    expected_no_sources: true
+    modality: null
+  - id: T1_003
+    type: factual_lookup
+    difficulty: easy
+    question: "What is the approved maximum weekly dose of Ozempic?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.2"}
+    gold_answer: "2 mg once weekly"
+    gold_terms: ["2 mg", "once weekly"]
+    modality: null
+  - id: T1_004
+    type: factual_lookup
+    difficulty: easy
+    question: "Is semaglutide approved for type 1 diabetes?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.4"}
+    gold_answer: "No — semaglutide should not be used in type 1 diabetes"
+    gold_terms: ["type 1 diabetes", "should not be used"]
+    modality: PROHIBITED
+  - id: T1_005
+    type: factual_lookup
+    difficulty: easy
+    question: "How many days after a missed Ozempic dose can it still be taken?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.2"}
+    gold_answer: "Within 5 days after the missed dose"
+    gold_terms: ["missed dose", "5 days"]
+    modality: null
+  - id: T1_006
+    type: factual_lookup
+    difficulty: easy
+    question: "What injection sites are approved for Ozempic?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.2"}
+    gold_answer: "Abdomen, thigh, or upper arm"
+    gold_terms: ["abdomen", "thigh", "upper arm"]
+    modality: null
+  - id: T1_007
+    type: factual_lookup
+    difficulty: easy
+    question: "How long before a planned pregnancy should semaglutide be stopped?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.6"}
+    gold_answer: "At least 2 months"
+    gold_terms: ["2 months", "planned pregnancy"]
+    modality: RECOMMENDED
+  - id: T1_008
+    type: factual_lookup
+    difficulty: medium
+    question: "What are the two oral semaglutide formulations in PSG_213051 and what strengths does each have?"
+    gold_chunks:
+      - {file: "PSG_213051.pdf", section: "1"}
+    gold_answer: "R1: 3mg, 7mg, 14mg — R2: 1.5mg, 4mg, 9mg — not substitutable on mg per mg basis"
+    gold_terms: ["3 mg", "7 mg", "14 mg", "1.5 mg", "4 mg", "9 mg"]
+    modality: null
+  - id: T1_009
+    type: factual_lookup
+    difficulty: easy
+    question: "What does NAION stand for and is it listed as an adverse reaction for semaglutide?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.8"}
+    gold_answer: "Non-arteritic anterior ischaemic optic neuropathy — listed as Not Known frequency"
+    gold_terms: ["non-arteritic anterior ischaemic optic neuropathy", "NAION", "not known"]
+    modality: null
+  - id: T1_010
+    type: factual_lookup
+    difficulty: easy
+    question: "When did the FDA resolve the semaglutide shortage according to the citizen petition?"
+    gold_chunks:
+      - {file: "FDA-2025-P-3239-0001_attachment_1.pdf", section: "B"}
+    gold_answer: "February 21, 2025"
+    gold_terms: ["February 21, 2025", "shortage"]
+    modality: null
+  - id: T2_002
+    type: numerical_table
+    difficulty: medium
+    question: "What percentage of patients achieved HbA1c below 7% with semaglutide 0.5mg in SUSTAIN 2?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", page: 14}
+    gold_answer: "69%"
+    gold_terms: ["SUSTAIN 2", "69", "HbA"]
+    modality: null
+  - id: T2_003
+    type: numerical_table
+    difficulty: medium
+    question: "What was the body weight change with semaglutide 1mg compared to sitagliptin in SUSTAIN 2?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", page: 14}
+    gold_answer: "-6.1 kg vs -1.9 kg — difference of -4.2 kg"
+    gold_terms: ["SUSTAIN 2", "-6.1", "-1.9", "-4.2"]
+    modality: null
+  - id: T2_004
+    type: numerical_table
+    difficulty: hard
+    question: "How many patients were in the SUSTAIN 1 ITT population for each arm?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", page: 13}
+    gold_answer: "128 (0.5mg), 130 (1mg), 129 (placebo)"
+    gold_terms: ["128", "130", "129", "Intent-to-Treat"]
+    modality: null
+  - id: T2_005
+    type: numerical_table
+    difficulty: medium
+    question: "What was the atorvastatin Cmax change with semaglutide?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.5"}
+    gold_answer: "Decreased by 38% — assessed as not clinically relevant"
+    gold_terms: ["atorvastatin", "Cmax", "38%"]
+    modality: null
+  - id: T2_006
+    type: numerical_table
+    difficulty: medium
+    question: "What is the quantitative similarity threshold for salcaprozate sodium under PSG Option II?"
+    gold_chunks:
+      - {file: "PSG_213051.pdf", section: "II"}
+    gold_answer: "Within plus or minus 10% of the amount in the RLD"
+    gold_terms: ["salcaprozate", "10%", "RLD"]
+    modality: MANDATORY
+  - id: T2_008
+    type: numerical_table
+    difficulty: medium
+    question: "What was the paracetamol AUC0-60min change when co-administered with semaglutide 1mg?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.5"}
+    gold_answer: "Decreased by 27%"
+    gold_terms: ["paracetamol", "AUC", "27%"]
+    modality: null
+  - id: T2_010
+    type: numerical_table
+    difficulty: medium
+    question: "What minimum time must elapse between two Ozempic doses when changing the administration day?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.2"}
+    gold_answer: "At least 3 days — more than 72 hours"
+    gold_terms: ["3 days", "72 hours"]
+    modality: MANDATORY
+  - id: T3_002
+    type: regulatory_modality
+    difficulty: medium
+    question: "Must a generic applicant monitor blood glucose during a semaglutide BE study?"
+    gold_chunks:
+      - {file: "PSG_213051.pdf", section: "additional_comments"}
+    gold_answer: "Yes — the PSG states to monitor blood glucose concentrations and signs of hypoglycemia"
+    gold_terms: ["monitor blood glucose", "hypoglycemia"]
+    modality: MANDATORY
+  - id: T3_003
+    type: regulatory_modality
+    difficulty: medium
+    question: "Is semaglutide recommended for patients with severe gastroparesis?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.4"}
+    gold_answer: "Not recommended — semaglutide is not recommended if gastroparesis is severe"
+    gold_terms: ["severe gastroparesis", "not recommended"]
+    modality: PROHIBITED
+  - id: T3_005
+    type: regulatory_modality
+    difficulty: medium
+    question: "Is dose adjustment required for elderly patients taking Ozempic?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.2"}
+    gold_answer: "No dose adjustment is required based on age"
+    gold_terms: ["elderly", "no dose adjustment"]
+    modality: NEUTRAL
+  - id: T3_006
+    type: regulatory_modality
+    difficulty: medium
+    question: "Must semaglutide be discontinued if NAION is confirmed?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.4"}
+    gold_answer: "Yes — treatment should be discontinued if NAION is confirmed"
+    gold_terms: ["NAION", "discontinued"]
+    modality: MANDATORY
+  - id: T3_007
+    type: regulatory_modality
+    difficulty: hard
+    question: "Under PSG Option II, is salcaprozate sodium quantitative similarity mandatory or optional?"
+    gold_chunks:
+      - {file: "PSG_213051.pdf", section: "II"}
+    gold_answer: "Mandatory — Option II is acceptable only if the test product meets the plus or minus 10% threshold"
+    gold_terms: ["Option II", "salcaprozate", "10%"]
+    modality: MANDATORY
+  - id: T3_008
+    type: regulatory_modality
+    difficulty: medium
+    question: "Is INR monitoring required when starting semaglutide in a patient on warfarin?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.5"}
+    gold_answer: "Frequent monitoring is recommended — not mandatory, but recommended upon initiation"
+    gold_terms: ["warfarin", "INR", "monitoring"]
+    modality: RECOMMENDED
+  - id: T4_002
+    type: cross_document
+    difficulty: hard
+    question: "How does the FDA PSG for subcutaneous semaglutide compare to EMA requirements?"
+    gold_chunks:
+      - {file: "PSG_209637.pdf", section: "1"}
+      - {file: "ozempic-epar-product-information_en.pdf", section: "5.2"}
+    gold_answer: "FDA PSG requires waiver-based BE with Q1Q2 sameness — EMA EPAR covers approved product characteristics not generic BE requirements"
+    gold_terms: ["Q1", "Q2", "bioequivalence", "pharmacokinetic"]
+    modality: null
+  - id: T4_003
+    type: cross_document
+    difficulty: medium
+    question: "Does the citizen petition concern Ozempic or Wegovy specifically?"
+    gold_chunks:
+      - {file: "FDA-2025-P-3239-0001_attachment_1.pdf", section: "introduction"}
+    gold_answer: "Neither specifically — it concerns compounded semaglutide, referencing both as approved comparators"
+    gold_terms: ["compounded semaglutide", "Ozempic", "Wegovy"]
+    modality: null
+  - id: T4_004
+    type: cross_document
+    difficulty: hard
+    question: "What risks from compounded semaglutide does the citizen petition identify that are absent from the EPAR adverse reactions table?"
+    gold_chunks:
+      - {file: "FDA-2025-P-3239-0001_attachment_1.pdf", section: "B"}
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.8"}
+    gold_answer: "Host cell protein contamination, immunogenicity from fermentation impurities, dosing errors from manual syringes"
+    gold_terms: ["host cell protein", "immunogenic", "dosing errors"]
+    modality: null
+  - id: T4_006
+    type: cross_document
+    difficulty: hard
+    question: "What adverse events does semaglutide share with other GLP-1 receptor agonists as a class effect?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.4"}
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.8"}
+    gold_answer: "Gastrointestinal effects, acute pancreatitis, delayed gastric emptying"
+    gold_terms: ["gastrointestinal", "pancreatitis", "gastric emptying"]
+    modality: null
+  - id: T4_007
+    type: cross_document
+    difficulty: medium
+    question: "What is the legal basis cited in the FDA citizen petition for its requests?"
+    gold_chunks:
+      - {file: "FDA-2025-P-3239-0001_attachment_1.pdf", section: "A"}
+    gold_answer: "FD&C Act Sections 503A and 503B — 21 CFR Section 10.30 — Sections 501 and 502"
+    gold_terms: ["503A", "503B", "10.30", "501", "502"]
+    modality: null
+  - id: T4_008
+    type: cross_document
+    difficulty: hard
+    question: "What specific risks from compounded semaglutide does the citizen petition say the FDA FAERS system cannot capture?"
+    gold_chunks:
+      - {file: "FDA-2025-P-3239-0001_attachment_1.pdf", section: "B"}
+    gold_answer: "503A pharmacies have no federal requirement to report adverse events to FAERS"
+    gold_terms: ["503A", "FAERS", "adverse events"]
+    modality: null
+  - id: T5_001
+    type: version_aware
+    difficulty: hard
+    question: "What changed in the FDA guidance on subcutaneous semaglutide between the 2023 and 2025 versions?"
+    gold_chunks:
+      - {file: "PSG_209637.pdf", section: "1"}
+      - {file: "PSG_215256.pdf", section: "1"}
+    gold_answer: "PSG_215256 (Dec 2025) revised the BE waiver criteria and study design recommendations compared to PSG_209637 (Nov 2023)"
+    gold_terms: ["November 2023", "December 2025", "PSG_215256"]
+    modality: null
+  - id: T5_003
+    type: version_aware
+    difficulty: hard
+    question: "Was the oral semaglutide PSG revised from its original version?"
+    gold_chunks:
+      - {file: "PSG_213051.pdf", section: "document_history"}
+    gold_answer: "Yes — originally recommended August 2021, revised October 2025"
+    gold_terms: ["August 2021", "October 2025"]
+    modality: null
+  - id: T5_004
+    type: version_aware
+    difficulty: hard
+    question: "If I am planning a BE study for subcutaneous semaglutide, which PSG version should I follow?"
+    gold_chunks:
+      - {file: "PSG_215256.pdf", section: "1"}
+    gold_answer: "PSG_215256 (December 2025) — the most recent version"
+    gold_terms: ["PSG_215256", "December 2025"]
+    modality: null
+  - id: T5_005
+    type: version_aware
+    difficulty: medium
+    question: "How many versions of the subcutaneous semaglutide PSG are in the knowledge base?"
+    gold_chunks:
+      - {file: "PSG_209637.pdf", section: "header"}
+      - {file: "PSG_215256.pdf", section: "header"}
+    gold_answer: "Two versions — November 2023 and December 2025"
+    gold_terms: ["PSG_209637", "PSG_215256"]
+    modality: null
+  - id: T5_006
+    type: version_aware
+    difficulty: hard
+    question: "Does the 2023 subcutaneous semaglutide PSG have different waiver criteria than the 2025 version?"
+    gold_chunks:
+      - {file: "PSG_209637.pdf", section: "waiver"}
+      - {file: "PSG_215256.pdf", section: "waiver"}
+    gold_answer: "RegDelta comparison needed — both cover BE waiver for Q1Q2 same SC solution but with updated 2025 criteria"
+    gold_terms: ["waiver", "Q1", "Q2", "2025"]
+    modality: null
+  - id: T6_001
+    type: figure
+    difficulty: hard
+    question: "What do the EPAR line graphs show about HbA1c change over time with semaglutide?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", page: 14, type: "figure"}
+    gold_answer: "Mean HbA1c decreases from baseline over 56 weeks"
+    gold_terms: ["Figure", "HbA", "week"]
+    modality: null
+  - id: T6_002
+    type: figure
+    difficulty: hard
+    question: "What does the Kaplan-Meier plot in the EPAR show about semaglutide's cardiovascular benefit?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", page: 23, type: "figure"}
+    gold_answer: "Cumulative incidence of MACE is lower in the semaglutide group versus placebo"
+    gold_terms: ["MACE", "cumulative incidence", "placebo", "Kaplan-Meier"]
+    modality: null
+  - id: T6_003
+    type: figure
+    difficulty: medium
+    question: "What page of the Ozempic EPAR shows the forest plot for cardiovascular subgroup analyses?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", page: 24, type: "figure"}
+    gold_answer: "Figure 4 on page 24"
+    gold_terms: ["Figure 4", "cardiovascular", "subgroup"]
+    modality: null
+  - id: T7_001
+    type: reference_chain
+    difficulty: hard
+    question: "Why must semaglutide be stopped 2 months before a planned pregnancy?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.6"}
+      - {file: "ozempic-epar-product-information_en.pdf", section: "5.2"}
+    gold_answer: "Because of semaglutide's long half-life of approximately 1 week"
+    gold_terms: ["2 months", "half-life", "1 week"]
+    modality: RECOMMENDED
+  - id: T7_002
+    type: reference_chain
+    difficulty: hard
+    question: "What pharmacokinetic mechanism explains the drug interaction between semaglutide and paracetamol?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.5"}
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.8"}
+    gold_answer: "Semaglutide delays gastric emptying — this slows oral absorption rate"
+    gold_terms: ["paracetamol", "gastric emptying", "absorption"]
+    modality: null
+  - id: T7_003
+    type: reference_chain
+    difficulty: hard
+    question: "What is the basis for monitoring diabetic retinopathy complications in semaglutide patients?"
+    gold_chunks:
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.4"}
+      - {file: "ozempic-epar-product-information_en.pdf", section: "4.8"}
+    gold_answer: "Section 4.4 warns about retinopathy risk in patients on insulin — frequency data is in 4.8"
+    gold_terms: ["retinopathy", "insulin", "4.8"]
+    modality: null

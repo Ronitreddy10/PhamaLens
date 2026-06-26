@@ -1,0 +1,93 @@
+{
+  "table_id": "e69fac3d_p15_t0",
+  "doc_id": "e69fac3de3e1dab76b382cc9312ac0aebd5c746ff62e1c75b0fc24a5f9e16939",
+  "filename": "ozempic-epar-product-information_en.pdf",
+  "page_number": 15,
+  "headers": [
+    "",
+    "Semaglutide\n0.5 mg",
+    "Semaglutide\n1 mg",
+    "Dulaglutide\n0.75 mg",
+    "Dulaglutide\n1.5 mg"
+  ],
+  "rows": [
+    {
+      "Semaglutide\n0.5 mg": "301",
+      "Semaglutide\n1 mg": "300",
+      "Dulaglutide\n0.75 mg": "299",
+      "Dulaglutide\n1.5 mg": "299"
+    },
+    {
+      "Semaglutide\n0.5 mg": "",
+      "Semaglutide\n1 mg": "",
+      "Dulaglutide\n0.75 mg": "",
+      "Dulaglutide\n1.5 mg": ""
+    },
+    {
+      "Semaglutide\n0.5 mg": "8.3",
+      "Semaglutide\n1 mg": "8.2",
+      "Dulaglutide\n0.75 mg": "8.2",
+      "Dulaglutide\n1.5 mg": "8.2"
+    },
+    {
+      "Semaglutide\n0.5 mg": "-1.5",
+      "Semaglutide\n1 mg": "-1.8",
+      "Dulaglutide\n0.75 mg": "-1.1",
+      "Dulaglutide\n1.5 mg": "-1.4"
+    },
+    {
+      "Semaglutide\n0.5 mg": "-0.4b\n[-0.6, -0.2]a",
+      "Semaglutide\n1 mg": "-0.4c\n[-0.6, -0.3]a",
+      "Dulaglutide\n0.75 mg": "-",
+      "Dulaglutide\n1.5 mg": "-"
+    },
+    {
+      "Semaglutide\n0.5 mg": "68",
+      "Semaglutide\n1 mg": "79",
+      "Dulaglutide\n0.75 mg": "52",
+      "Dulaglutide\n1.5 mg": "67"
+    },
+    {
+      "Semaglutide\n0.5 mg": "",
+      "Semaglutide\n1 mg": "",
+      "Dulaglutide\n0.75 mg": "",
+      "Dulaglutide\n1.5 mg": ""
+    },
+    {
+      "Semaglutide\n0.5 mg": "9.8",
+      "Semaglutide\n1 mg": "9.8",
+      "Dulaglutide\n0.75 mg": "9.7",
+      "Dulaglutide\n1.5 mg": "9.6"
+    },
+    {
+      "Semaglutide\n0.5 mg": "-2.2",
+      "Semaglutide\n1 mg": "-2.8",
+      "Dulaglutide\n0.75 mg": "-1.9",
+      "Dulaglutide\n1.5 mg": "-2.2"
+    },
+    {
+      "Semaglutide\n0.5 mg": "",
+      "Semaglutide\n1 mg": "",
+      "Dulaglutide\n0.75 mg": "",
+      "Dulaglutide\n1.5 mg": ""
+    },
+    {
+      "Semaglutide\n0.5 mg": "96.4",
+      "Semaglutide\n1 mg": "95.5",
+      "Dulaglutide\n0.75 mg": "95.6",
+      "Dulaglutide\n1.5 mg": "93.4"
+    },
+    {
+      "Semaglutide\n0.5 mg": "-4.6",
+      "Semaglutide\n1 mg": "-6.5",
+      "Dulaglutide\n0.75 mg": "-2.3",
+      "Dulaglutide\n1.5 mg": "-3.0"
+    },
+    {
+      "Semaglutide\n0.5 mg": "-2.3b\n[-3.0, -1.5]a",
+      "Semaglutide\n1 mg": "-3.6c\n[-4.3, -2.8]a",
+      "Dulaglutide\n0.75 mg": "-",
+      "Dulaglutide\n1.5 mg": "-"
+    }
+  ]
+}

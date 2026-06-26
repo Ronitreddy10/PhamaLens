@@ -1,0 +1,35 @@
+{
+  "table_id": "e69fac3d_p9_t0",
+  "doc_id": "e69fac3de3e1dab76b382cc9312ac0aebd5c746ff62e1c75b0fc24a5f9e16939",
+  "filename": "ozempic-epar-product-information_en.pdf",
+  "page_number": 9,
+  "headers": [
+    "MedDRA\nsystem organ\nclass",
+    "Very common",
+    "Common",
+    "Uncommon",
+    "Rare",
+    "Very Rare",
+    "Not known"
+  ],
+  "rows": [
+    {
+      "MedDRA\nsystem organ\nclass": "General\ndisorders and\nadministra-\ntion site\nconditions",
+      "Very common": "",
+      "Common": "Fatigue",
+      "Uncommon": "Injection\nsite\nreactions",
+      "Rare": "",
+      "Very Rare": "",
+      "Not known": ""
+    },
+    {
+      "MedDRA\nsystem organ\nclass": "Investigations",
+      "Very common": "",
+      "Common": "Increased\nlipase\nIncreased\namylase\nWeight\ndecreased",
+      "Uncommon": "",
+      "Rare": "",
+      "Very Rare": "",
+      "Not known": ""
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "table_id": "e69fac3d_p18_t0",
+  "doc_id": "e69fac3de3e1dab76b382cc9312ac0aebd5c746ff62e1c75b0fc24a5f9e16939",
+  "filename": "ozempic-epar-product-information_en.pdf",
+  "page_number": 18,
+  "headers": [
+    "",
+    "Semaglutide\n1 mg",
+    "Semaglutide\n2 mg"
+  ],
+  "rows": [
+    {
+      "Semaglutide\n1 mg": "-3.1",
+      "Semaglutide\n2 mg": "-3.4"
+    },
+    {
+      "Semaglutide\n1 mg": "",
+      "Semaglutide\n2 mg": ""
+    },
+    {
+      "Semaglutide\n1 mg": "98.6",
+      "Semaglutide\n2 mg": "100.1"
+    },
+    {
+      "Semaglutide\n1 mg": "-6.0",
+      "Semaglutide\n2 mg": "-6.9"
+    },
+    {
+      "Semaglutide\n1 mg": "",
+      "Semaglutide\n2 mg": "-0.9 [-1.7, -0.2]b"
+    }
+  ]
+}

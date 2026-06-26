@@ -1,0 +1,13 @@
+[build]
+  command = "node pharmalens/ui/write-config.js"
+  publish = "pharmalens/ui"
+
+[[redirects]]
+  from = "/"
+  to = "/dashboard.html"
+  status = 200
+
+[[redirects]]
+  from = "/static/dashboard.html"
+  to = "/dashboard.html"
+  status = 200

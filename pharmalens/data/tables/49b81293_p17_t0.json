@@ -1,0 +1,53 @@
+{
+  "table_id": "49b81293_p17_t0",
+  "doc_id": "49b812930b88efda31e215a88160df9cfd39abddb37cbb7f8d8bac18c4090d4e",
+  "filename": "wegovy-epar-product-information_en.pdf",
+  "page_number": 17,
+  "headers": [
+    "",
+    "Semaglutide 2.4 mg",
+    "Placebo"
+  ],
+  "rows": [
+    {
+      "Semaglutide 2.4 mg": "73.0*",
+      "Placebo": "27.1"
+    },
+    {
+      "Semaglutide 2.4 mg": "53.5*",
+      "Placebo": "13.2"
+    },
+    {
+      "Semaglutide 2.4 mg": "",
+      "Placebo": ""
+    },
+    {
+      "Semaglutide 2.4 mg": "113.6",
+      "Placebo": "111.8"
+    },
+    {
+      "Semaglutide 2.4 mg": "-14.6",
+      "Placebo": "-6.3"
+    },
+    {
+      "Semaglutide 2.4 mg": "-8.3 [-10.1; -6.6]*",
+      "Placebo": "-"
+    },
+    {
+      "Semaglutide 2.4 mg": "",
+      "Placebo": ""
+    },
+    {
+      "Semaglutide 2.4 mg": "124",
+      "Placebo": "124"
+    },
+    {
+      "Semaglutide 2.4 mg": "-5.6",
+      "Placebo": "-1.6"
+    },
+    {
+      "Semaglutide 2.4 mg": "-3.9 [-6.4; -1.5]*",
+      "Placebo": "-"
+    }
+  ]
+}

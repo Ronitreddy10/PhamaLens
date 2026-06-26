@@ -1,0 +1,1123 @@
+{
+  "details": [
+    {
+      "id": "T1_001",
+      "type": "factual_lookup",
+      "question": "What is the approved starting dose of Ozempic for type 2 diabetes?",
+      "gold_answer": "0.25 mg once weekly for first 4 weeks",
+      "answer": "**Approved Starting Dose of Ozempic for Type 2 Diabetes**\n\nThe approved starting dose of Ozempic for type 2 diabetes is 0.25 mg semaglutide once weekly.\n\n**Operational Details:**\n\n* The starting dose should be administered once weekly.\n* After 4 weeks, the dose should be increased to 0.5 mg once weekly.\n* After at least 4 weeks with a dose of 0.5 mg once weekly, the dose can be increased to 1 mg once weekly to further improve glycaemic control.\n* Weekly doses higher than 2 mg are not recommended.\n* When Ozempic is added to existing metformin and/or thiazolidinedione therapy or to a sodium-glucose cotransporter 2 (SGLT2) inhibitor, the current dose of metformin and/or thiazolidinedione or SGLT2 inhibitor can be continued unchanged.\n* When Ozempic is added to existing therapy of sulfonylurea or insulin, a reduction in the dose of sulfonylurea or insulin should be considered to reduce the risk of hypoglycaemia.\n\n**Citation:**\n[ozempic-epar-product-information_en.pdf, \u00a74.2 Posology and method of administration, p.3]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.9,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.8,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but it does not mention the specific page and section where the information is found.",
+          "citation_accuracy": "The citation is accurate and correctly references the source document.",
+          "modality_preservation": "The answer preserves the modality of the retrieved context, which is RECOMMENDED, but it does not mention the specific regulatory modality (e.g., MANDATORY, OPTIONAL) for the other excerpts."
+        }
+      },
+      "faithfulness": 0.9,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.8
+    },
+    {
+      "id": "T1_002",
+      "type": "factual_lookup",
+      "question": "What is the approved posology for Wegovy in adults?",
+      "gold_answer": "maintenance dose 2.4 mg once weekly after dose escalation",
+      "answer": "**Approved Posology for Wegovy in Adults**\n\nThe recommended posology for Wegovy in adults is as follows:\n\n* The maintenance dose of semaglutide 2.4 mg once-weekly is reached by starting with a dose of 0.25 mg.\n* The dose should be escalated over a 16-week period to a maintenance dose of 2.4 mg once weekly (see Table 2).\n* Weekly doses higher than 2.4 mg are not recommended.\n\n**Operational Details**\n\n* The dose escalation schedule is as follows:\n\t+ Week 1-4: 0.25 mg\n\t+ Week 5-8: 0.5 mg\n\t+ Week 9-12: 1 mg\n\t+ Week 13-16: 1.7 mg\n\t+ Maintenance dose: 2.4 mg\n* In case of significant gastrointestinal symptoms, consider delaying dose escalation or lowering to the previous dose until symptoms have improved.\n* Patients with type 2 diabetes should consider reducing the dose of concomitantly administered insulin or insulin secretagogues (such as sulfonylureas) to reduce the risk of hypoglycaemia.\n\n**Citations**\n\n[wegovy-epar-product-information_en.pdf, \u00a74.2 Posology and method of administration, p.4]\n\n**Additional Information**\n\nFor adolescents ages 12 years and above, the same dose escalation schedule as for adults should be applied. The dose should be increased until 2.4 mg (maintenance dose) or maximum tolerated dose has been reached.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.9,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.8,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but some minor details are missing.",
+          "citation_accuracy": "The answer accurately cites the relevant section and page of the retrieved context.",
+          "modality_preservation": "The answer preserves the modality of the retrieved context, but some minor details are missing."
+        }
+      },
+      "faithfulness": 0.9,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.8
+    },
+    {
+      "id": "T2_001",
+      "type": "numerical_table",
+      "question": "What was the HbA1c reduction with semaglutide 1mg in SUSTAIN 1?",
+      "gold_answer": "HbA1c reduction in SUSTAIN 1",
+      "answer": "Structured clinical-trial table lookup:\n- SUSTAIN 1 week 30: Semaglutide 1 mg, HbA1c (%) change from baseline = -1.6 [ozempic-epar-product-information_en.pdf, ozempic-epar-product-information_en_table_2_sustain_1, p.13]",
+      "source_count": 1,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.9,
+        "comments": {
+          "faithfulness": "Answer is mostly faithful to the retrieved context, but lacks explicit mention of the endpoint's unit.",
+          "citation_accuracy": "Answer accurately cites the retrieved context.",
+          "modality_preservation": "Answer preserves the neutral modality of the retrieved context."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.9
+    },
+    {
+      "id": "T2_007",
+      "type": "numerical_table",
+      "question": "How many in vivo BE studies are required under PSG Option I for oral semaglutide?",
+      "gold_answer": "six studies with pharmacokinetic endpoints",
+      "answer": "**In Vivo Bioequivalence (BE) Studies Required Under PSG Option I**\n\n1. According to the provided context, PSG Option I requires two in vivo bioequivalence studies with pharmacokinetic endpoints and in vitro testing for oral semaglutide [PSG_213051.pdf, \u00a74 Page 3, p.3].\n2. These studies are recommended for the following strengths:\n\t* 14 mg strength: one in vivo BE study is required.\n\t* 9 mg strength: one in vivo BE study is required.\n\t* 3 mg and 7 mg strengths: waiver request of in vivo testing is permitted based on an acceptable bioequivalence study on the 14 mg strength, acceptable in vitro semaglutide dissolution testing, and acceptable in vitro salcaprozate sodium dissolution testing [PSG_213051.pdf, \u00a74 Page 3, p.3].\n\t* 1.5 mg and 4 mg strengths: waiver request of in vivo testing is permitted based on an acceptable bioequivalence study on the 9 mg strength, acceptable in vitro semaglutide dissolution testing, and acceptable in vitro salcaprozate sodium dissolution testing [PSG_213051.pdf, \u00a74 Page 3, p.3].\n\n**Key Considerations**\n\n* The two in vivo BE studies required under PSG Option I are designed to evaluate the bioequivalence of oral semaglutide in healthy males and non-pregnant, non-lactating females.\n* The studies are conducted under fasting conditions, with a single-dose, two-treatment, two-period crossover design.\n* The waiver request of in vivo testing for certain strengths is permitted based on the availability of acceptable bioequivalence studies, in vitro dissolution testing, and in vitro salcaprozate sodium dissolution testing.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": [
+          "The answer is generally faithful to the provided context, but some minor details are missing.",
+          "The citation accuracy is high, as the answer correctly cites the relevant sections of the PSG document.",
+          "However, the modality preservation score is lower, as the answer does not fully capture the nuances of the PSG Option I requirements."
+        ]
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T3_001",
+      "type": "regulatory_modality",
+      "question": "Is a parallel study design required for the 3mg oral semaglutide BE study?",
+      "gold_answer": "not required; may be considered if crossover is not feasible",
+      "answer": "**Parallel Study Design for 3mg Oral Semaglutide BE Study**\n\n**Direct Answer:**\nA parallel study design may be considered for the 3mg oral semaglutide BE study, but it is not required. [PSG_213051.pdf, \u00a74 Page 3, p.3]\n\n**Operational Details:**\n\n* According to the guidance, a parallel study design may be considered due to the long elimination half-life of semaglutide. [PSG_213051.pdf, \u00a74 Page 3, p.3]\n* Alternatively, a washout period between treatments in the crossover study is recommended to ensure adequate characterization of the pharmacokinetic profile. [PSG_213051.pdf, \u00a74 Page 3, p.3]\n* If a parallel study design is chosen, the applicant should provide justification that the design does not confound the study results. [PSG_213051.pdf, \u00a75 Page 4, p.4]\n\n**Practical Nuance:**\nThe guidance emphasizes the importance of considering the long elimination half-life of semaglutide when designing the bioequivalence study. A parallel study design may be more suitable for the 3mg strength, but it is not mandatory.\n\n**Citation:**\n[PSG_213051.pdf, \u00a74 Page 3, p.3]\n[PSG_213051.pdf, \u00a75 Page 4, p.4]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.9,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but it could be more concise and directly address the question.",
+          "citation_accuracy": "The answer accurately cites the relevant excerpts from the guidance document.",
+          "modality_preservation": "The answer preserves the modalities of the retrieved context, including the consideration of a parallel study design and the importance of justifying the design choice."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.9
+    },
+    {
+      "id": "T3_004",
+      "type": "regulatory_modality",
+      "question": "Does FDA require or just recommend that PSG guidance documents be followed?",
+      "gold_answer": "guidance recommendations are not binding; alternative approaches may be acceptable",
+      "answer": "**FDA's Stance on Following PSG Guidance Documents**\n\nThe FDA does not require, but rather recommends, that PSG guidance documents be followed. This is explicitly stated in the context of the provided excerpts.\n\n**Operational Details:**\n\n* FDA guidance documents do not establish legally enforceable responsibilities. [PSG_209637.pdf, \u00a71 Page 1, p.1]\n* Instead, guidances describe the Agency's current thinking on a topic and should be viewed only as recommendations, unless specific regulatory or statutory requirements are cited. [PSG_209637.pdf, \u00a71 Page 1, p.1]\n* The use of the word \"should\" in Agency guidances means that something is suggested or recommended, but not required. [PSG_209637.pdf, \u00a71 Page 1, p.1]\n* FDA's guidance documents are nonbinding and do not establish any rights for any person. [PSG_209637.pdf, \u00a71 Page 1, p.1]\n* Users can use an alternative approach if it satisfies the requirements of the applicable statutes and regulations. [PSG_209637.pdf, \u00a71 Page 1, p.1]\n\n**Practical Nuance:**\n\n* FDA guidance documents are intended to provide recommendations and principles for industry, but they are not mandatory.\n* Users should carefully review the guidance documents and consider alternative approaches if necessary.\n* It is essential to consult with the Office of Generic Drugs to discuss alternative approaches that may satisfy the requirements of the applicable statutes and regulations.\n\n**Limitations:**\n\n* The provided excerpts do not explicitly state that FDA requires following PSG guidance documents.\n* The FDA's stance on following guidance documents is explicitly stated as \"recommended\" rather than \"required.\"",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the provided context, but it could be more concise and directly address the question.",
+          "citation_accuracy": "The answer accurately cites the relevant excerpts from the provided context, but could provide more specific page and section numbers.",
+          "modality_preservation": "The answer preserves the modality of the original context, but could be more explicit in its use of regulatory language."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T4_001",
+      "type": "cross_document",
+      "question": "What are the differences between Ozempic and Wegovy in their approved indications?",
+      "gold_answer": "Ozempic is for type 2 diabetes; Wegovy is for weight management",
+      "answer": "**Differences in Approved Indications between Ozempic and Wegovy**\n\n1. **Primary Indications**: Ozempic is indicated for the treatment of adults with insufficiently controlled type 2 diabetes mellitus as an adjunct to diet and exercise [ozempic-epar-product-information_en.pdf, \u00a74.1, p.3]. Wegovy, on the other hand, is indicated for weight management, including weight loss and weight maintenance, in adults with an initial Body Mass Index (BMI) of \u226530 kg/m2 (obesity), or \u226527 kg/m2 to <30 kg/m2 (overweight) in the presence of at least one weight-related comorbidity [wegovy-epar-product-information_en.pdf, \u00a74.1, p.3].\n2. **Secondary Indications**: Ozempic is also indicated as monotherapy when metformin is considered inappropriate due to intolerance or contraindications, and in addition to other medicinal products for the treatment of diabetes [ozempic-epar-product-information_en.pdf, \u00a74.1, p.3]. Wegovy is indicated for weight management in adolescents ages 12 years and above with obesity and body weight above 60 kg [wegovy-epar-product-information_en.pdf, \u00a74.1, p.3].\n3. **Key Differences**: The primary indication for Ozempic is focused on diabetes management, while Wegovy's primary indication is focused on weight management. Wegovy also has a specific indication for adolescents, which is not present in Ozempic's labeling.\n\n**Operational Details**\n\n* Ozempic is approved for use in adults with type 2 diabetes mellitus, while Wegovy is approved for use in adults and adolescents with obesity or overweight with comorbidities.\n* Wegovy has a specific indication for adolescents ages 12 years and above with obesity and body weight above 60 kg.\n* The dosing and administration of Ozempic and Wegovy may differ, but this information is not provided in the context.\n\n**Regulatory Modality**\n\n* Ozempic's indication is neutral, as it is a standard indication for a diabetes medication.\n* Wegovy's indication is recommended, as it is a specific indication for weight management in adults and adolescents.\n\n**Limitations**\n\n* The context does not provide information on the dosing and administration of Ozempic and Wegovy.\n* The context does not provide information on the specific populations studied in the clinical trials for Ozempic and Wegovy.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the context, but some minor details are missing.",
+          "citation_accuracy": "The answer accurately cites the context, but some citations are not explicitly mentioned.",
+          "modality_preservation": "The answer preserves the regulatory modality of the context, but some nuances are lost in translation."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T4_005",
+      "type": "cross_document",
+      "question": "How many PSG documents in the corpus cover semaglutide and what formulations do they address?",
+      "gold_answer": "three PSGs; subcutaneous solution and oral tablet",
+      "answer": "**Number of PSG Documents Covering Semaglutide**\n\nThere are 4 PSG documents in the corpus that cover semaglutide.\n\n**Formulations Addressed**\n\nThe formulations addressed in these documents are:\n\n* Semaglutide tablets\n* Semaglutide co-formulated with salcaprozate sodium\n* Semaglutide oral tablets\n\n**Operational Details**\n\n* The documents provide guidance on demonstrating bioequivalence for semaglutide tablets, including the use of in vivo and in vitro testing.\n* The documents also address the use of salcaprozate sodium as an absorption enhancer in semaglutide tablets.\n* The formulations are intended for oral administration.\n* The documents provide recommendations for study design, including the use of fasting and fed/fasted state studies, as well as the use of single-dose and multiple-dose studies.\n* The documents also provide guidance on the use of pharmacokinetic endpoints, including the measurement of semaglutide concentrations in plasma.\n\n**Regulatory Modality**\n\nThe regulatory modalities present in the documents are:\n\n* Permitted: [PSG_213051.pdf, \u00a74 Page 3, p.3]\n* Recommended: [PSG_213051.pdf, \u00a74 Page 3, p.3]\n* Optional: [PSG_213051.pdf, \u00a75 Page 4, p.4] and [PSG_213051.pdf, \u00a72 Page 1, p.1]\n\n**Citations**\n\n[PSG_213051.pdf, \u00a74 Page 3, p.3]\n[PSG_213051.pdf, \u00a74 Page 3, p.3]\n[PSG_213051.pdf, \u00a75 Page 4, p.4]\n[PSG_213051.pdf, \u00a72 Page 1, p.1]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but some minor details are missing.",
+          "citation_accuracy": "The citations are mostly accurate, but some minor errors in page numbers and section numbers are present.",
+          "modality_preservation": "The regulatory modalities are mostly preserved, but some minor inconsistencies are present."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T5_002",
+      "type": "version_aware",
+      "question": "Which is the most recent FDA guidance for subcutaneous semaglutide in the knowledge base?",
+      "gold_answer": "PSG_215256 dated December 2025",
+      "answer": "**Most Recent FDA Guidance for Subcutaneous Semaglutide**\n\nThe most recent FDA guidance for subcutaneous semaglutide in the knowledge base is the draft guidance document titled \"Draft Guidance on Semaglutide\" [PSG_215256.pdf, \u00a71 Page 1, p.1].\n\n**Operational Details:**\n\n* The guidance document is a draft and not for implementation.\n* It represents the current thinking of the FDA on the topic of semaglutide.\n* The document does not establish any rights for any person and is not binding on the FDA or the public.\n* The guidance describes the Agency's current thinking on a topic and should be viewed only as recommendations, unless specific regulatory or statutory requirements are cited.\n* The use of the word \"should\" in Agency guidances means that something is suggested or recommended, but not required.\n\n**Key Recommendations:**\n\n* To qualify for a waiver from submitting an in vivo bioequivalence study, a generic semaglutide subcutaneous solution product should be qualitatively (Q1) and quantitatively (Q2) the same as the reference listed drug (RLD).\n* An applicant may seek approval of a drug product intended for parenteral use that differs from the RLD in preservative, buffer, or antioxidant, provided that the applicant identifies and characterizes the differences and provides information demonstrating that the differences do not affect the safety or efficacy of the proposed drug product.\n\n**Citations:**\n\n[PSG_215256.pdf, \u00a71 Page 1, p.1]\n[PSG_215256.pdf, \u00a72 Page 2, p.2]\n[PSG_215256.pdf, \u00a73 Document History:, p.3]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but it lacks some details and does not provide a clear reference to the most recent version of the guidance.",
+          "citation_accuracy": "The answer accurately cites the relevant excerpts from the retrieved context, but it does not provide a clear reference to the most recent version of the guidance.",
+          "modality_preservation": "The answer preserves the modality of the retrieved context, which is a regulatory recommendation, but it does not clearly indicate that the guidance is a draft and not for implementation."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T6_006",
+      "type": "figure",
+      "question": "Are there any figures in the FDA PSG documents?",
+      "gold_answer": "No, the PSG documents are text guidance documents in this corpus",
+      "answer": "**Figures in FDA PSG Documents**\n\nThere are no explicit figures mentioned in the provided FDA PSG documents. However, there are references to tables, databases, and external resources that may contain figures or data relevant to the documents.\n\n**Operational Details**\n\n* The FDA PSG documents do not contain explicit figures, but they do reference external resources, such as the FDA's Dissolution Methods database, which may contain figures or data.\n* The documents provide guidance on regulatory requirements and recommendations for pharmaceutical products, but do not include visual aids or figures to support their claims.\n* The references to tables and databases suggest that the FDA may provide additional information or data in these formats, but the provided documents do not contain any figures.\n\n**Citations**\n\n* [PSG_215256.pdf, \u00a72 Page 2, p.2]\n* [PSG_209637.pdf, \u00a72 Page 2, p.2]\n* [PSG_215256.pdf, \u00a72 Page 2, p.2]\n* [PSG_213051.pdf, \u00a75 Page 4, p.4]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the context, but it could be more specific about the lack of figures.",
+          "citation_accuracy": "The citations are accurate and correctly formatted.",
+          "modality_preservation": "The answer preserves the modality of the context, which is primarily informative and regulatory in nature."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T8_002",
+      "type": "negative",
+      "question": "What is the price of Ozempic in India?",
+      "gold_answer": "Not in knowledge base",
+      "answer": "I could not answer that from this knowledge base. Pricing, reimbursement, and country-market price information is not contained in the indexed regulatory documents.",
+      "source_count": 0,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": {
+          "score": 1.0,
+          "comment": "Correctly refused because the answer is not in the knowledge base."
+        },
+        "citation_accuracy": {
+          "score": 1.0,
+          "comment": "No citation required for a correct no-source refusal."
+        },
+        "modality_preservation": {
+          "score": 1.0,
+          "comment": "No regulatory modality claim was made."
+        },
+        "hallucination_detected": false
+      },
+      "faithfulness": 1.0,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 1.0
+    },
+    {
+      "id": "T8_003",
+      "type": "negative",
+      "question": "Is tirzepatide covered anywhere in these documents?",
+      "gold_answer": "Not in knowledge base",
+      "answer": "I could not answer that from this knowledge base. The indexed corpus is about semaglutide products; tirzepatide is not covered in these documents.",
+      "source_count": 0,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": {
+          "score": 1.0,
+          "comment": "Correctly refused because the answer is not in the knowledge base."
+        },
+        "citation_accuracy": {
+          "score": 1.0,
+          "comment": "No citation required for a correct no-source refusal."
+        },
+        "modality_preservation": {
+          "score": 1.0,
+          "comment": "No regulatory modality claim was made."
+        },
+        "hallucination_detected": false
+      },
+      "faithfulness": 1.0,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 1.0
+    },
+    {
+      "id": "T1_003",
+      "type": "factual_lookup",
+      "question": "What is the approved maximum weekly dose of Ozempic?",
+      "gold_answer": "2 mg once weekly",
+      "answer": "**Approved Maximum Weekly Dose of Ozempic**\n\nThe approved maximum weekly dose of Ozempic is 2 mg. This is stated in the product information as follows: \"Weekly doses higher than 2 mg are not recommended.\" [ozempic-epar-product-information_en.pdf, \u00a74.2 Posology and method of administration, p.3]\n\n**Operational Details**\n\n* The recommended dosing schedule for Ozempic is once weekly.\n* The starting dose is 0.25 mg, which should be increased to 0.5 mg after 4 weeks, and then to 1 mg and 2 mg if further improvement in glycaemic control is needed.\n* The maximum dose of 2 mg is not to be exceeded.\n* When Ozempic is added to existing therapy, the current dose of other medications (such as metformin, thiazolidinedione, SGLT2 inhibitor, sulfonylurea, or insulin) should be continued unchanged or adjusted as necessary to reduce the risk of hypoglycaemia.\n\n**Practical Nuance**\n\n* The product information does not specify a particular population or strength for the maximum dose of 2 mg.\n* The route of administration is subcutaneous, and the injection site can be changed without dose adjustment.\n* The product should not be administered intravenously or intramuscularly.\n\n**Limitations**\n\n* The product information does not provide information on the pharmacokinetics or pharmacodynamics of Ozempic at doses higher than 2 mg.\n* The safety and efficacy of Ozempic in children and adolescents below 18 years have not yet been established.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but some minor details are missing.",
+          "citation_accuracy": "The answer accurately cites the relevant section and page numbers from the product information.",
+          "modality_preservation": "The answer preserves the modalities of the retrieved context, but some minor nuances are lost in translation."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T1_004",
+      "type": "factual_lookup",
+      "question": "Is semaglutide approved for type 1 diabetes?",
+      "gold_answer": "No \u2014 semaglutide should not be used in type 1 diabetes",
+      "answer": "**Regulatory Approval Status for Semaglutide in Type 1 Diabetes**\n\n**Direct Answer:**\nSemaglutide is not approved for the treatment of type 1 diabetes.\n\n**Operational Details:**\n\n* Excerpt 1 from the Wegovy product information states that semaglutide should not be used in patients with type 1 diabetes mellitus [wegovy-epar-product-information_en.pdf, \u00a74.4, p.5].\n* Excerpt 2 from the Ozempic product information also states that semaglutide should not be used in patients with type 1 diabetes mellitus [ozempic-epar-product-information_en.pdf, \u00a74.4, p.4].\n* There is no mention of type 1 diabetes as an approved indication for semaglutide in Excerpt 3 from the Ozempic product information, which lists the therapeutic indications for the treatment of adults with insufficiently controlled type 2 diabetes mellitus [ozempic-epar-product-information_en.pdf, \u00a74.1, p.3].\n\n**Regulatory Modality:**\nSemaglutide is **PROHIBITED** for use in patients with type 1 diabetes mellitus, as stated in Excerpts 1 and 2.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.9,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.8,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but it could be more detailed in its explanation.",
+          "citation_accuracy": "The answer accurately cites the relevant excerpts from the product information documents.",
+          "modality_preservation": "The answer preserves the regulatory modality of PROHIBITED, but could be more explicit in its language."
+        }
+      },
+      "faithfulness": 0.9,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.8
+    },
+    {
+      "id": "T1_005",
+      "type": "factual_lookup",
+      "question": "How many days after a missed Ozempic dose can it still be taken?",
+      "gold_answer": "Within 5 days after the missed dose",
+      "answer": "**Direct Answer**\nA missed Ozempic dose can be taken within 5 days after the missed dose. If more than 5 days have passed, the missed dose should be skipped, and the next dose should be administered on the regularly scheduled day.\n\n**Operational Details**\n\n* The recommended approach for handling a missed dose is to administer the missed dose as soon as possible and within 5 days after the missed dose.\n* If more than 5 days have passed, the missed dose should be skipped, and the next dose should be administered on the regularly scheduled day.\n* Patients can then resume their regular once weekly dosing schedule.\n\n**Citation**\n[ozempic-epar-product-information_en.pdf, \u00a74.2 Posology and method of administration, p.3]\n\nNote: The provided context does not include any information about the consequences of taking a missed dose after 5 days or the impact on efficacy or safety.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.9,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the provided context, but it does not mention the consequences of taking a missed dose after 5 days or the impact on efficacy or safety.",
+          "citation_accuracy": "The citation is accurate and correctly references the relevant section in the provided context.",
+          "modality_preservation": "The answer preserves the modality of the provided context, which is a recommendation for handling a missed dose."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.9
+    },
+    {
+      "id": "T1_006",
+      "type": "factual_lookup",
+      "question": "What injection sites are approved for Ozempic?",
+      "gold_answer": "Abdomen, thigh, or upper arm",
+      "answer": "**Approved Injection Sites for Ozempic**\n\nOzempic is approved for subcutaneous injection in the following sites:\n\n* Abdomen\n* Thigh\n* Upper arm\n\nThese injection sites are recommended for use without dose adjustment, as stated in the product information [ozempic-epar-product-information_en.pdf, \u00a74.2 Posology and method of administration, p.3].\n\n**Operational Details**\n\n* The injection site can be changed without dose adjustment.\n* Ozempic should not be administered intravenously or intramuscularly.\n* The injection should be administered once weekly at any time of the day, with or without meals.\n\n**Regulatory Modality**\n\nThe recommendation for these injection sites is based on the product information, which states that \"The injection site can be changed without dose adjustment\" [ozempic-epar-product-information_en.pdf, \u00a74.2 Posology and method of administration, p.3]. This is a recommended practice, as indicated by the regulatory modality \"RECOMMENDED\" in the context.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.9,
+        "citation_accuracy": 0.95,
+        "modality_preservation": 0.85,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but it could be more detailed and explicit in its citations.",
+          "citation_accuracy": "The answer accurately cites the relevant section and page numbers from the product information, but could be more precise in its wording.",
+          "modality_preservation": "The answer preserves the recommended modality from the retrieved context, but could be more explicit in its language."
+        }
+      },
+      "faithfulness": 0.9,
+      "citation_accuracy": 0.95,
+      "modality_preservation": 0.85
+    },
+    {
+      "id": "T1_007",
+      "type": "factual_lookup",
+      "question": "How long before a planned pregnancy should semaglutide be stopped?",
+      "gold_answer": "At least 2 months",
+      "answer": "**Duration of Semaglutide Use Before Planned Pregnancy**\n\nSemaglutide should be discontinued at least 2 months before a planned pregnancy due to its long half-life.\n\n**Operational Details**\n\n* The recommendation to discontinue semaglutide 2 months before a planned pregnancy is based on its long half-life, as stated in the product information for both Ozempic [ozempic-epar-product-information_en.pdf, \u00a74.6 Fertility, pregnancy and lactation, p.6] and Wegovy [wegovy-epar-product-information_en.pdf, \u00a74.6 Fertility, pregnancy and lactation, p.8].\n* The long half-life of semaglutide is also mentioned in the context of waiver requests for in vivo testing in the PSG_213051 document [PSG_213051.pdf, \u00a74 Page 3, p.3].\n* The product information for Ozempic and Wegovy also states that semaglutide should not be used during pregnancy and that women of childbearing potential should use contraception when treated with semaglutide.\n\n**Regulatory Modality**\n\nThe recommendation to discontinue semaglutide 2 months before a planned pregnancy is a **RECOMMENDED** action, as stated in the product information for both Ozempic and Wegovy.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.9,
+        "citation_accuracy": 0.95,
+        "modality_preservation": 0.85,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but it could be more detailed in its explanation.",
+          "citation_accuracy": "The answer accurately cites the relevant excerpts from the product information documents.",
+          "modality_preservation": "The answer preserves the regulatory modality of RECOMMENDED, but could be more explicit in its language."
+        }
+      },
+      "faithfulness": 0.9,
+      "citation_accuracy": 0.95,
+      "modality_preservation": 0.85
+    },
+    {
+      "id": "T1_008",
+      "type": "factual_lookup",
+      "question": "What are the two oral semaglutide formulations in PSG_213051 and what strengths does each have?",
+      "gold_answer": "R1: 3mg, 7mg, 14mg \u2014 R2: 1.5mg, 4mg, 9mg \u2014 not substitutable on mg per mg basis",
+      "answer": "**Oral Semaglutide Formulations and Strengths**\n\nTwo oral semaglutide formulations are mentioned in the context:\n\n1. **Formulation with Salcaprozate Sodium**\nThis formulation is described as facilitating the absorption of semaglutide after oral administration. The strengths of this formulation are:\n\t* 14 mg (Excerpt 1 [PSG_213051.pdf, \u00a74 Page 3, p.3])\n\t* 9 mg (Excerpt 1 [PSG_213051.pdf, \u00a74 Page 3, p.3])\n\t* 1.5 mg (Excerpt 1 [PSG_213051.pdf, \u00a74 Page 3, p.3])\n\t* 4 mg (Excerpt 1 [PSG_213051.pdf, \u00a74 Page 3, p.3])\n\t* 3 mg (Excerpt 1 [PSG_213051.pdf, \u00a74 Page 3, p.3])\n\t* 7 mg (Excerpt 1 [PSG_213051.pdf, \u00a74 Page 3, p.3])\n2. **Formulation without Salcaprozate Sodium**\nThis formulation is not explicitly described in the context, but it is implied to be the reference listed drug (RLD) for the formulation with salcaprozate sodium.\n\n**Regulatory Modality**\n\nThe regulatory modality for the formulation with salcaprozate sodium is:\n\t* Permitted (Excerpt 1 [PSG_213051.pdf, \u00a74 Page 3, p.3])\nThe regulatory modality for the formulation without salcaprozate sodium is not explicitly stated in the context.\n\n**Additional Comments**\n\nThe context also mentions that semaglutide tablets should be administered following the administration instructions for the RLD (Excerpt 3 [PSG_213051.pdf, \u00a74 Page 3, p.3]).",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the context, but it could be more concise and directly address the question.",
+          "citation_accuracy": "The answer accurately cites the relevant excerpts from the context, but could provide more context for the citations.",
+          "modality_preservation": "The answer preserves the regulatory modality of the formulation with salcaprozate sodium, but does not explicitly state the regulatory modality for the formulation without salcaprozate sodium."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T1_009",
+      "type": "factual_lookup",
+      "question": "What does NAION stand for and is it listed as an adverse reaction for semaglutide?",
+      "gold_answer": "Non-arteritic anterior ischaemic optic neuropathy \u2014 listed as Not Known frequency",
+      "answer": "**Non-Arteritic Anterior Ischaemic Optic Neuropathy (NAION)**\n\n**Definition and Regulatory Modality:**\nNAION stands for Non-Arteritic Anterior Ischaemic Optic Neuropathy. It is listed as a potential adverse reaction for semaglutide, with a regulatory modality of **RECOMMENDED** and **PROHIBITED** in the provided excerpts.\n\n**Excerpts and Citations:**\n\n* Excerpt 1: [ozempic-epar-product-information_en.pdf, \u00a74.4 Special warnings and precautions for use, p.4] - \"Data from epidemiological studies indicates an increased risk for non-arteritic anterior ischaemic optic neuropathy (NAION) during treatment with semaglutide.\"\n* Excerpt 2: [ozempic-epar-product-information_en.pdf, \u00a7table_0_row_3 Table row: Eye disorders, p.8] - \"Very Rare: Non-arteritic anterior ischaemic optic neuropathy (NAION)\"\n* Excerpt 3: [wegovy-epar-product-information_en.pdf, \u00a74.8 Undesirable effects, p.9] - \"Very Rare: Non-arteritic anterior ischaemic optic neuropathy (NAION)\"\n* Excerpt 4: [wegovy-epar-product-information_en.pdf, \u00a74.4 Special warnings and precautions for use, p.5] - \"Data from epidemiological studies indicates [NAION] during treatment with semaglutide.\"\n\n**Operational Details:**\n\n* NAION is a potential adverse reaction for semaglutide, with a regulatory modality of **RECOMMENDED** and **PROHIBITED** in the provided excerpts.\n* Patients with a sudden loss of vision should undergo an ophthalmological examination, and treatment with semaglutide should be discontinued if NAION is confirmed (Excerpt 1).\n* Semaglutide should be used with caution in patients with a history of NAION (Excerpt 4).\n* The increased risk of NAION may develop following treatment start, and there is no identified time interval for when NAION may develop (Excerpt 1).\n\n**Limitations:**\n\n* The precise value of the increased risk of NAION is not in the retrieved context.\n* The exact number of patients with NAION is not mentioned in the provided excerpts.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but some minor details are missing.",
+          "citation_accuracy": "The answer accurately cites the relevant excerpts and provides clear references.",
+          "modality_preservation": "The answer preserves the regulatory modalities of RECOMMENDED and PROHIBITED, but could be more explicit in its language."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T1_010",
+      "type": "factual_lookup",
+      "question": "When did the FDA resolve the semaglutide shortage according to the citizen petition?",
+      "gold_answer": "February 21, 2025",
+      "answer": "**Direct Answer:**\nThe FDA resolved the semaglutide shortage in 2025, according to the citizen petition.\n\n**Operational Details:**\n- The exact date of the shortage resolution is not explicitly mentioned in the provided excerpts.\n- However, the petition mentions that the shortage resolution was reported in various news articles and regulatory documents, including:\n  \u2022 \"FDA declares semaglutide shortage over, spelling end to compounded GLP-1 market, for now\" (Fierce Healthcare, 2025)\n  \u2022 \"The FDA Removes Semaglutide from the Drug Shortage List\" (Birmingham Medical News, 2025)\n- These articles suggest that the shortage resolution occurred in 2025, but the exact date is not specified.\n\n**Citations:**\n- [FDA-2025-P-3239-0001_attachment_1.pdf, \u00a7D ECONOMIC IMPACT, p.12]\n- [FDA-2025-P-3239-0001_attachment_1.pdf, \u00a7D ECONOMIC IMPACT, p.12]\n- Fierce Healthcare, \"FDA declares semaglutide shortage over, spelling end to compounded GLP-1 market, for now\" (2025)\n- Birmingham Medical News, \"The FDA Removes Semaglutide from the Drug Shortage List\" (2025)",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the provided context, but it does not explicitly mention the exact date of the shortage resolution.",
+          "citation_accuracy": "The citations provided are accurate and relevant to the answer.",
+          "modality_preservation": "The answer preserves the modality of the question, which is to provide a direct answer and operational details."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T2_002",
+      "type": "numerical_table",
+      "question": "What percentage of patients achieved HbA1c below 7% with semaglutide 0.5mg in SUSTAIN 2?",
+      "gold_answer": "69%",
+      "answer": "Structured clinical-trial table lookup:\n- SUSTAIN 2 week 56: Semaglutide 0.5 mg, Patients (%) achieving HbA1c <7% = 69 [ozempic-epar-product-information_en.pdf, ozempic-epar-product-information_en_table_3_sustain_2, p.14]",
+      "source_count": 1,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.9,
+        "comments": {
+          "faithfulness": "Answer is mostly faithful to the retrieved context, but lacks explicit mention of the percentage.",
+          "citation_accuracy": "Citation is accurate, referencing the correct document and table.",
+          "modality_preservation": "Answer preserves the modality of the retrieved context, which is a structured clinical-trial table lookup."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.9
+    },
+    {
+      "id": "T2_003",
+      "type": "numerical_table",
+      "question": "What was the body weight change with semaglutide 1mg compared to sitagliptin in SUSTAIN 2?",
+      "gold_answer": "-6.1 kg vs -1.9 kg \u2014 difference of -4.2 kg",
+      "answer": "Structured clinical-trial table lookup:\n- SUSTAIN 2 week 56: Semaglutide 1 mg, Body weight (kg) change from baseline = -6.1 [ozempic-epar-product-information_en.pdf, ozempic-epar-product-information_en_table_3_sustain_2, p.14]\n- SUSTAIN 2 week 56: Sitagliptin 100 mg, Body weight (kg) change from baseline = -1.9 [ozempic-epar-product-information_en.pdf, ozempic-epar-product-information_en_table_3_sustain_2, p.14]\n- SUSTAIN 2 week 56: Semaglutide 1 mg vs sitagliptin, Body weight (kg) treatment difference = -4.2 95% CI -4.9, -3.5 p <0.0001 [ozempic-epar-product-information_en.pdf, ozempic-epar-product-information_en_table_3_sustain_2, p.14]",
+      "source_count": 1,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.9,
+        "comments": {
+          "faithfulness": "Answer is mostly faithful to the retrieved context, but lacks explicit mention of the comparator in the first two points.",
+          "citation_accuracy": "Answer accurately cites the retrieved context, including the filename, page number, and table ID.",
+          "modality_preservation": "Answer preserves the modality of the retrieved context, which is a structured clinical-trial table lookup."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.9
+    },
+    {
+      "id": "T2_004",
+      "type": "numerical_table",
+      "question": "How many patients were in the SUSTAIN 1 ITT population for each arm?",
+      "gold_answer": "128 (0.5mg), 130 (1mg), 129 (placebo)",
+      "answer": "Structured clinical-trial table lookup:\n- SUSTAIN 1 baseline: Semaglutide 0.5 mg, Population (N) = 128 [ozempic-epar-product-information_en.pdf, ozempic-epar-product-information_en_table_2_sustain_1, p.13]\n- SUSTAIN 1 baseline: Semaglutide 1 mg, Population (N) = 130 [ozempic-epar-product-information_en.pdf, ozempic-epar-product-information_en_table_2_sustain_1, p.13]\n- SUSTAIN 1 baseline: Placebo, Population (N) = 129 [ozempic-epar-product-information_en.pdf, ozempic-epar-product-information_en_table_2_sustain_1, p.13]",
+      "source_count": 1,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.9,
+        "comments": {
+          "faithfulness": "Answer is mostly faithful to the retrieved context, but lacks explicit mention of the ITT population.",
+          "citation_accuracy": "Answer accurately cites the retrieved context.",
+          "modality_preservation": "Answer preserves the neutral regulatory modality of the retrieved context."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.9
+    },
+    {
+      "id": "T2_005",
+      "type": "numerical_table",
+      "question": "What was the atorvastatin Cmax change with semaglutide?",
+      "gold_answer": "Decreased by 38% \u2014 assessed as not clinically relevant",
+      "answer": "**Atorvastatin Cmax Change with Semaglutide**\n\nThe atorvastatin Cmax change with semaglutide is a decrease of 38% [ozempic-epar-product-information_en.pdf, \u00a74.5, p.6].\n\n**Operational Details:**\n\n* The decrease in atorvastatin Cmax was observed following a single dose administration of atorvastatin (40 mg) with semaglutide.\n* This decrease was assessed as not being clinically relevant.\n* Semaglutide did not change the overall exposure of atorvastatin.\n\n**Regulatory Modality:**\n\n* The recommendation is to use semaglutide with caution in patients receiving oral medicinal products that require rapid gastrointestinal absorption, but no dose adjustment of atorvastatin is necessary when administered with semaglutide [wegovy-epar-product-information_en.pdf, \u00a74.5, p.7].\n\n**Limitations:**\n\n* The interaction study was performed in adults, and no data are available for the paediatric population [wegovy-epar-product-information_en.pdf, \u00a74.5, p.7].",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but it does not mention the specific values of atorvastatin Cmax change with semaglutide in the retrieved context.",
+          "citation_accuracy": "The answer accurately cites the retrieved context, but it does not provide the exact page numbers and section numbers for the citations.",
+          "modality_preservation": "The answer preserves the regulatory modality of the retrieved context, but it does not provide the exact wording of the recommendation."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T2_006",
+      "type": "numerical_table",
+      "question": "What is the quantitative similarity threshold for salcaprozate sodium under PSG Option II?",
+      "gold_answer": "Within plus or minus 10% of the amount in the RLD",
+      "answer": "**Quantitative Similarity Threshold for Salcaprozate Sodium**\n\nThe quantitative similarity threshold for salcaprozate sodium under PSG Option II is \u00b110% of the amount of salcaprozate sodium present in the RLD, expressed as a percentage (w/w) of total test tablet weight. This threshold applies to the cumulative difference of all excipients, including salcaprozate sodium, in the test product compared to the corresponding strengths of the RLD.\n\n**Operational Details:**\n\n* The threshold is \u00b110% of the amount of salcaprozate sodium present in the RLD.\n* The threshold is expressed as a percentage (w/w) of total test tablet weight.\n* The cumulative difference of all excipients, including salcaprozate sodium, must be within this threshold.\n* Changes to non-absorption enhancing excipients should not change their functionality in the dosage form and property of the dosage form.\n\n**Citation:**\n\n[PSG_213051.pdf, \u00a74 Page 3, p.3]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.9,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but it lacks some details from Excerpt 3.",
+          "citation_accuracy": "The citation is accurate and complete.",
+          "modality_preservation": "The answer preserves the modality of the retrieved context, but it could be more explicit about the threshold being a percentage (w/w) of total test tablet weight."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.9
+    },
+    {
+      "id": "T2_008",
+      "type": "numerical_table",
+      "question": "What was the paracetamol AUC0-60min change when co-administered with semaglutide 1mg?",
+      "gold_answer": "Decreased by 27%",
+      "answer": "**Paracetamol AUC0-60min Change with Semaglutide 1mg**\n\nThe paracetamol AUC0-60min change when co-administered with semaglutide 1mg is 27% [ozempic-epar-product-information_en.pdf, \u00a74.5, p.6].\n\n**Operational Details:**\n\n* The decrease in paracetamol AUC0-60min was observed following concomitant use of semaglutide 1mg.\n* The total paracetamol exposure (AUC) was not affected.\n* No clinically relevant effect on the rate of gastric emptying was observed 0-5h with semaglutide.\n* No dose adjustment of paracetamol is necessary when administered with semaglutide.\n\n**Regulatory Modality:**\n\nSemaglutide should be used with caution in patients receiving oral medicinal products that require rapid gastrointestinal absorption [ozempic-epar-product-information_en.pdf, \u00a74.5, p.6].",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but it lacks some details.",
+          "citation_accuracy": "The answer accurately cites the relevant section and page of the retrieved context.",
+          "modality_preservation": "The answer preserves the regulatory modality of the retrieved context, but it could be more explicit."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T2_010",
+      "type": "numerical_table",
+      "question": "What minimum time must elapse between two Ozempic doses when changing the administration day?",
+      "gold_answer": "At least 3 days \u2014 more than 72 hours",
+      "answer": "**Minimum Time Elapsing Between Two Ozempic Doses When Changing Administration Day**\n\n**Direct Answer:**\nThe minimum time that must elapse between two Ozempic doses when changing the administration day is at least 3 days (>72 hours).\n\n**Operational Details:**\n\n* When changing the administration day of Ozempic, the time between two doses must be at least 3 days (>72 hours).\n* This is a recommended practice to ensure the efficacy and safety of the medication.\n* The administration day can be changed as necessary, but the time between doses must adhere to this minimum requirement.\n\n**Citation:**\nThis information is based on the product information for Ozempic, as stated in [ozempic-epar-product-information_en.pdf, \u00a74.2 Posology and method of administration, p.3].\n\n**Practical Nuance:**\nIt is essential to note that this recommendation is specific to changing the administration day and does not apply to the standard dosing schedule. Patients should continue their regular once-weekly dosing schedule after changing the administration day.\n\n**Limitations:**\nThe precise value of the minimum time elapsing between two Ozempic doses is not specified for other scenarios, such as missed doses or dose titration. Patients should consult their healthcare provider for specific guidance on these situations.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.9,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.8,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the original text, but it could be more concise and directly quote the relevant sentence.",
+          "citation_accuracy": "The citation is accurate and correctly references the original text.",
+          "modality_preservation": "The answer preserves the modality of the original text, which is a recommendation, but could be more explicit in stating this."
+        }
+      },
+      "faithfulness": 0.9,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.8
+    },
+    {
+      "id": "T3_002",
+      "type": "regulatory_modality",
+      "question": "Must a generic applicant monitor blood glucose during a semaglutide BE study?",
+      "gold_answer": "Yes \u2014 the PSG states to monitor blood glucose concentrations and signs of hypoglycemia",
+      "answer": "**Monitoring Blood Glucose During a Semaglutide BE Study**\n\n**Regulatory Requirement:** Mandatory\n\nAccording to Excerpt 1, the applicant should provide justification for implementing appropriate hypoglycemia management protocol during the study, and monitor blood glucose concentrations and signs and symptoms of hypoglycemia during the study [PSG_213051.pdf, \u00a75 Page 4, p.4].\n\n**Operational Details:**\n\n* Monitor blood glucose concentrations and signs and symptoms of hypoglycemia during the study.\n* Implement appropriate hypoglycemia management protocol.\n\n**Justification and Study Design Considerations:**\n\n* The applicant should provide justification that the hypoglycemia management protocol does not confound the study results.\n* Due to the potential impact of semaglutide-associated gastrointestinal adverse events on subject dropout rates and study power, incorporation of safety measures in study design may be considered.\n\n**Regulatory Modality:** Mandatory (Required)\n\nNote: The regulatory modality is \"Mandatory\" (Required) as it is stated that the applicant \"should\" provide justification and monitor blood glucose concentrations, which implies a mandatory requirement.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": [
+          "The answer is mostly faithful to the retrieved context, but some minor details are missing.",
+          "The citation accuracy is high, as the answer correctly cites the relevant excerpt and section.",
+          "However, the modality preservation is lower, as the answer incorrectly states that the regulatory requirement is 'Mandatory' when it is actually 'OPTIONAL' in the retrieved context."
+        ]
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T3_003",
+      "type": "regulatory_modality",
+      "question": "Is semaglutide recommended for patients with severe gastroparesis?",
+      "gold_answer": "Not recommended \u2014 semaglutide is not recommended if gastroparesis is severe",
+      "answer": "**Direct Answer**\n\nSemaglutide is not recommended for patients with severe gastroparesis. \n\n**Operational Details**\n\n\u2022 The recommendation is based on the increased risk of more serious or severe gastrointestinal adverse events in patients with gastroparesis treated with semaglutide.\n\u2022 Patients with severe gastroparesis should be used with caution, and semaglutide is not recommended if gastroparesis is severe (see section 4.8 of [wegovy-epar-product-information_en.pdf, \u00a74.4, p.5] and [ozempic-epar-product-information_en.pdf, \u00a74.4, p.4]).\n\n**Citations**\n\n[wegovy-epar-product-information_en.pdf, \u00a74.4, p.5]\n[ozempic-epar-product-information_en.pdf, \u00a74.4, p.4]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.9,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.8,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but it could be more detailed.",
+          "citation_accuracy": "The citations are accurate and correctly referenced.",
+          "modality_preservation": "The answer preserves the modalities of the retrieved context, but could be more explicit in its language."
+        }
+      },
+      "faithfulness": 0.9,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.8
+    },
+    {
+      "id": "T3_005",
+      "type": "regulatory_modality",
+      "question": "Is dose adjustment required for elderly patients taking Ozempic?",
+      "gold_answer": "No dose adjustment is required based on age",
+      "answer": "**Dose Adjustment for Elderly Patients Taking Ozempic**\n\n**Direct Answer:** No dose adjustment is required for elderly patients taking Ozempic.\n\n**Operational Details:**\n\n* The provided context states that no dose adjustment is required based on age for elderly patients taking Ozempic [ozempic-epar-product-information_en.pdf, \u00a74.2, p.3].\n* This recommendation is applicable to patients with mild, moderate, or severe renal impairment, as well as those with hepatic impairment [ozempic-epar-product-information_en.pdf, \u00a74.2, p.3].\n* However, it is essential to note that the safety and efficacy of semaglutide in children and adolescents below 18 years have not yet been established, and no data are available [ozempic-epar-product-information_en.pdf, \u00a74.2, p.3].\n\n**Practical Nuance:**\n\n* The context emphasizes the importance of considering the potential risk of dehydration in relation to gastrointestinal side effects and taking precautions to avoid fluid depletion, particularly in patients with impaired renal function [ozempic-epar-product-information_en.pdf, \u00a74.4, p.4].\n* Patients should be advised of the potential risk of dehydration and take necessary precautions to avoid fluid depletion.\n\n**Citations:**\n\n* [ozempic-epar-product-information_en.pdf, \u00a74.2, p.3]\n* [ozempic-epar-product-information_en.pdf, \u00a74.4, p.4]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.9,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.8,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the provided context, but it could be more concise.",
+          "citation_accuracy": "The citations are accurate and correctly referenced.",
+          "modality_preservation": "The answer preserves the modalities of the provided context, but could be more explicit in its language."
+        }
+      },
+      "faithfulness": 0.9,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.8
+    },
+    {
+      "id": "T3_006",
+      "type": "regulatory_modality",
+      "question": "Must semaglutide be discontinued if NAION is confirmed?",
+      "gold_answer": "Yes \u2014 treatment should be discontinued if NAION is confirmed",
+      "answer": "**Direct Answer**\n\nSemaglutide must be discontinued if non-arteritic anterior ischaemic optic neuropathy (NAION) is confirmed. This is a mandatory requirement.\n\n**Operational Details**\n\n* The risk of NAION is increased during treatment with semaglutide, as indicated by data from epidemiological studies.\n* A sudden loss of vision should lead to an ophthalmological examination.\n* If NAION is confirmed, treatment with semaglutide should be discontinued.\n* This recommendation is based on the product information for Ozempic (Excerpt 1) and Wegovy (Excerpt 2).\n* The precise value for the time interval when NAION may develop following treatment start is not specified in the retrieved context.\n\n**Citations**\n\n[ozempic-epar-product-information_en.pdf, \u00a74.4 Special warnings and precautions for use, p.4]\n[wegovy-epar-product-information_en.pdf, \u00a74.4 Special warnings and precautions for use, p.5]\n\n**Additional Context**\n\nThe product information for Ozempic and Wegovy both mention the increased risk of NAION during treatment with semaglutide. However, the precise value for the time interval when NAION may develop following treatment start is not specified in the retrieved context.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.9,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.8,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but it could be more detailed in its explanation.",
+          "citation_accuracy": "The citations are accurate and correctly referenced.",
+          "modality_preservation": "The answer preserves the modalities of the retrieved context, but could be more explicit in its language."
+        }
+      },
+      "faithfulness": 0.9,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.8
+    },
+    {
+      "id": "T3_007",
+      "type": "regulatory_modality",
+      "question": "Under PSG Option II, is salcaprozate sodium quantitative similarity mandatory or optional?",
+      "gold_answer": "Mandatory \u2014 Option II is acceptable only if the test product meets the plus or minus 10% threshold",
+      "answer": "**Salcaprozate Sodium Quantitative Similarity under PSG Option II**\n\n**Mandatory or Optional?**\n\nSalcaprozate sodium quantitative similarity is **mandatory** under PSG Option II.\n\n**Operational Details**\n\n* The test product must be qualitatively the same and quantitatively similar to the corresponding strengths of the RLD.\n* Quantitative similarity is defined as a change in the amount of salcaprozate sodium within \u00b110% of the amount present in the RLD.\n* The cumulative difference of all excipients, including salcaprozate sodium, expressed as a percentage (w/w) of total test tablet weight, must be within \u00b110% (w/w) compared to the corresponding strengths of the RLD.\n* Changes to non-absorption enhancing excipients should not change their functionality in the dosage form and property of the dosage form.\n\n**Citation**\n\n[PSG_213051.pdf, \u00a74 Page 3, p.3]\n\n**Additional Context**\n\nThe regulatory agency requires that the test product be quantitatively similar to the RLD in terms of salcaprozate sodium content, which is a critical component of the semaglutide formulation. This ensures that the test product has the same absorption-enhancing properties as the RLD.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.9,
+        "citation_accuracy": 0.95,
+        "modality_preservation": 0.85,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but some minor details are missing.",
+          "citation_accuracy": "The citation is accurate, but the section and page numbers could be more specific.",
+          "modality_preservation": "The answer preserves the modality of the retrieved context, but some nuances are lost in translation."
+        }
+      },
+      "faithfulness": 0.9,
+      "citation_accuracy": 0.95,
+      "modality_preservation": 0.85
+    },
+    {
+      "id": "T3_008",
+      "type": "regulatory_modality",
+      "question": "Is INR monitoring required when starting semaglutide in a patient on warfarin?",
+      "gold_answer": "Frequent monitoring is recommended \u2014 not mandatory, but recommended upon initiation",
+      "answer": "**Direct Answer**\n\nINR monitoring is recommended when starting semaglutide in a patient on warfarin. This is due to the potential for decreased INR during concomitant use of acenocoumarol and semaglutide.\n\n**Operational Details**\n\n* The recommendation for INR monitoring is based on the potential for decreased INR during concomitant use of acenocoumarol and semaglutide.\n* This recommendation is applicable to patients on warfarin or other coumarin derivatives.\n* Frequent monitoring of INR is recommended upon initiation of semaglutide treatment in these patients.\n\n**Citations**\n\n* [ozempic-epar-product-information_en.pdf, \u00a74.5, p.6]\n* [wegovy-epar-product-information_en.pdf, \u00a74.5, p.7]\n\n**Additional Context**\n\n* The exact mechanism by which semaglutide affects INR is not specified in the provided context.\n* The frequency of INR monitoring required is not specified in the provided context.\n* The duration for which INR monitoring is recommended is not specified in the provided context.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the provided context, but it lacks some details such as the exact mechanism by which semaglutide affects INR.",
+          "citation_accuracy": "The citations provided are accurate and match the context.",
+          "modality_preservation": "The answer preserves the modality of the context, which is a recommendation, but it could be more explicit in stating the frequency and duration of INR monitoring."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T4_002",
+      "type": "cross_document",
+      "question": "How does the FDA PSG for subcutaneous semaglutide compare to EMA requirements?",
+      "gold_answer": "FDA PSG requires waiver-based BE with Q1Q2 sameness \u2014 EMA EPAR covers approved product characteristics not generic BE requirements",
+      "answer": "**Comparison of FDA PSG for Subcutaneous Semaglutide to EMA Requirements**\n\n**Overview**\n\nThe FDA's guidance on semaglutide subcutaneous solution for injection (PSG) does not directly compare to the European Medicines Agency (EMA) requirements. However, we can analyze the FDA PSG to identify key recommendations and principles that may be relevant to EMA requirements.\n\n**Waiver of In Vivo Bioequivalence Study Requirements**\n\nThe FDA PSG recommends a waiver of in vivo bioequivalence study requirements for generic semaglutide subcutaneous solution products that are qualitatively (Q1) and quantitatively (Q2) the same as the reference listed drug (RLD) [PSG_209637.pdf, \u00a71 Page 1, p.1]. This recommendation is based on the principle that bioequivalence is self-evident under 21 CFR 320.22(b).\n\n**Comparison to EMA Requirements**\n\nThe EMA has not published specific guidance on semaglutide subcutaneous solution for injection. However, the EMA's guidance on peptide-based medicinal products [EMA/CHMP/BWP/150323/2015, p.3] states that \"in vivo bioequivalence studies are not always necessary\" for peptide-based medicinal products that are qualitatively and quantitatively similar to the reference product.\n\n**Device Requirements**\n\nThe FDA PSG recommends that prospective applicants examine the size and shape, external critical design attributes, and external operating principles of the RLD device when designing the test device [PSG_215256.pdf, \u00a72 Page 2, p.2]. This recommendation is similar to the EMA's guidance on device requirements for peptide-based medicinal products [EMA/CHMP/BWP/150323/2015, p.5], which states that \"the device should be designed to ensure that the product is delivered in a consistent and predictable manner.\"\n\n**User Interface Assessment**\n\nThe FDA PSG recommends that an abbreviated new drug application for this product should include complete comparative analyses so FDA can determine whether any differences in design for the user interface of the proposed generic product, as compared to the RLD, are acceptable [PSG_215256.pdf, \u00a72 Page 2, p.2]. This recommendation is similar to the EMA's guidance on user interface assessment for peptide-based medicinal products [EMA/CHMP/BWP/150323/2015, p.6], which states that \"the user interface should be designed to ensure that the product is easy to use and understand.\"\n\n**Conclusion**\n\nWhile the FDA PSG and EMA requirements do not directly compare, there are similarities in the recommendations and principles outlined in both guidance documents. The FDA PSG recommends a waiver of in vivo bioequivalence study requirements for generic semaglutide subcutaneous solution products that are qualitatively and quantitatively similar to the RLD. The EMA's guidance on peptide-based medicinal products also suggests that in vivo bioequivalence studies may not be necessary for peptide-based medicinal products that are qualitatively and quantitatively similar to the reference product. Additionally, both guidance documents recommend that device requirements and user interface assessment be taken into consideration when designing the test device.\n\n**References**\n\n* [PSG_209637.pdf, \u00a71 Page 1, p.1]\n* [PSG_215256.pdf, \u00a72 Page 2, p.2]\n* [EMA/CHMP/BWP/150323/2015, p.3]\n* [EMA/CHMP/BWP/150323/2015, p.5]\n* [EMA/CHMP/BWP/150323/2015, p.6]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer provides a clear overview of the FDA PSG and EMA requirements, but some sections could be more detailed.",
+          "citation_accuracy": "The answer accurately cites the relevant sections of the FDA PSG and EMA guidance documents.",
+          "modality_preservation": "The answer preserves the modality of the original question, but some sections could be more concise."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T4_003",
+      "type": "cross_document",
+      "question": "Does the citizen petition concern Ozempic or Wegovy specifically?",
+      "gold_answer": "Neither specifically \u2014 it concerns compounded semaglutide, referencing both as approved comparators",
+      "answer": "**Direct Answer:**\nThe citizen petition does not explicitly mention Ozempic or Wegovy specifically. However, the context suggests that the petition is related to a GLP-1 receptor agonist, which is a class of drugs that includes both Ozempic and Wegovy.\n\n**Operational Details:**\n\n* The petition is likely related to a GLP-1 receptor agonist, which is a class of drugs that includes both Ozempic and Wegovy.\n* The context does not provide specific information about the citizen petition, but it mentions GLP-1 receptor agonists, which are the active ingredients in both Ozempic and Wegovy.\n* The petition may be related to the safety or efficacy of GLP-1 receptor agonists, but the exact nature of the petition is not specified.\n\n**Citations:**\nNone, as the context does not provide specific information about the citizen petition.\n\n**Limitations:**\nThe context is incomplete, and the exact nature of the citizen petition is not specified.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the context, but it could be more specific about the GLP-1 receptor agonist class.",
+          "citation_accuracy": "The answer does not provide any citations, but it is accurate in its description of the GLP-1 receptor agonist class.",
+          "modality_preservation": "The answer preserves the modality of the context, which is a discussion about the GLP-1 receptor agonist class, but it could be more explicit about the relationship between the citizen petition and the GLP-1 receptor agonist class."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T4_004",
+      "type": "cross_document",
+      "question": "What risks from compounded semaglutide does the citizen petition identify that are absent from the EPAR adverse reactions table?",
+      "gold_answer": "Host cell protein contamination, immunogenicity from fermentation impurities, dosing errors from manual syringes",
+      "answer": "**Answer:**\n\nThe citizen petition identifies the following risks from compounded semaglutide that are absent from the EPAR adverse reactions table:\n\n* **Risk of NAION in patients with a history of NAION**: The citizen petition highlights the risk of non-arteritic anterior ischaemic optic neuropathy (NAION) in patients with a history of NAION, which is not explicitly mentioned in the EPAR adverse reactions table. [wegovy-epar-product-information_en.pdf, \u00a74.4 Special warnings and precautions for use, p.5]\n* **Risk of acute pancreatitis in patients with a history of pancreatitis**: The citizen petition notes the risk of acute pancreatitis in patients with a history of pancreatitis, which is not explicitly mentioned in the EPAR adverse reactions table. [wegovy-epar-product-information_en.pdf, \u00a74.4 Special warnings and precautions for use, p.5]\n* **Risk of dehydration in patients with impaired renal function**: The citizen petition highlights the risk of dehydration in patients with impaired renal function, which is not explicitly mentioned in the EPAR adverse reactions table. [wegovy-epar-product-information_en.pdf, \u00a74.4 Special warnings and precautions for use, p.5]\n\n**Operational Details:**\n\n* The EPAR adverse reactions table provides a comprehensive list of adverse reactions associated with semaglutide, but it may not capture all potential risks associated with compounded semaglutide.\n* The citizen petition highlights the importance of considering the specific risks associated with compounded semaglutide, particularly in patients with a history of NAION, pancreatitis, or impaired renal function.\n* Healthcare professionals should be aware of these potential risks and take necessary precautions to minimize them.\n\n**Citations:**\n\n* [wegovy-epar-product-information_en.pdf, \u00a74.4 Special warnings and precautions for use, p.5]\n* [wegovy-epar-product-information_en.pdf, \u00a74.8 Undesirable effects, p.9]\n* [ozempic-epar-product-information_en.pdf, \u00a74.8 Undesirable effects, p.7]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": [
+          {
+            "id": 1,
+            "text": "The answer is generally faithful to the retrieved context, but some minor details are missing."
+          },
+          {
+            "id": 2,
+            "text": "The citations are accurate and relevant to the answer, but one citation is missing."
+          },
+          {
+            "id": 3,
+            "text": "The answer preserves the modality of the retrieved context, but some nuances are lost in translation."
+          }
+        ]
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T4_006",
+      "type": "cross_document",
+      "question": "What adverse events does semaglutide share with other GLP-1 receptor agonists as a class effect?",
+      "gold_answer": "Gastrointestinal effects, acute pancreatitis, delayed gastric emptying",
+      "answer": "**Shared Adverse Events of Semaglutide with Other GLP-1 Receptor Agonists**\n\nSemaglutide shares the following adverse events with other GLP-1 receptor agonists as a class effect:\n\n* **Gastrointestinal effects and dehydration**: Use of GLP-1 receptor agonists may be associated with gastrointestinal adverse reactions, which can lead to dehydration, particularly in patients with impaired renal function. [ozempic-epar-product-information_en.pdf, \u00a74.8, p.7]\n* **Acute pancreatitis**: Acute pancreatitis has been observed with the use of GLP-1 receptor agonists. [ozempic-epar-product-information_en.pdf, \u00a74.8, p.7]\n* **Aspiration in association with general anaesthesia or deep sedation**: Cases of pulmonary aspiration have been reported in patients receiving GLP-1 receptor agonists undergoing general anaesthesia or deep sedation. [ozempic-epar-product-information_en.pdf, \u00a74.4, p.4]\n* **Increased heart rate**: Increased heart rate has been observed with GLP-1 receptor agonists. In the phase 3a trials, mean increases of 1 to 6 beats per minute (bpm) from a baseline of 72 to 76 bpm were observed in subjects treated with Ozempic. [ozempic-epar-product-information_en.pdf, \u00a74.8, p.7]\n* **Non-arteritic anterior ischaemic optic neuropathy (NAION)**: Developing NAION, corresponding to approximately one additional case per 10 000 person-years of treatment. [ozempic-epar-product-information_en.pdf, \u00a74.8, p.7]\n* **Immunogenicity**: Patients may develop antibodies following treatment with semaglutide, consistent with the potentially immunogenic properties of medicinal products containing proteins or peptides. [ozempic-epar-product-information_en.pdf, \u00a74.8, p.7]\n* **Injection site reactions**: Injection site reactions (e.g. injection site rash, erythema) have been reported by 0.6% and 0.5% of patients receiving semaglutide 0.5 mg and 1 mg, respectively. [ozempic-epar-product-information_en.pdf, \u00a74.8, p.7]\n\nThese adverse events are shared among GLP-1 receptor agonists, including semaglutide, and should be considered when treating patients with these medications.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.85,
+        "citation_accuracy": 0.92,
+        "modality_preservation": 0.78,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but some minor details are missing.",
+          "citation_accuracy": "The answer accurately cites the relevant sections and pages from the product information documents.",
+          "modality_preservation": "The answer preserves the modalities of the retrieved context, but some nuances are lost in translation."
+        }
+      },
+      "faithfulness": 0.85,
+      "citation_accuracy": 0.92,
+      "modality_preservation": 0.78
+    },
+    {
+      "id": "T4_007",
+      "type": "cross_document",
+      "question": "What is the legal basis cited in the FDA citizen petition for its requests?",
+      "gold_answer": "FD&C Act Sections 503A and 503B \u2014 21 CFR Section 10.30 \u2014 Sections 501 and 502",
+      "answer": "**Legal Basis for the FDA Citizen Petition**\n\nThe FDA citizen petition cites the following legal basis for its requests:\n\n* **Mandatory Mandate for Proactive Risk Communication to Health Care Professionals**: The petition requests that the FDA mandate that all facilities compounding semaglutide issue \"Dear Health Care Professional\" (DHCP) letters to convey critical safety information, specifically an \"Important Drug Warning\" letter, under 21 C.F.R. \u00a7 200.5. [FDA-2025-P-3239-0001_attachment_1.pdf, \u00a7B STATEMENTS OF GROUNDS, p.12]\n* **Prohibited Sourcing of API from Uninspected Facilities**: The petition requests that the FDA require that any API used for compounding semaglutide, especially at the scale seen in 503B facilities, meets the same baseline quality standard\u2014CGMP compliance\u2014as the API used for FDA-approved medicines. [FDA-2025-P-3239-0001_attachment_1.pdf, \u00a7B STATEMENTS OF GROUNDS, p.6]\n* **Prohibited Sale of Misbranded Products**: The petition requests that the FDA consider semaglutide products compounded in vials as misbranded, as they cannot be reliably delivered in the correct dose and to the correct tissue. [FDA-2025-P-3239-0001_attachment_1.pdf, \u00a7B STATEMENTS OF GROUNDS, p.21]\n\n**Operational Details**\n\n* The petition requests that the FDA mandate a more sophisticated, proactive pharmacovigilance system for compounded semaglutide, including:\n\t+ Active surveillance using electronic health records and insurance claims data, similar to the Sentinel Initiative.\n\t+ Targeted pharmacovigilance strategies for high-risk compounded products, similar to those used for nirsevimab.\n\t+ Risk Evaluation and Mitigation Strategies (REMS) for products with serious safety concerns.\n* The petition highlights the need for modernized pharmacovigilance for compounded drug adverse events, citing the limitations of the current passive surveillance system.\n* The petition emphasizes the importance of ensuring that compounded semaglutide products meet the same quality standards as FDA-approved products, including CGMP compliance for API sourcing.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but some minor details are missing or paraphrased.",
+          "citation_accuracy": "The answer accurately cites the relevant sections and pages of the FDA-2025-P-3239-0001_attachment_1.pdf document.",
+          "modality_preservation": "The answer preserves the original modality of the retrieved context, but some minor changes are made to improve clarity and readability."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T4_008",
+      "type": "cross_document",
+      "question": "What specific risks from compounded semaglutide does the citizen petition say the FDA FAERS system cannot capture?",
+      "gold_answer": "503A pharmacies have no federal requirement to report adverse events to FAERS",
+      "answer": "**Specific Risks from Compounded Semaglutide**\n\nThe citizen petition highlights the following specific risks from compounded semaglutide that the FDA FAERS system cannot capture:\n\n* **Immunogenicity**: The petition notes that the immunogenicity profile of compounded semaglutide is unknown, and there is a potential for contamination with host cell proteins (HCPs) and aggregates, which can act as adjuvants and increase immunogenicity [FDA-2025-P-3239-0001_attachment_1.pdf, \u00a7B STATEMENTS OF GROUNDS, p.3].\n* **Dosing errors and hospitalizations**: The petition states that clinically significant dosing errors have led to adverse events and hospitalizations, and that the FDA has linked these errors to the use of a pre-filled autoinjector vial requiring manual pen designed and validated measurement with a syringe [FDA-2025-P-3239-0001_attachment_1.pdf, \u00a7A ACTIONS REQUESTED, p.1].\n* **Inadvertent and improper delivery**: The petition notes that the autoinjector's fixed needle length and automated injection mechanism lack controls for needle depth, creating a significant risk of inadvertent and improper subcutaneous (SC), intramuscular (IM), or intradermal (ID) delivery [FDA-2025-P-3239-0001_attachment_1.pdf, \u00a7B STATEMENTS OF GROUNDS, p.3].\n* **Underreported adverse events**: The petition states that there is no federal requirement for 503A pharmacies to report adverse events to the FDA, resulting in \"underreported\" adverse events and a critical public health blind spot [FDA-2025-P-3239-0001_attachment_1.pdf, \u00a7table_0_row_2 Table row: Mandatory post-market adverse event (AE) reporting by the manufacturer to the FDA Adverse Event Reporting System (FAERS).25].\n\nThese risks highlight the need for enhanced pharmacovigilance and active surveillance methodologies to capture adverse events associated with compounded semaglutide.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but some minor details are omitted or paraphrased.",
+          "citation_accuracy": "The answer accurately cites the relevant sections and pages of the FDA-2025-P-3239-0001_attachment_1.pdf document.",
+          "modality_preservation": "The answer preserves the original modality of the retrieved context, which is mostly mandatory, but includes some optional and prohibited modalities."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T5_001",
+      "type": "version_aware",
+      "question": "What changed in the FDA guidance on subcutaneous semaglutide between the 2023 and 2025 versions?",
+      "gold_answer": "PSG_215256 (Dec 2025) revised the BE waiver criteria and study design recommendations compared to PSG_209637 (Nov 2023)",
+      "answer": "**Changes in FDA Guidance on Subcutaneous Semaglutide between 2023 and 2025 Versions**\n\nThe FDA guidance on subcutaneous semaglutide has undergone revisions between the 2023 and 2025 versions.\n\n**Key Changes:**\n\n* **Document Status:** The 2023 version is marked as \"Recommended Nov 2023; Revised Dec 2025,\" indicating that it was recommended in November 2023 and revised in December 2025. In contrast, the 2025 version is marked as \"Draft Guidance on Semaglutide, December 2025,\" indicating that it is a draft guidance document.\n* **Regulatory Modality:** The 2023 version is marked as \"Recommended,\" while the 2025 version is marked as \"Draft \u2013 Not for Implementation.\" This indicates that the 2023 version is a recommended guidance, whereas the 2025 version is a draft guidance that is not yet implementable.\n* **Content Changes:** The 2025 version includes additional information on the use of non-clinical assays to assess risk in recombinant generic peptides, as well as a request for waiver of in vivo bioequivalence study requirements.\n\n**Operational Details:**\n\n* The 2023 version recommends that applicants submit pre-ANDA product development meeting requests for inquiries regarding the use of non-clinical assays to assess risk in recombinant generic peptides.\n* The 2025 version includes a draft guidance on semaglutide, which outlines the Agency's current thinking on the topic. However, this guidance is not yet implementable and should not be used for implementation purposes.\n\n**Citations:**\n\n* [PSG_215256.pdf, \u00a72 Page 2, p.2]\n* [PSG_215256.pdf, \u00a73 Document History:, p.3]\n* [PSG_215256.pdf, \u00a71 Page 1, p.1]\n* [PSG_215256.pdf, \u00a71 Page 1, p.1]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but some minor details are missing.",
+          "citation_accuracy": "The answer accurately cites the relevant excerpts from the retrieved context.",
+          "modality_preservation": "The answer preserves the regulatory modality of the 2023 version, but incorrectly states that the 2025 version is a draft guidance that is not yet implementable."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T5_003",
+      "type": "version_aware",
+      "question": "Was the oral semaglutide PSG revised from its original version?",
+      "gold_answer": "Yes \u2014 originally recommended August 2021, revised October 2025",
+      "answer": "**Revisions to the Oral Semaglutide PSG**\n\nThe oral semaglutide PSG was revised from its original version. \n\n**Operational Details:**\n\n\u2022 The original version of the PSG was recommended in August 2021.\n\u2022 The revised version of the PSG was recommended in October 2025.\n\u2022 The revision includes updates to the administration instructions for the RLD, washout periods between treatments, and bioanalytical sensitivity for the pharmacokinetic profile of certain strengths.\n\u2022 The revision also includes additional comments on the proposed alternative bioequivalence approach for the 1.5 or 3 mg strength.\n\n**Citation:**\n\n[PSG_213051.pdf, \u00a76 Page 4, p.4] and [PSG_213051.pdf, \u00a74 Page 3, p.3]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.9,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but it could be more specific about the changes made in the revised version.",
+          "citation_accuracy": "The citations are accurate and correctly reference the relevant sections of the PSG.",
+          "modality_preservation": "The answer preserves the modality of the original context, which is primarily RECOMMENDED, but could be more explicit about the changes made in the revised version."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.9
+    },
+    {
+      "id": "T5_004",
+      "type": "version_aware",
+      "question": "If I am planning a BE study for subcutaneous semaglutide, which PSG version should I follow?",
+      "gold_answer": "PSG_215256 (December 2025) \u2014 the most recent version",
+      "answer": "**Recommended PSG Version for Subcutaneous Semaglutide BE Study**\n\nTo determine the recommended PSG version for a bioequivalence (BE) study of subcutaneous semaglutide, refer to the document history in Excerpt 3.\n\n**Document History**\n\n* Recommended: November 2023\n* Revised: December 2025\n\n**Operational Details**\n\n* The latest version of the guidance is recommended for implementation.\n* Check the FDA guidance website at https://www.fda.gov/regulatory-information/search-fda-guidance-documents for the most recent version.\n* The recommended PSG version is PSG_215256, Revised December 2025.\n\n**Regulatory Modality**\n\n* The regulatory modality for this guidance is RECOMMENDED, as indicated in Excerpt 1 and Excerpt 2.\n\n**Citation**\n\n[PSG_215256.pdf, \u00a73 Document History:, p.3]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 1.0,
+        "modality_preservation": 0.9,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but it could be more detailed and explicit in its reasoning.",
+          "citation_accuracy": "The answer accurately cites the relevant section of the PSG document.",
+          "modality_preservation": "The answer preserves the regulatory modality of the original context, which is RECOMMENDED."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 1.0,
+      "modality_preservation": 0.9
+    },
+    {
+      "id": "T5_005",
+      "type": "version_aware",
+      "question": "How many versions of the subcutaneous semaglutide PSG are in the knowledge base?",
+      "gold_answer": "Two versions \u2014 November 2023 and December 2025",
+      "answer": "**Number of Versions of the Subcutaneous Semaglutide PSG**\n\nThere are 2 versions of the subcutaneous semaglutide PSG in the knowledge base.\n\n**Document History**\n\n* The first version is marked as \"Draft \u2013 Not for Implementation\" and is dated December 2025, as stated in [PSG_215256.pdf, \u00a71 Page 1, p.1].\n* The second version is marked as \"Recommended\" and is dated November 2023, as stated in [PSG_215256.pdf, \u00a73 Document History:, p.3].\n* Both versions are revised in December 2025, as stated in [PSG_215256.pdf, \u00a73 Document History:, p.3] and [PSG_215256.pdf, \u00a71 Page 1, p.1].\n\n**Regulatory Modality**\n\n* The first version is marked as \"Draft \u2013 Not for Implementation\" and does not have a regulatory modality.\n* The second version is marked as \"Recommended\" and has a regulatory modality of \"RECOMMENDED\", as stated in [PSG_215256.pdf, \u00a71 Page 1, p.1] and [PSG_215256.pdf, \u00a73 Document History:, p.3].\n\n**Key Takeaways**\n\n* The knowledge base contains 2 versions of the subcutaneous semaglutide PSG.\n* The second version is marked as \"Recommended\" and has a regulatory modality of \"RECOMMENDED\".\n* Both versions are revised in December 2025.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but it lacks some details and does not explicitly mention the document history.",
+          "citation_accuracy": "The answer accurately cites the relevant excerpts from the PSG_215256.pdf document.",
+          "modality_preservation": "The answer preserves the regulatory modality of the second version, but it does not accurately represent the first version's modality as 'Draft \u2013 Not for Implementation' without a regulatory modality."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T5_006",
+      "type": "version_aware",
+      "question": "Does the 2023 subcutaneous semaglutide PSG have different waiver criteria than the 2025 version?",
+      "gold_answer": "RegDelta comparison needed \u2014 both cover BE waiver for Q1Q2 same SC solution but with updated 2025 criteria",
+      "answer": "**Comparison of 2023 and 2025 Subcutaneous Semaglutide PSG Waiver Criteria**\n\n**Direct Answer:**\nThe 2023 subcutaneous semaglutide PSG and the 2025 version have different waiver criteria for in vivo bioequivalence studies.\n\n**Operational Details:**\n\n* The 2023 version does not provide specific waiver criteria for in vivo bioequivalence studies.\n* The 2025 version recommends that a generic semaglutide subcutaneous solution product should be qualitatively (Q1) and quantitatively (Q2) the same as the reference listed drug (RLD) to qualify for a waiver from submitting an in vivo bioequivalence study.\n* The 2025 version also allows for a waiver if the applicant identifies and characterizes differences in preservative, buffer, or antioxidant and provides information demonstrating that the differences do not affect the safety or efficacy of the proposed drug product.\n\n**Comparison of Waiver Criteria:**\n\n* The 2023 version does not provide specific waiver criteria, whereas the 2025 version provides clear guidelines for waiver eligibility.\n* The 2025 version introduces the concept of Q1 and Q2 sameness as a requirement for waiver eligibility, which is not mentioned in the 2023 version.\n\n**Citations:**\n\n* [PSG_215256.pdf, \u00a71 Page 1, p.1] (2023 version)\n* [PSG_215256.pdf, \u00a71 Page 1, p.1] (2025 version)\n* [PSG_215256.pdf, \u00a73 Document History:, p.3] (2025 version)\n\n**Limitations:**\nThe 2023 version does not provide sufficient information to determine the waiver criteria for in vivo bioequivalence studies. The 2025 version provides clear guidelines, but it is essential to note that the guidance is still in draft form and has not been finalized.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but some minor details are missing.",
+          "citation_accuracy": "The citations are mostly accurate, but one of the citations is repeated.",
+          "modality_preservation": "The answer preserves the modality of the retrieved context, but some minor changes in wording are noticeable."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T6_001",
+      "type": "figure",
+      "question": "What do the EPAR line graphs show about HbA1c change over time with semaglutide?",
+      "gold_answer": "Mean HbA1c decreases from baseline over 56 weeks",
+      "answer": "**HbA1c Change Over Time with Semaglutide: EPAR Line Graph Insights**\n\nThe European Public Assessment Report (EPAR) line graphs provide visual insights into the change in HbA1c levels over time with semaglutide treatment.\n\n**Figure 1: Mean Change in HbA1c (%) and Body Weight (kg) from Baseline to Week 56**\n\n* The graph shows that both semaglutide treatment arms (0.5 mg and 1 mg) result in a greater decrease in HbA1c compared to sitagliptin over 56 weeks [ozempic-epar-product-information_en.pdf, \u00a7figure Figure 1 Mean change in HbA (%) and body weight (kg) from baseline to week 56, p.15].\n* At week 0, HbA1c is approximately 8.0% for all groups.\n* At week 56, HbA1c is approximately 7.6% for semaglutide 0.5 mg, 6.8% for semaglutide 1 mg, and 7.8% for sitagliptin.\n\n**Figure 2: Mean Change in HbA1c (%) and Body Weight (kg) from Baseline to Week 40**\n\n* The graph shows that semaglutide 1 mg has a greater decrease in HbA1c compared to dulaglutide 1.5 mg over 40 weeks [ozempic-epar-product-information_en.pdf, \u00a7figure Figure 2 Mean change in HbA (%) and body weight (kg) from baseline to week 40, p.16].\n* At week 40, semaglutide 1 mg decreases HbA1c by approximately 1.8% and body weight by approximately 5.5 kg.\n\n**Key Findings**\n\n* Both semaglutide and dulaglutide decrease HbA1c and body weight over time.\n* Semaglutide 1 mg has a greater decrease in HbA1c and body weight compared to dulaglutide 1.5 mg.\n\n**Limitations**\n\n* The precise values for HbA1c change over time are not explicitly stated in the EPAR line graphs for weeks other than 40 and 56.\n* The graphs do not provide information on the statistical significance of the differences between treatment groups.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but some minor details are missing.",
+          "citation_accuracy": "The answer accurately cites the relevant sections of the EPAR document.",
+          "modality_preservation": "The answer preserves the modalities of the retrieved context, but some minor changes are made for clarity."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T6_002",
+      "type": "figure",
+      "question": "What does the Kaplan-Meier plot in the EPAR show about semaglutide's cardiovascular benefit?",
+      "gold_answer": "Cumulative incidence of MACE is lower in the semaglutide group versus placebo",
+      "answer": "**Direct Answer:**\nThe Kaplan-Meier plot in the European Public Assessment Report (EPAR) for semaglutide shows a lower incidence of the composite outcome (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in the semaglutide group compared to the placebo group over time.\n\n**Operational Details:**\n\n* The Kaplan-Meier plot is a graphical representation of the time-to-event data, showing the cumulative incidence of the composite outcome over time for both the semaglutide and placebo groups.\n* The plot indicates that the semaglutide group has a consistently lower cumulative incidence of the composite outcome compared to the placebo group.\n* The hazard ratio (HR) for the composite outcome is 0.74 (95% CI: 0.58-0.95) [ozempic-epar-product-information_en.pdf, \u00a7figure Figure 3 Kaplan-Meier plot of time to first occurrence of the composite outcome: cardiovascular, p.20], indicating a statistically significant reduction in the risk of the composite outcome with semaglutide compared to placebo.\n* The Kaplan-Meier plot also shows that at 104 weeks, approximately 8% of patients in the semaglutide group and 11.5% in the placebo group experienced the composite outcome [wegovy-epar-product-information_en.pdf, \u00a7figure Figure 7: Kaplan-Meier plot of time to first occurrence of the composite outcome:, p.23].\n\n**Practical Nuance:**\nThe Kaplan-Meier plot is a useful tool for visualizing time-to-event data and can provide insights into the efficacy of a treatment. In this case, the plot suggests that semaglutide may have a cardiovascular benefit compared to placebo. However, it is essential to note that the plot is based on a specific population and study design, and the results may not be generalizable to other populations or settings.\n\n**Limitations:**\nThe precise value of the hazard ratio for the individual components of the composite outcome is not explicitly stated in the context. However, the Kaplan-Meier plot and forest plot provide a comprehensive overview of the efficacy of semaglutide in reducing the risk of cardiovascular events.",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the context, but some minor details are missing.",
+          "citation_accuracy": "The answer accurately cites the relevant figures and tables from the EPAR, but could provide more precise references.",
+          "modality_preservation": "The answer preserves the modalities of the context, but could provide more nuanced explanations of the Kaplan-Meier plot and its implications."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T6_003",
+      "type": "figure",
+      "question": "What page of the Ozempic EPAR shows the forest plot for cardiovascular subgroup analyses?",
+      "gold_answer": "Figure 4 on page 24",
+      "answer": "**Direct Answer**\nThe forest plot for cardiovascular subgroup analyses is shown on page 20 of the Ozempic EPAR.\n\n**Operational Details**\n\n* The forest plot is part of Figure 3: Kaplan-Meier plot of time to first occurrence of the composite outcome: cardiovascular death, non-fatal myocardial infarction or non-fatal stroke (SUSTAIN 6) [ozempic-epar-product-information_en.pdf, \u00a7figure Figure 3 Kaplan-Meier plot of time to first occurrence of the composite outcome: cardiovascular, p.20].\n* The figure also includes a Kaplan-Meier plot and a forest plot, but the forest plot specifically shows the hazard ratios and 95% confidence intervals for various cardiovascular outcomes.\n* The forest plot is mentioned in the context of the SUSTAIN 6 trial, which is referenced in [ozempic-epar-product-information_en.pdf, \u00a75.1 Pharmacodynamic properties, p.11].\n\n**Citation**\n[ozempic-epar-product-information_en.pdf, \u00a7figure Figure 3 Kaplan-Meier plot of time to first occurrence of the composite outcome: cardiovascular, p.20]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but it could be more specific about the exact figure and page number.",
+          "citation_accuracy": "The citation is accurate and correctly references the figure and page number.",
+          "modality_preservation": "The answer preserves the modality of the retrieved context, which is neutral, but could be more explicit about the type of analysis (e.g. forest plot)."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T7_001",
+      "type": "reference_chain",
+      "question": "Why must semaglutide be stopped 2 months before a planned pregnancy?",
+      "gold_answer": "Because of semaglutide's long half-life of approximately 1 week",
+      "answer": "**Regulatory Requirement for Semaglutide Use During Pregnancy**\n\n**Direct Answer**\n\nSemaglutide must be stopped at least 2 months before a planned pregnancy due to its long half-life. [PSG_213051.pdf, \u00a74 Page 3, p.3]\n\n**Operational Details**\n\n* The long half-life of semaglutide necessitates a 2-month discontinuation period before a planned pregnancy.\n* This recommendation is based on the potential for semaglutide to affect fetal development or maternal health during pregnancy.\n* The exact mechanism of semaglutide's reproductive toxicity is not specified in the provided context.\n* The recommended 2-month discontinuation period is a precautionary measure to minimize potential risks associated with semaglutide use during pregnancy.\n* The precise value of the half-life is not explicitly stated in the provided context, but it is mentioned as \"long\" in the excerpt. [PSG_213051.pdf, \u00a74 Page 3, p.3]\n\n**Regulatory Modality**\n\nThe regulatory modality for this requirement is RECOMMENDED, as stated in the context. [PSG_213051.pdf, \u00a74 Page 3, p.3]\n\n**Comparison with Other Excerpts**\n\nThe other excerpts provided (Excerpts 1 and 2) do not explicitly state the reason for discontinuing semaglutide 2 months before a planned pregnancy. However, they do recommend contraception use and state that semaglutide should not be used during pregnancy due to reproductive toxicity and limited human data. [ozempic-epar-product-information_en.pdf, \u00a74.6 Fertility, pregnancy and lactation, p.6] and [wegovy-epar-product-information_en.pdf, \u00a74.6 Fertility, pregnancy and lactation, p.8]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the provided context, but it could be more concise and directly address the question.",
+          "citation_accuracy": "The answer accurately cites the relevant excerpt from PSG_213051.pdf, but it could provide more context and clarify the relationship between the half-life and the recommended discontinuation period.",
+          "modality_preservation": "The answer preserves the regulatory modality of RECOMMENDED, but it could provide more information about the potential risks associated with semaglutide use during pregnancy and the reasoning behind the recommended discontinuation period."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T7_002",
+      "type": "reference_chain",
+      "question": "What pharmacokinetic mechanism explains the drug interaction between semaglutide and paracetamol?",
+      "gold_answer": "Semaglutide delays gastric emptying \u2014 this slows oral absorption rate",
+      "answer": "**Pharmacokinetic Mechanism Explaining the Drug Interaction between Semaglutide and Paracetamol**\n\nThe pharmacokinetic mechanism explaining the drug interaction between semaglutide and paracetamol is related to the delay in gastric emptying caused by semaglutide.\n\n**Delayed Gastric Emptying**\n\nSemaglutide delays gastric emptying, which can potentially influence the absorption of concomitantly administered oral medicinal products, including paracetamol [wegovy-epar-product-information_en.pdf, \u00a74.5, p.7]. This delay in gastric emptying can lead to a decrease in the rate of paracetamol absorption.\n\n**Effect on Paracetamol Pharmacokinetics**\n\nStudies have shown that semaglutide delays the rate of gastric emptying as assessed by paracetamol pharmacokinetics during a standardised meal test [wegovy-epar-product-information_en.pdf, \u00a74.5, p.7; ozempic-epar-product-information_en.pdf, \u00a74.5, p.6]. Specifically, paracetamol AUC and C were decreased by 27% and 23%, respectively, following concomitant use of semaglutide 1 mg [wegovy-epar-product-information_en.pdf, \u00a74.5, p.7; ozempic-epar-product-information_en.pdf, \u00a74.5, p.6].\n\n**No Clinically Relevant Effect Observed**\n\nHowever, no clinically relevant effect on the rate of gastric emptying was observed with semaglutide 2.4 mg, following 20 weeks of administration of semaglutide, probably due to a tolerance effect [ozempic-epar-product-information_en.pdf, \u00a74.5, p.6]. No dose adjustment of paracetamol is necessary when administered with semaglutide [wegovy-epar-product-information_en.pdf, \u00a74.5, p.7; ozempic-epar-product-information_en.pdf, \u00a74.5, p.6].\n\n**Regulatory Modality**\n\nThe regulatory modality for this interaction is RECOMMENDED, indicating that semaglutide should be used with caution in patients receiving oral medicinal products that require rapid gastrointestinal absorption [wegovy-epar-product-information_en.pdf, \u00a74.5, p.7; ozempic-epar-product-information_en.pdf, \u00a74.5, p.6].",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but some minor details are missing.",
+          "citation_accuracy": "The answer accurately cites the relevant excerpts from the product information documents.",
+          "modality_preservation": "The answer preserves the regulatory modality of RECOMMENDED, but could be more explicit in its explanation."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    },
+    {
+      "id": "T7_003",
+      "type": "reference_chain",
+      "question": "What is the basis for monitoring diabetic retinopathy complications in semaglutide patients?",
+      "gold_answer": "Section 4.4 warns about retinopathy risk in patients on insulin \u2014 frequency data is in 4.8",
+      "answer": "**Basis for Monitoring Diabetic Retinopathy Complications in Semaglutide Patients**\n\n**Direct Answer**\n\nThe basis for monitoring diabetic retinopathy complications in semaglutide patients is the observed increased risk of developing diabetic retinopathy complications, particularly in patients with known diabetic retinopathy.\n\n**Operational Details**\n\n* **Increased Risk of Diabetic Retinopathy Complications**: Excerpts 1 and 3 indicate that patients with diabetic retinopathy treated with semaglutide have an increased risk of developing diabetic retinopathy complications [wegovy-epar-product-information_en.pdf, \u00a74.4, p.5; ozempic-epar-product-information_en.pdf, \u00a74.4, p.4].\n* **Rapid Improvement in Glucose Control**: Rapid improvement in glucose control has been associated with a temporary worsening of diabetic retinopathy, but other mechanisms cannot be excluded [wegovy-epar-product-information_en.pdf, \u00a74.4, p.5; ozempic-epar-product-information_en.pdf, \u00a74.4, p.4].\n* **Monitoring and Treatment**: Patients with diabetic retinopathy using semaglutide should be monitored closely and treated according to clinical guidelines [wegovy-epar-product-information_en.pdf, \u00a74.4, p.5; ozempic-epar-product-information_en.pdf, \u00a74.4, p.4].\n* **Specific Recommendations**: There is no experience with semaglutide 2 mg in patients with type 2 diabetes with uncontrolled or potentially unstable diabetic retinopathy, and semaglutide 2 mg is therefore not recommended in these patients [ozempic-epar-product-information_en.pdf, \u00a74.4, p.4].\n\n**Regulatory Modality**\n\nThe regulatory modality for monitoring diabetic retinopathy complications in semaglutide patients is **RECOMMENDED** [ozempic-epar-product-information_en.pdf, \u00a74.4, p.4].\n\n**Citations**\n\n* [wegovy-epar-product-information_en.pdf, \u00a74.4, p.5]\n* [ozempic-epar-product-information_en.pdf, \u00a74.4, p.4]",
+      "source_count": 4,
+      "scorer": "groq_judge",
+      "raw_score": {
+        "faithfulness": 0.8,
+        "citation_accuracy": 0.9,
+        "modality_preservation": 0.7,
+        "comments": {
+          "faithfulness": "The answer is mostly faithful to the retrieved context, but some minor details are missing.",
+          "citation_accuracy": "The citations are mostly accurate, but one is missing.",
+          "modality_preservation": "The regulatory modality is mostly preserved, but the answer could be more explicit about the recommended actions."
+        }
+      },
+      "faithfulness": 0.8,
+      "citation_accuracy": 0.9,
+      "modality_preservation": 0.7
+    }
+  ]
+}

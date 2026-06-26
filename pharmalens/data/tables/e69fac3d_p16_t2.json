@@ -1,0 +1,49 @@
+{
+  "table_id": "e69fac3d_p16_t2",
+  "doc_id": "e69fac3de3e1dab76b382cc9312ac0aebd5c746ff62e1c75b0fc24a5f9e16939",
+  "filename": "ozempic-epar-product-information_en.pdf",
+  "page_number": 16,
+  "headers": [
+    "",
+    "Semaglutide\n0.5 mg",
+    "Semaglutide\n1 mg",
+    "Insulin\nGlargine"
+  ],
+  "rows": [
+    {
+      "Semaglutide\n0.5 mg": "362",
+      "Semaglutide\n1 mg": "360",
+      "Insulin\nGlargine": "360"
+    },
+    {
+      "Semaglutide\n0.5 mg": "",
+      "Semaglutide\n1 mg": "",
+      "Insulin\nGlargine": ""
+    },
+    {
+      "Semaglutide\n0.5 mg": "8.1",
+      "Semaglutide\n1 mg": "8.2",
+      "Insulin\nGlargine": "8.1"
+    },
+    {
+      "Semaglutide\n0.5 mg": "-1.2",
+      "Semaglutide\n1 mg": "-1.6",
+      "Insulin\nGlargine": "-0.8"
+    },
+    {
+      "Semaglutide\n0.5 mg": "-0.4 [-0.5, -0.2]a",
+      "Semaglutide\n1 mg": "-0.8 [-1.0, -0.7]a",
+      "Insulin\nGlargine": "-"
+    },
+    {
+      "Semaglutide\n0.5 mg": "57",
+      "Semaglutide\n1 mg": "73",
+      "Insulin\nGlargine": "38"
+    },
+    {
+      "Semaglutide\n0.5 mg": "",
+      "Semaglutide\n1 mg": "",
+      "Insulin\nGlargine": ""
+    }
+  ]
+}

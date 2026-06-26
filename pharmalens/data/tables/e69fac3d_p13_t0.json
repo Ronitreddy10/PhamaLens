@@ -1,0 +1,34 @@
+{
+  "table_id": "e69fac3d_p13_t0",
+  "doc_id": "e69fac3de3e1dab76b382cc9312ac0aebd5c746ff62e1c75b0fc24a5f9e16939",
+  "filename": "ozempic-epar-product-information_en.pdf",
+  "page_number": 13,
+  "headers": [
+    "",
+    "Semaglutide\n0.5 mg",
+    "Semaglutide\n1 mg",
+    "Placebo"
+  ],
+  "rows": [
+    {
+      "Semaglutide\n0.5 mg": "128",
+      "Semaglutide\n1 mg": "130",
+      "Placebo": "129"
+    },
+    {
+      "Semaglutide\n0.5 mg": "",
+      "Semaglutide\n1 mg": "",
+      "Placebo": ""
+    },
+    {
+      "Semaglutide\n0.5 mg": "8.1",
+      "Semaglutide\n1 mg": "8.1",
+      "Placebo": "8.0"
+    },
+    {
+      "Semaglutide\n0.5 mg": "-1.5",
+      "Semaglutide\n1 mg": "-1.6",
+      "Placebo": "0"
+    }
+  ]
+}

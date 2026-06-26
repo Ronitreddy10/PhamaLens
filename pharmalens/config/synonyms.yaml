@@ -1,0 +1,125 @@
+synonyms:
+  "glycated haemoglobin":
+    - HbA1c
+    - HbA1C
+    - glycosylated haemoglobin
+    - glycated hemoglobin
+    - hemoglobin A1c
+  "fasting plasma glucose":
+    - FPG
+    - fasting blood glucose
+    - FBG
+  "major adverse cardiovascular events":
+    - MACE
+    - cardiovascular outcomes
+    - MACE endpoint
+  "glucagon-like peptide-1":
+    - GLP-1
+    - GLP1
+    - GLP-1 receptor agonist
+    - GLP1 RA
+  "abbreviated new drug application":
+    - ANDA
+    - generic drug application
+  "reference listed drug":
+    - RLD
+    - reference product
+    - innovator product
+  "bioequivalence":
+    - BE
+    - bioequivalent
+    - BE study
+    - bioequivalence study
+  "current good manufacturing practice":
+    - CGMP
+    - GMP
+    - good manufacturing practice
+  "subcutaneous":
+    - SC
+    - sub-Q
+    - subcut
+    - subcutaneously
+  "oral":
+    - PO
+    - per os
+    - by mouth
+  "pharmacokinetics":
+    - PK
+    - pharmacokinetic
+    - PK parameters
+    - pharmacokinetic profile
+  "area under the curve":
+    - AUC
+    - AUC0-inf
+    - total drug exposure
+  "maximum concentration":
+    - Cmax
+    - peak concentration
+    - peak plasma level
+  "summary of product characteristics":
+    - SmPC
+    - SPC
+    - product information
+    - prescribing information
+  "European public assessment report":
+    - EPAR
+  "non-arteritic anterior ischaemic optic neuropathy":
+    - NAION
+    - optic neuropathy
+  "host cell protein":
+    - HCP
+    - process-related impurity
+  "adverse event reporting system":
+    - FAERS
+    - adverse event report
+    - AE reporting
+  "intent-to-treat":
+    - ITT
+    - ITT population
+    - full analysis set
+  "confidence interval":
+    - CI
+    - 95% CI
+    - confidence limits
+  "semaglutide":
+    - Ozempic
+    - Wegovy
+    - Rybelsus
+    - GLP-1 analogue
+    - semaglutide injection
+    - semaglutide tablet
+
+modality:
+  MANDATORY:
+    - must
+    - required
+    - shall
+    - is required
+    - are required
+    - mandatory
+    - obligatory
+  RECOMMENDED:
+    - should
+    - recommended
+    - it is recommended
+    - FDA recommends
+    - is recommended
+  OPTIONAL:
+    - may
+    - may be considered
+    - alternatively
+    - at the applicant's discretion
+    - if feasible
+    - can be
+  PROHIBITED:
+    - must not
+    - should not
+    - is not recommended
+    - is contraindicated
+    - is not permitted
+    - cannot
+  PERMITTED:
+    - is acceptable
+    - is permitted
+    - is allowed
+    - may be used

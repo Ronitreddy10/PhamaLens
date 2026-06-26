@@ -1,0 +1,83 @@
+{
+  "table_id": "e69fac3d_p21_t0",
+  "doc_id": "e69fac3de3e1dab76b382cc9312ac0aebd5c746ff62e1c75b0fc24a5f9e16939",
+  "filename": "ozempic-epar-product-information_en.pdf",
+  "page_number": 21,
+  "headers": [
+    "Intention-to-treata",
+    "Ozempic\nN = 396",
+    "Placebo\nN = 396"
+  ],
+  "rows": [
+    {
+      "Intention-to-treata": "Maximum walking distance (meters)",
+      "Ozempic\nN = 396": "",
+      "Placebo\nN = 396": ""
+    },
+    {
+      "Intention-to-treata": "Week 52",
+      "Ozempic\nN = 396": "",
+      "Placebo\nN = 396": ""
+    },
+    {
+      "Intention-to-treata": "Baselineb median",
+      "Ozempic\nN = 396": "184.50",
+      "Placebo\nN = 396": "185.75"
+    },
+    {
+      "Intention-to-treata": "Ratio to baseline median",
+      "Ozempic\nN = 396": "1.21",
+      "Placebo\nN = 396": "1.08"
+    },
+    {
+      "Intention-to-treata": "Treatment ratio (HL Estimate) [95% CI]c",
+      "Ozempic\nN = 396": "1.13 [1.056, 1.211]*",
+      "Placebo\nN = 396": ""
+    },
+    {
+      "Intention-to-treata": "Patients (%) experiencing meaningful within-patient changed",
+      "Ozempic\nN = 396": "49.1",
+      "Placebo\nN = 396": "35.1"
+    },
+    {
+      "Intention-to-treata": "Pain-free walking distance (meters), week 52",
+      "Ozempic\nN = 396": "",
+      "Placebo\nN = 396": ""
+    },
+    {
+      "Intention-to-treata": "Baselineb median",
+      "Ozempic\nN = 396": "119.00",
+      "Placebo\nN = 396": "109.00"
+    },
+    {
+      "Intention-to-treata": "Ratio to baseline median",
+      "Ozempic\nN = 396": "1.21",
+      "Placebo\nN = 396": "1.10"
+    },
+    {
+      "Intention-to-treata": "Treatment ratio (HL Estimate) [95% CI]c",
+      "Ozempic\nN = 396": "1.11 [1.033, 1.197]*",
+      "Placebo\nN = 396": ""
+    },
+    {
+      "Intention-to-treata": "VascuQoL-6 total score, week 52",
+      "Ozempic\nN = 396": "",
+      "Placebo\nN = 396": ""
+    },
+    {
+      "Intention-to-treata": "Baseline median",
+      "Ozempic\nN = 396": "15.0",
+      "Placebo\nN = 396": "15.0"
+    },
+    {
+      "Intention-to-treata": "Change from baseline median",
+      "Ozempic\nN = 396": "2.0",
+      "Placebo\nN = 396": "1.0"
+    },
+    {
+      "Intention-to-treata": "Treatment difference (HL Estimate) [95% CI]c",
+      "Ozempic\nN = 396": "1.00 [0.478, 1.518]*",
+      "Placebo\nN = 396": ""
+    }
+  ]
+}

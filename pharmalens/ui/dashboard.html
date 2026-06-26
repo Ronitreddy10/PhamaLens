@@ -1,0 +1,1320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PharmaLens Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+  <script src="config.js"></script>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f9;
+      --surface: #ffffff;
+      --surface-strong: #f0f3f7;
+      --ink: #17202a;
+      --muted: #667085;
+      --line: #d9e0e8;
+      --green: #168a54;
+      --green-soft: #e6f5ee;
+      --blue: #246bcd;
+      --blue-soft: #e8f1ff;
+      --amber: #b36b00;
+      --amber-soft: #fff2d6;
+      --red: #c93336;
+      --red-soft: #ffe7e7;
+      --dark-red: #821b24;
+      --shadow: 0 12px 28px rgba(26, 36, 52, 0.08);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(120deg, rgba(36, 107, 205, 0.08), transparent 36%),
+        linear-gradient(210deg, rgba(22, 138, 84, 0.09), transparent 32%),
+        var(--bg);
+      color: var(--ink);
+    }
+
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+
+    .app {
+      width: min(1440px, 100%);
+      margin: 0 auto;
+      min-height: 100vh;
+      padding: 22px;
+      display: grid;
+      grid-template-rows: auto auto minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, #246bcd, #168a54);
+      box-shadow: var(--shadow);
+      flex: 0 0 auto;
+      font-size: 25px;
+    }
+
+    h1, h2, h3, p { margin: 0; }
+
+    .brand h1 {
+      font-size: 26px;
+      line-height: 1.1;
+      font-weight: 780;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 3px;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.75);
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 4px rgba(22, 138, 84, 0.12);
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      padding: 6px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.78);
+      width: max-content;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    .tab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 0;
+      border-radius: 7px;
+      padding: 10px 14px;
+      background: transparent;
+      color: var(--muted);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .tab.active {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .panel {
+      min-height: 0;
+      overflow: auto;
+      display: none;
+      padding-bottom: 16px;
+    }
+
+    .panel.active { display: block; }
+
+    .section {
+      margin-bottom: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: var(--shadow);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .section h2 {
+      font-size: 18px;
+      font-weight: 780;
+    }
+
+    .section-note, .muted {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .metric-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      padding: 18px;
+      min-height: 126px;
+      display: grid;
+      align-content: space-between;
+      gap: 16px;
+    }
+
+    .metric-card.small { min-height: 102px; }
+
+    .metric-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 760;
+      text-transform: uppercase;
+    }
+
+    .metric-value {
+      font-size: 42px;
+      line-height: 1;
+      font-weight: 820;
+      color: var(--ink);
+    }
+
+    .small .metric-value { font-size: 30px; }
+
+    .tone-green { border-top: 4px solid var(--green); }
+    .tone-blue { border-top: 4px solid var(--blue); }
+    .tone-amber { border-top: 4px solid var(--amber); }
+    .tone-red { border-top: 4px solid var(--red); }
+    .tone-green .metric-value { color: var(--green); }
+    .tone-blue .metric-value { color: var(--blue); }
+    .tone-amber .metric-value { color: var(--amber); }
+    .tone-red .metric-value { color: var(--red); }
+
+    .components-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .component-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      min-height: 68px;
+      color: #293445;
+      line-height: 1.35;
+    }
+
+    .component-item i {
+      color: var(--green);
+      font-size: 21px;
+      flex: 0 0 auto;
+    }
+
+    .corpus-line {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 16px;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .chart-wrap {
+      height: 400px;
+      min-height: 400px;
+      position: relative;
+    }
+
+    .fallback-chart {
+      display: grid;
+      gap: 13px;
+      height: 100%;
+      align-content: center;
+    }
+
+    .fallback-row {
+      display: grid;
+      grid-template-columns: minmax(150px, 230px) minmax(0, 1fr) 52px;
+      align-items: center;
+      gap: 12px;
+      color: #344054;
+      font-size: 13px;
+      font-weight: 690;
+    }
+
+    .fallback-track {
+      height: 24px;
+      border-radius: 5px;
+      background: #e7edf4;
+      overflow: hidden;
+    }
+
+    .fallback-bar {
+      height: 100%;
+      border-radius: 5px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 640px;
+      background: var(--surface);
+    }
+
+    th, td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th {
+      color: var(--muted);
+      background: var(--surface-strong);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 12px;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+    tr.full-row td {
+      background: var(--green-soft);
+      font-weight: 790;
+    }
+
+    .weak-list {
+      margin: 0;
+      padding-left: 22px;
+      color: #344054;
+      line-height: 1.55;
+    }
+
+    .filter-row, .quick-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .filter-btn, .quick-btn, .ask-btn, .send-btn, .clear-btn {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--ink);
+      padding: 10px 12px;
+      font-weight: 720;
+      transition: border-color 150ms ease, background 150ms ease, transform 150ms ease;
+    }
+
+    .filter-btn:hover, .quick-btn:hover, .ask-btn:hover, .send-btn:hover, .clear-btn:hover {
+      border-color: var(--blue);
+      transform: translateY(-1px);
+    }
+
+    .filter-btn.active {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    .benchmark-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .question-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      padding: 15px;
+      display: grid;
+      gap: 12px;
+      min-height: 214px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 12px;
+      font-weight: 790;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .badge-green { color: var(--green); background: var(--green-soft); border-color: rgba(22, 138, 84, 0.22); }
+    .badge-blue { color: var(--blue); background: var(--blue-soft); border-color: rgba(36, 107, 205, 0.22); }
+    .badge-amber { color: var(--amber); background: var(--amber-soft); border-color: rgba(179, 107, 0, 0.25); }
+    .badge-red { color: var(--red); background: var(--red-soft); border-color: rgba(201, 51, 54, 0.24); }
+    .badge-dark-red { color: var(--dark-red); background: #f7d8dd; border-color: rgba(130, 27, 36, 0.22); }
+    .badge-neutral { color: #475467; background: #eef1f5; border-color: #d8dee8; }
+
+    .question-text {
+      font-weight: 780;
+      line-height: 1.38;
+    }
+
+    .gold-answer {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.42;
+    }
+
+    .ask-btn {
+      width: max-content;
+      align-self: end;
+      color: var(--blue);
+    }
+
+    .banner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 14px;
+      border: 1px solid rgba(36, 107, 205, 0.24);
+      border-radius: 8px;
+      background: var(--blue-soft);
+      color: #214a86;
+      font-weight: 690;
+      margin-bottom: 14px;
+    }
+
+    .chat-shell {
+      display: grid;
+      grid-template-rows: minmax(280px, 1fr) auto;
+      min-height: 520px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      overflow: hidden;
+    }
+
+    .messages {
+      min-height: 280px;
+      max-height: 58vh;
+      overflow-y: auto;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .empty-chat {
+      margin: auto;
+      color: var(--muted);
+      text-align: center;
+      max-width: 560px;
+      line-height: 1.5;
+    }
+
+    .message {
+      display: grid;
+      gap: 6px;
+      max-width: 920px;
+    }
+
+    .message.user { margin-left: auto; }
+
+    .bubble {
+      border-radius: 8px;
+      padding: 13px 14px;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+
+    .message.user .bubble {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .message.bot .bubble {
+      background: var(--surface-strong);
+      color: #263241;
+      border: 1px solid var(--line);
+    }
+
+    .source-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .source-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      background: #fff;
+      display: grid;
+      gap: 7px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .source-card strong {
+      color: var(--ink);
+      overflow-wrap: anywhere;
+    }
+
+    .warning {
+      border: 1px solid rgba(179, 107, 0, 0.25);
+      border-radius: 8px;
+      background: var(--amber-soft);
+      color: #7a4a00;
+      padding: 11px 12px;
+      margin-bottom: 8px;
+      line-height: 1.45;
+    }
+
+    .composer {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 10px;
+      padding: 14px;
+      border-top: 1px solid var(--line);
+      background: #fbfcfe;
+    }
+
+    .composer input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 13px;
+      outline: none;
+      color: var(--ink);
+      background: #fff;
+    }
+
+    .composer input:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(36, 107, 205, 0.11);
+    }
+
+    .send-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--blue);
+      color: #fff;
+      border-color: var(--blue);
+      min-width: 104px;
+      justify-content: center;
+    }
+
+    .clear-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 92px;
+      justify-content: center;
+      color: var(--muted);
+      background: #fff;
+    }
+
+    .send-btn:disabled {
+      opacity: 0.7;
+      cursor: wait;
+      transform: none;
+    }
+
+    @media (max-width: 980px) {
+      .metric-grid, .components-grid, .benchmark-grid, .source-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .tabs { width: 100%; }
+    }
+
+    @media (max-width: 640px) {
+      .app { padding: 14px; }
+      .section { padding: 16px; }
+      .brand h1 { font-size: 22px; }
+      .metric-value { font-size: 36px; }
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .composer { grid-template-columns: 1fr; }
+      .send-btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><i class="ti ti-microscope"></i></div>
+        <div>
+          <h1>PharmaLens</h1>
+          <p class="subtitle">Local pharmaceutical knowledge base dashboard</p>
+        </div>
+      </div>
+      <div class="status-pill"><span class="status-dot"></span>50-question benchmark &middot; 6-document corpus</div>
+    </header>
+
+    <nav class="tabs" aria-label="Dashboard tabs">
+      <button class="tab active" data-tab="overview"><i class="ti ti-layout-dashboard"></i>Overview</button>
+      <button class="tab" data-tab="evaluation"><i class="ti ti-chart-bar"></i>Evaluation</button>
+      <button class="tab" data-tab="benchmark"><i class="ti ti-list-check"></i>Benchmark</button>
+      <button class="tab" data-tab="chat"><i class="ti ti-message-circle"></i>Chat</button>
+    </nav>
+
+    <main>
+      <section class="panel active" id="overview">
+        <div class="section">
+          <div class="metric-grid">
+            <article class="metric-card tone-green">
+              <div class="metric-label">R@5 <i class="ti ti-target-arrow"></i></div>
+              <div class="metric-value" id="metric-r5"></div>
+            </article>
+            <article class="metric-card tone-green">
+              <div class="metric-label">Faithfulness <i class="ti ti-shield-check"></i></div>
+              <div class="metric-value" id="metric-faithfulness"></div>
+            </article>
+            <article class="metric-card tone-green">
+              <div class="metric-label">Citation Accuracy <i class="ti ti-quote"></i></div>
+              <div class="metric-value" id="metric-citation"></div>
+            </article>
+          </div>
+          <div class="metric-grid">
+            <article class="metric-card small tone-green">
+              <div class="metric-label">MRR <i class="ti ti-arrow-big-up-lines"></i></div>
+              <div class="metric-value" id="metric-mrr"></div>
+            </article>
+            <article class="metric-card small tone-blue">
+              <div class="metric-label">P@5 <i class="ti ti-filter-check"></i></div>
+              <div class="metric-value" id="metric-p5"></div>
+            </article>
+            <article class="metric-card small tone-amber">
+              <div class="metric-label">Modality Preservation <i class="ti ti-alert-triangle"></i></div>
+              <div class="metric-value" id="metric-modality"></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-head">
+            <h2>System Components</h2>
+            <p class="section-note">Retrieval, regulatory semantics, and eval coverage</p>
+          </div>
+          <div class="components-grid" id="components-grid"></div>
+          <div class="corpus-line"><i class="ti ti-database"></i>6 documents &middot; 253 pages &middot; <span id="chunk-count">—</span> &middot; Ozempic EPAR, Wegovy EPAR, 3 FDA PSGs, 1 citizen petition</div>
+        </div>
+      </section>
+
+      <section class="panel" id="evaluation">
+        <div class="section">
+          <div class="section-head">
+            <h2>Faithfulness by Question Type</h2>
+            <p class="section-note">Horizontal bars use dashboard score colour thresholds</p>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="faithfulness-chart" aria-label="Faithfulness by question type chart"></canvas>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-head">
+            <h2>Faithfulness improvement over development</h2>
+            <p class="section-note">Baseline to final structured-table release</p>
+          </div>
+          <div class="chart-wrap" style="height: 280px; min-height: 280px;">
+            <canvas id="faithfulness-progression-chart" aria-label="Faithfulness progression chart"></canvas>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-head">
+            <h2>Ablation Study</h2>
+            <p class="section-note">Retrieval metrics across system configurations</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Configuration</th>
+                  <th>R@5</th>
+                  <th>P@5</th>
+                  <th>MRR</th>
+                </tr>
+              </thead>
+              <tbody id="ablation-body"></tbody>
+            </table>
+          </div>
+          <p class="section-note" style="margin-top: 12px;">Flat ablation is expected on a 6-document corpus. Components differentiate at scale.</p>
+        </div>
+
+        <div class="section">
+          <div class="section-head">
+            <h2>Faithfulness Detail</h2>
+          </div>
+          <ul class="weak-list">
+            <li>Numerical table (0.542): LLM draws on training knowledge for well-known SUSTAIN trial numbers.</li>
+            <li>Figure (0.501): depends on vision-enriched chunk quality - 18/21 pages described.</li>
+            <li>Negative (resolved): scorer now gives 1.0 for correct KB refusals.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" id="benchmark">
+        <div class="section">
+          <div class="filter-row" id="filter-row"></div>
+          <div class="benchmark-grid" id="benchmark-grid"></div>
+        </div>
+      </section>
+
+      <section class="panel" id="chat">
+        <div class="section">
+          <div class="banner" id="api-status"><i class="ti ti-plug-connected"></i>Checking API...</div>
+          <div class="quick-row" id="quick-row"></div>
+          <div class="chat-shell">
+            <div class="messages" id="messages">
+              <div class="empty-chat" id="empty-chat">Ask a grounded question about Ozempic, Wegovy, semaglutide PSGs, regulatory modality, figures, or benchmark cases.</div>
+            </div>
+            <form class="composer" id="chat-form">
+              <input id="chat-input" type="text" autocomplete="off" placeholder="Ask PharmaLens...">
+              <button class="send-btn" id="send-btn" type="submit"><i class="ti ti-send"></i>Send</button>
+              <button class="clear-btn" id="clear-btn" type="button"><i class="ti ti-trash"></i>Clear</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const METRICS = {
+      r5: 1.000,
+      mrr: 0.980,
+      p5: 0.804,
+      faithfulness: 0.829,
+      citation_accuracy: 0.941,
+      modality_preservation: 0.773,
+      n_questions: 50,
+      n_docs: 6,
+      n_pages: 253,
+    };
+
+    const FAITHFULNESS_BY_TYPE = [
+      { type: "Negative / out-of-scope",  score: 1.000, n: 6  },
+      { type: "Regulatory modality",       score: 0.863, n: 8  },
+      { type: "Reference chain",           score: 0.850, n: 6  },
+      { type: "Figure interpretation",     score: 0.800, n: 6  },
+      { type: "Numerical table",           score: 0.811, n: 9  },
+      { type: "Cross-document",            score: 0.660, n: 8  },
+      { type: "Version-aware",             score: 0.606, n: 6  },
+      { type: "Factual lookup",            score: 0.748, n: 10 },
+    ];
+
+    const FAITHFULNESS_PROGRESSION = [
+      { label: "Baseline\n(Groq rate-limited)", value: 0.611 },
+      { label: "After fixes\n(vision + negative)", value: 0.803 },
+      { label: "Final\n(structured tables)", value: 0.829 },
+    ];
+
+    const ABLATION = [
+      { name: "Vector-only (baseline)", r5: 1.000, p5: 0.744, mrr: 0.967, full: false },
+      { name: "BM25-only (baseline)", r5: 1.000, p5: 0.744, mrr: 0.967, full: false },
+      { name: "Hybrid BM25 + vector", r5: 1.000, p5: 0.744, mrr: 0.967, full: false },
+      { name: "Hybrid + synonym expansion", r5: 1.000, p5: 0.740, mrr: 0.980, full: false },
+      { name: "Full PharmaLens", r5: 1.000, p5: 0.740, mrr: 0.990, full: true },
+    ];
+
+    const SYSTEM_COMPONENTS = [
+      "PharmChunk - section-aware hierarchical chunking",
+      "RegDelta - semantic version change detection",
+      "Hybrid BM25 + vector retrieval with RRF fusion",
+      "Synonym expansion (HbA1c <-> glycated haemoglobin)",
+      "Modality tagger (MANDATORY / RECOMMENDED / OPTIONAL)",
+      "Vision-enriched figures - 18/21 pages described",
+      "Cell-level structured table extraction",
+      "Cross-encoder reranker",
+      "PharmaEval - 50-question benchmark, 8 question types",
+    ];
+
+    const QUESTIONS = [
+      { id:"T1_001", type:"factual_lookup", diff:"easy", modality:null, q:"What is the approved starting dose of Ozempic for type 2 diabetes?", ans:"0.25 mg once weekly for the first 4 weeks" },
+      { id:"T1_002", type:"factual_lookup", diff:"easy", modality:null, q:"What are the contraindications listed in the Ozempic EPAR?", ans:"Hypersensitivity to semaglutide or any excipients" },
+      { id:"T1_003", type:"factual_lookup", diff:"easy", modality:null, q:"What is the approved maximum weekly dose of Ozempic?", ans:"2 mg once weekly" },
+      { id:"T1_004", type:"factual_lookup", diff:"easy", modality:"PROHIBITED", q:"Is semaglutide approved for type 1 diabetes?", ans:"No - should not be used in type 1 diabetes" },
+      { id:"T1_005", type:"factual_lookup", diff:"easy", modality:null, q:"How many days after a missed Ozempic dose can it still be taken?", ans:"Within 5 days after the missed dose" },
+      { id:"T1_006", type:"factual_lookup", diff:"easy", modality:null, q:"What injection sites are approved for Ozempic?", ans:"Abdomen, thigh, or upper arm" },
+      { id:"T1_007", type:"factual_lookup", diff:"easy", modality:"RECOMMENDED", q:"How long before a planned pregnancy should semaglutide be stopped?", ans:"At least 2 months" },
+      { id:"T1_008", type:"factual_lookup", diff:"medium", modality:null, q:"What are the two oral semaglutide formulations in PSG_213051 and their strengths?", ans:"R1: 3/7/14 mg; R2: 1.5/4/9 mg - not substitutable mg per mg" },
+      { id:"T1_009", type:"factual_lookup", diff:"easy", modality:null, q:"What does NAION stand for and is it listed as an adverse reaction?", ans:"Non-arteritic anterior ischaemic optic neuropathy - listed as Not Known frequency" },
+      { id:"T1_010", type:"factual_lookup", diff:"easy", modality:null, q:"When did the FDA resolve the semaglutide shortage per the citizen petition?", ans:"February 21, 2025" },
+      { id:"T2_001", type:"numerical_table", diff:"medium", modality:null, q:"What was the HbA1c reduction with semaglutide 1mg vs placebo in SUSTAIN 1 at week 30?", ans:"-1.6% vs 0% - difference -1.5% [95% CI -1.8, -1.2]" },
+      { id:"T2_002", type:"numerical_table", diff:"medium", modality:null, q:"What percentage of patients achieved HbA1c below 7% with semaglutide 0.5mg in SUSTAIN 2?", ans:"69%" },
+      { id:"T2_003", type:"numerical_table", diff:"medium", modality:null, q:"What was the body weight change with semaglutide 1mg vs sitagliptin in SUSTAIN 2?", ans:"-6.1 kg vs -1.9 kg - difference -4.2 kg" },
+      { id:"T2_004", type:"numerical_table", diff:"hard", modality:null, q:"How many patients were in the SUSTAIN 1 ITT population for each arm?", ans:"128 (0.5 mg), 130 (1 mg), 129 (placebo)" },
+      { id:"T2_005", type:"numerical_table", diff:"medium", modality:null, q:"What was the atorvastatin Cmax change when co-administered with semaglutide?", ans:"Decreased by 38% - assessed as not clinically relevant" },
+      { id:"T2_006", type:"numerical_table", diff:"medium", modality:"MANDATORY", q:"What is the salcaprozate sodium threshold under PSG Option II?", ans:"Within +/-10% of the amount in the RLD" },
+      { id:"T2_007", type:"numerical_table", diff:"medium", modality:"MANDATORY", q:"How many in vivo BE studies are required under PSG Option I for oral semaglutide?", ans:"Six studies - one per strength across both formulations" },
+      { id:"T2_008", type:"numerical_table", diff:"medium", modality:null, q:"What was the paracetamol AUC0-60min change with semaglutide 1mg?", ans:"Decreased by 27%" },
+      { id:"T2_009", type:"numerical_table", diff:"hard", modality:null, q:"What within-subject variability threshold triggers reference-scaled average BE in PSG_213051?", ans:"30% or greater within-subject variability in RLD PK parameters" },
+      { id:"T2_010", type:"numerical_table", diff:"medium", modality:"MANDATORY", q:"What minimum time must elapse between two Ozempic doses when changing the day of administration?", ans:"At least 3 days - more than 72 hours" },
+      { id:"T3_001", type:"regulatory_modality", diff:"medium", modality:"OPTIONAL", q:"Is a parallel study design required for the 3mg oral semaglutide BE study?", ans:"Not required - may be considered as alternative if crossover not feasible" },
+      { id:"T3_002", type:"regulatory_modality", diff:"medium", modality:"MANDATORY", q:"Must a generic applicant monitor blood glucose during a semaglutide BE study?", ans:"Yes - PSG states to monitor blood glucose and signs of hypoglycaemia" },
+      { id:"T3_003", type:"regulatory_modality", diff:"medium", modality:"PROHIBITED", q:"Is semaglutide recommended for patients with severe gastroparesis?", ans:"Not recommended - semaglutide should not be used if gastroparesis is severe" },
+      { id:"T3_004", type:"regulatory_modality", diff:"hard", modality:"RECOMMENDED", q:"Does FDA require or just recommend following PSG guidances?", ans:"Recommendations only - 'should' means suggested but not required" },
+      { id:"T3_005", type:"regulatory_modality", diff:"medium", modality:"NEUTRAL", q:"Is dose adjustment required for elderly patients taking Ozempic?", ans:"No dose adjustment required based on age" },
+      { id:"T3_006", type:"regulatory_modality", diff:"medium", modality:"MANDATORY", q:"Must semaglutide be discontinued if NAION is confirmed?", ans:"Yes - treatment should be discontinued if NAION is confirmed" },
+      { id:"T3_007", type:"regulatory_modality", diff:"hard", modality:"MANDATORY", q:"Under PSG Option II, is salcaprozate sodium quantitative similarity mandatory or optional?", ans:"Mandatory - Option II acceptable only if +/-10% threshold is met" },
+      { id:"T3_008", type:"regulatory_modality", diff:"medium", modality:"RECOMMENDED", q:"Is INR monitoring required when starting semaglutide in a patient on warfarin?", ans:"Recommended - not mandatory, but frequent monitoring recommended on initiation" },
+      { id:"T4_001", type:"cross_document", diff:"hard", modality:null, q:"What are the differences between Ozempic and Wegovy in approved indications?", ans:"Ozempic: type 2 diabetes; Wegovy: weight management in obesity" },
+      { id:"T4_002", type:"cross_document", diff:"hard", modality:null, q:"How does the FDA PSG for subcutaneous semaglutide compare to EMA requirements?", ans:"FDA PSG covers generic BE requirements; EMA EPAR covers approved product characteristics" },
+      { id:"T4_003", type:"cross_document", diff:"medium", modality:null, q:"Does the citizen petition concern Ozempic or Wegovy specifically?", ans:"Neither specifically - concerns compounded semaglutide, referencing both as comparators" },
+      { id:"T4_004", type:"cross_document", diff:"hard", modality:null, q:"What risks from compounded semaglutide does the citizen petition identify not in the EPAR?", ans:"Host cell protein contamination, immunogenicity, dosing errors from manual syringes" },
+      { id:"T4_005", type:"cross_document", diff:"medium", modality:null, q:"How many PSG documents in the corpus cover semaglutide and what formulations?", ans:"Three - two for subcutaneous (Nov 2023, Dec 2025) and one for oral tablet (Oct 2025)" },
+      { id:"T4_006", type:"cross_document", diff:"hard", modality:null, q:"What adverse events does semaglutide share with other GLP-1 receptor agonists as a class effect?", ans:"Gastrointestinal effects, acute pancreatitis, delayed gastric emptying" },
+      { id:"T4_007", type:"cross_document", diff:"medium", modality:null, q:"What is the legal basis cited in the FDA citizen petition?", ans:"FD&C Act Sections 503A and 503B; 21 CFR Section 10.30; Sections 501 and 502" },
+      { id:"T4_008", type:"cross_document", diff:"hard", modality:null, q:"What risks does the petition say the FAERS system cannot capture?", ans:"503A pharmacies have no federal requirement to report adverse events to FAERS" },
+      { id:"T5_001", type:"version_aware", diff:"hard", modality:null, q:"What changed in the FDA guidance on subcutaneous semaglutide between 2023 and 2025?", ans:"PSG_215256 (Dec 2025) revised BE waiver criteria vs PSG_209637 (Nov 2023)" },
+      { id:"T5_002", type:"version_aware", diff:"medium", modality:null, q:"Which is the most recent FDA guidance for subcutaneous semaglutide in the knowledge base?", ans:"PSG_215256 dated December 2025" },
+      { id:"T5_003", type:"version_aware", diff:"hard", modality:null, q:"Was the oral semaglutide PSG revised from its original version?", ans:"Yes - originally August 2021, revised October 2025" },
+      { id:"T5_004", type:"version_aware", diff:"hard", modality:null, q:"Which PSG should I follow if planning a BE study for subcutaneous semaglutide?", ans:"PSG_215256 (Dec 2025) - most recent supersedes PSG_209637 (Nov 2023)" },
+      { id:"T5_005", type:"version_aware", diff:"medium", modality:null, q:"How many versions of the subcutaneous semaglutide PSG are in the knowledge base?", ans:"Two - November 2023 (PSG_209637) and December 2025 (PSG_215256)" },
+      { id:"T5_006", type:"version_aware", diff:"hard", modality:null, q:"Does the 2023 subcutaneous semaglutide PSG have different waiver criteria than the 2025 version?", ans:"Yes - RegDelta comparison detects changes in BE waiver criteria between versions" },
+      { id:"T6_001", type:"figure", diff:"hard", modality:null, q:"What do the EPAR line graphs show about HbA1c change over time with semaglutide?", ans:"Both doses show greater reduction than comparators - reduction plateaus about week 12-16" },
+      { id:"T6_002", type:"figure", diff:"hard", modality:null, q:"What does the Kaplan-Meier plot show about semaglutide's cardiovascular benefit?", ans:"Lower cumulative MACE incidence vs placebo - curves separate early and diverge" },
+      { id:"T6_003", type:"figure", diff:"medium", modality:null, q:"What page of the Ozempic EPAR shows the forest plot for cardiovascular subgroup analyses?", ans:"Figure 4 on page 24" },
+      { id:"T6_004", type:"figure", diff:"hard", modality:null, q:"Which had greater body weight reduction in SUSTAIN 7 - semaglutide 0.5mg or dulaglutide 0.75mg?", ans:"Semaglutide 0.5mg showed greater body weight reduction" },
+      { id:"T6_005", type:"figure", diff:"medium", modality:null, q:"What figure in the Wegovy EPAR shows kidney disease progression outcomes?", ans:"Cumulative incidence figure for primary composite kidney endpoint - FLOW trial" },
+      { id:"T6_006", type:"figure", diff:"medium", modality:null, q:"Are there any figures in the FDA PSG documents?", ans:"No - PSG documents are text-only, no figures" },
+      { id:"T7_001", type:"reference_chain", diff:"hard", modality:"RECOMMENDED", q:"Why must semaglutide be stopped 2 months before a planned pregnancy?", ans:"Half-life about 1 week (section 5.2) - 2 months needed for full washout (referenced in 4.6)" },
+      { id:"T7_002", type:"reference_chain", diff:"hard", modality:null, q:"What pharmacokinetic mechanism explains the semaglutide-paracetamol interaction?", ans:"Semaglutide delays gastric emptying - slows oral absorption - documented in 4.5 and 4.8" },
+      { id:"T7_003", type:"reference_chain", diff:"hard", modality:null, q:"What is the basis for monitoring diabetic retinopathy in semaglutide patients?", ans:"Section 4.4 warns about retinopathy risk in insulin patients - frequency data in 4.8" },
+      { id:"T7_004", type:"reference_chain", diff:"medium", modality:null, q:"Where in the Ozempic EPAR are the clinical trial results supporting its cardiovascular indication?", ans:"Section 4.1 refers to section 5.1 - SUSTAIN and LEADER trial data in 5.1" },
+      { id:"T7_005", type:"reference_chain", diff:"hard", modality:null, q:"The EPAR mentions once-weekly dosing due to long half-life - where is the actual half-life value?", ans:"Section 5.2 states about 1 week half-life - section 4.2 uses this to justify once-weekly" },
+      { id:"T7_006", type:"reference_chain", diff:"hard", modality:null, q:"Why does the citizen petition request a Drug Master File for the P29 fermentation intermediate?", ans:"DMF lets FDA audit the impurity profile of the compounded semaglutide precursor" },
+      { id:"T8_001", type:"negative", diff:"easy", modality:null, q:"What is the approved dose of semaglutide for children under 18?", ans:"No data - safety and efficacy not established in patients below 18" },
+      { id:"T8_002", type:"negative", diff:"easy", modality:null, q:"What is the price of Ozempic in India?", ans:"NOT IN KNOWLEDGE BASE - not in any regulatory document" },
+      { id:"T8_003", type:"negative", diff:"medium", modality:null, q:"Is tirzepatide covered anywhere in these documents?", ans:"NOT IN KNOWLEDGE BASE - none of the 6 documents mention tirzepatide" },
+      { id:"T8_004", type:"negative", diff:"medium", modality:null, q:"What are the EMA bioequivalence study requirements for semaglutide generics?", ans:"NOT IN KNOWLEDGE BASE - EMA documents here are EPARs for approved products only" },
+      { id:"T8_005", type:"negative", diff:"easy", modality:null, q:"Has semaglutide been approved for paediatric obesity?", ans:"No - no paediatric data available, not established for patients below 18" },
+      { id:"T8_006", type:"negative", diff:"hard", modality:null, q:"What clinical trials are planned for semaglutide beyond what is in the EPAR?", ans:"NOT IN KNOWLEDGE BASE - future trial plans are not in these documents" },
+    ];
+
+    const FILTERS = [
+      { label: "All", type: "all" },
+      { label: "Factual", type: "factual_lookup" },
+      { label: "Numerical", type: "numerical_table" },
+      { label: "Modality", type: "regulatory_modality" },
+      { label: "Cross-doc", type: "cross_document" },
+      { label: "Version", type: "version_aware" },
+      { label: "Figure", type: "figure" },
+      { label: "Ref chain", type: "reference_chain" },
+      { label: "Negative", type: "negative" },
+    ];
+
+    const QUICK_QUESTIONS = [
+      "What are the contraindications for Ozempic?",
+      "Is a parallel study design required for oral semaglutide BE?",
+      "What changed in the FDA PSG between 2023 and 2025?",
+      "What was the HbA1c reduction with 1mg semaglutide in SUSTAIN 1?",
+    ];
+
+    const TYPE_LABELS = {
+      factual_lookup: "Factual",
+      numerical_table: "Numerical",
+      regulatory_modality: "Modality",
+      cross_document: "Cross-doc",
+      version_aware: "Version",
+      figure: "Figure",
+      reference_chain: "Ref chain",
+      negative: "Negative",
+    };
+
+    const TYPE_BADGES = {
+      factual_lookup: "badge-blue",
+      numerical_table: "badge-amber",
+      regulatory_modality: "badge-red",
+      cross_document: "badge-green",
+      version_aware: "badge-blue",
+      figure: "badge-amber",
+      reference_chain: "badge-neutral",
+      negative: "badge-dark-red",
+    };
+
+    let activeFilter = "all";
+    let chart;
+    let progressionChart;
+    let conversationHistory = [];
+    const API_BASE = (window.PHARMALENS_API_URL || "").replace(/\/$/, "");
+
+    function apiUrl(path) {
+      return API_BASE + path;
+    }
+
+    function scoreColor(score) {
+      if (score >= 0.80) return "#3FB950";
+      if (score >= 0.65) return "#58A6FF";
+      if (score >= 0.50) return "#D29922";
+      return "#F85149";
+    }
+
+    function scoreClass(score) {
+      if (score >= 0.80) return "tone-green";
+      if (score >= 0.65) return "tone-blue";
+      if (score >= 0.50) return "tone-amber";
+      return "tone-red";
+    }
+
+    function fmt(value) {
+      return Number(value).toFixed(3);
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "").replace(/[&<>"']/g, function(char) {
+        return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" })[char];
+      });
+    }
+
+    function readableSections(value) {
+      return String(value ?? "").replace(/§\s*/g, "Section ");
+    }
+
+    function setActiveTab(tabId) {
+      document.querySelectorAll(".tab").forEach(function(button) {
+        button.classList.toggle("active", button.dataset.tab === tabId);
+      });
+      document.querySelectorAll(".panel").forEach(function(panel) {
+        panel.classList.toggle("active", panel.id === tabId);
+      });
+      if (tabId === "evaluation") {
+        if (chart) chart.resize();
+        if (progressionChart) progressionChart.resize();
+      }
+      if (tabId === "chat") document.getElementById("chat-input").focus();
+    }
+
+    function renderMetrics() {
+      document.getElementById("metric-r5").textContent = fmt(METRICS.r5);
+      document.getElementById("metric-modality").textContent = fmt(METRICS.modality_preservation);
+      document.getElementById("metric-citation").textContent = fmt(METRICS.citation_accuracy);
+      document.getElementById("metric-mrr").textContent = fmt(METRICS.mrr);
+      document.getElementById("metric-p5").textContent = fmt(METRICS.p5);
+      document.getElementById("metric-faithfulness").textContent = fmt(METRICS.faithfulness);
+    }
+
+    function renderComponents() {
+      const grid = document.getElementById("components-grid");
+      grid.innerHTML = SYSTEM_COMPONENTS.map(function(item) {
+        return `<div class="component-item"><i class="ti ti-circle-check-filled"></i><span>${escapeHtml(item)}</span></div>`;
+      }).join("");
+    }
+
+    function renderAblation() {
+      const body = document.getElementById("ablation-body");
+      body.innerHTML = ABLATION.map(function(row) {
+        return `<tr class="${row.full ? "full-row" : ""}">
+          <td>${escapeHtml(row.name)}</td>
+          <td>${fmt(row.r5)}</td>
+          <td>${fmt(row.p5)}</td>
+          <td>${fmt(row.mrr)}</td>
+        </tr>`;
+      }).join("");
+    }
+
+    function renderFilters() {
+      const row = document.getElementById("filter-row");
+      row.innerHTML = FILTERS.map(function(filter) {
+        const count = filter.type === "all" ? METRICS.n_questions : QUESTIONS.filter(function(q) { return q.type === filter.type; }).length;
+        return `<button class="filter-btn ${filter.type === activeFilter ? "active" : ""}" data-filter="${filter.type}">${filter.label} (${count})</button>`;
+      }).join("");
+      row.querySelectorAll(".filter-btn").forEach(function(button) {
+        button.addEventListener("click", function() {
+          activeFilter = button.dataset.filter;
+          renderFilters();
+          renderBenchmark();
+        });
+      });
+    }
+
+    function difficultyBadge(diff) {
+      const map = { easy: "badge-green", medium: "badge-blue", hard: "badge-amber" };
+      return `<span class="badge ${map[diff] || "badge-neutral"}">${escapeHtml(diff)}</span>`;
+    }
+
+    function modalityBadge(modality) {
+      if (!modality) return "";
+      const map = {
+        MANDATORY: "badge-red",
+        RECOMMENDED: "badge-amber",
+        OPTIONAL: "badge-blue",
+        PROHIBITED: "badge-dark-red",
+        NEUTRAL: "badge-neutral",
+      };
+      return `<span class="badge ${map[modality] || "badge-neutral"}">${escapeHtml(modality)}</span>`;
+    }
+
+    function renderBenchmark() {
+      const grid = document.getElementById("benchmark-grid");
+      const shown = activeFilter === "all" ? QUESTIONS : QUESTIONS.filter(function(item) { return item.type === activeFilter; });
+      grid.innerHTML = shown.map(function(item) {
+        return `<article class="question-card">
+          <div class="badge-row">
+            <span class="badge ${TYPE_BADGES[item.type] || "badge-neutral"}">${escapeHtml(TYPE_LABELS[item.type] || item.type)}</span>
+            ${difficultyBadge(item.diff)}
+            ${modalityBadge(item.modality)}
+          </div>
+          <div class="question-text">${escapeHtml(item.q)}</div>
+          <div class="gold-answer"><strong>Gold answer:</strong> ${escapeHtml(item.ans)}</div>
+          <button class="ask-btn" data-question="${escapeHtml(item.q)}">Ask this &rarr;</button>
+        </article>`;
+      }).join("");
+      grid.querySelectorAll(".ask-btn").forEach(function(button) {
+        button.addEventListener("click", function() {
+          askQuestion(button.dataset.question);
+        });
+      });
+    }
+
+    function renderQuickQuestions() {
+      const row = document.getElementById("quick-row");
+      row.innerHTML = QUICK_QUESTIONS.map(function(question) {
+        return `<button class="quick-btn" data-question="${escapeHtml(question)}">${escapeHtml(question)}</button>`;
+      }).join("");
+      row.querySelectorAll(".quick-btn").forEach(function(button) {
+        button.addEventListener("click", function() {
+          askQuestion(button.dataset.question);
+        });
+      });
+    }
+
+    function initChart() {
+      if (typeof Chart === "undefined") {
+        renderFallbackChart();
+        return;
+      }
+
+      const labelPlugin = {
+        id: "scoreLabels",
+        afterDatasetsDraw: function(chartInstance) {
+          const ctx = chartInstance.ctx;
+          const meta = chartInstance.getDatasetMeta(0);
+          ctx.save();
+          ctx.font = "700 12px Inter, system-ui, sans-serif";
+          ctx.fillStyle = "#344054";
+          ctx.textBaseline = "middle";
+          meta.data.forEach(function(bar, index) {
+            const value = FAITHFULNESS_BY_TYPE[index].score;
+            ctx.fillText(value.toFixed(3), Math.min(bar.x + 8, chartInstance.chartArea.right - 42), bar.y);
+          });
+          ctx.restore();
+        }
+      };
+
+      const canvas = document.getElementById("faithfulness-chart");
+      chart = new Chart(canvas, {
+        type: "bar",
+        plugins: [labelPlugin],
+        data: {
+          labels: FAITHFULNESS_BY_TYPE.map(function(item) { return item.type + " (n=" + item.n + ")"; }),
+          datasets: [{
+            data: FAITHFULNESS_BY_TYPE.map(function(item) { return item.score; }),
+            backgroundColor: FAITHFULNESS_BY_TYPE.map(function(item) { return scoreColor(item.score); }),
+            borderRadius: 5,
+            barThickness: 24,
+          }]
+        },
+        options: {
+          indexAxis: "y",
+          responsive: true,
+          maintainAspectRatio: false,
+          animation: { duration: 500 },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return "Faithfulness: " + Number(context.raw).toFixed(3);
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              min: 0,
+              max: 1.0,
+              grid: { color: "#e2e8f0" },
+              ticks: { color: "#667085" }
+            },
+            y: {
+              grid: { display: false },
+              ticks: { color: "#344054", font: { size: 12, weight: 650 } }
+            }
+          },
+          layout: { padding: { right: 48 } }
+        }
+      });
+    }
+
+    function initProgressionChart() {
+      if (typeof Chart === "undefined") return;
+      const canvas = document.getElementById("faithfulness-progression-chart");
+      if (!canvas) return;
+      progressionChart = new Chart(canvas, {
+        type: "line",
+        data: {
+          labels: FAITHFULNESS_PROGRESSION.map(function(item) { return item.label.split("\n"); }),
+          datasets: [{
+            label: "Faithfulness",
+            data: FAITHFULNESS_PROGRESSION.map(function(item) { return item.value; }),
+            borderColor: "#246bcd",
+            backgroundColor: "rgba(36, 107, 205, 0.14)",
+            pointBackgroundColor: FAITHFULNESS_PROGRESSION.map(function(item) { return scoreColor(item.value); }),
+            pointBorderColor: "#fff",
+            pointBorderWidth: 2,
+            pointRadius: 6,
+            tension: 0.28,
+            fill: true,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          animation: { duration: 500 },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return "Faithfulness: " + Number(context.raw).toFixed(3);
+                }
+              }
+            }
+          },
+          scales: {
+            y: {
+              min: 0.5,
+              max: 0.9,
+              grid: { color: "#e2e8f0" },
+              ticks: { color: "#667085" }
+            },
+            x: {
+              grid: { display: false },
+              ticks: { color: "#344054", font: { size: 12, weight: 650 } }
+            }
+          }
+        }
+      });
+    }
+
+    function renderFallbackChart() {
+      const wrap = document.querySelector(".chart-wrap");
+      const canvas = document.getElementById("faithfulness-chart");
+      if (canvas) canvas.style.display = "none";
+      const fallback = document.createElement("div");
+      fallback.className = "fallback-chart";
+      fallback.setAttribute("aria-label", "Faithfulness by question type fallback chart");
+      fallback.innerHTML = FAITHFULNESS_BY_TYPE.map(function(item) {
+        return `<div class="fallback-row">
+          <span>${escapeHtml(item.type)} (n=${item.n})</span>
+          <span class="fallback-track"><span class="fallback-bar" style="width:${item.score * 100}%; background:${scoreColor(item.score)}"></span></span>
+          <span>${item.score.toFixed(3)}</span>
+        </div>`;
+      }).join("");
+      wrap.appendChild(fallback);
+    }
+
+    function addMessage(role, text, data) {
+      const messages = document.getElementById("messages");
+      const empty = document.getElementById("empty-chat");
+      if (empty) empty.remove();
+
+      const message = document.createElement("div");
+      message.className = "message " + role;
+      const alerts = data && Array.isArray(data.delta_alerts) && data.delta_alerts.length
+        ? `<div class="warning"><strong>Delta alert</strong><br>${data.delta_alerts.map(escapeHtml).join("<br>")}</div>`
+        : "";
+      const sources = data && Array.isArray(data.sources) && data.sources.length
+        ? `<div class="source-grid">${data.sources.map(renderSource).join("")}</div>`
+        : "";
+      message.innerHTML = `${alerts}<div class="bubble">${escapeHtml(readableSections(text))}</div>${sources}`;
+      messages.appendChild(message);
+      messages.scrollTop = messages.scrollHeight;
+      return message;
+    }
+
+    function renderSource(source) {
+      const modality = source.modality || source.dominant_modality || "NEUTRAL";
+      const sectionNumber = source.section_number ? "Section " + source.section_number : "Section -";
+      const page = source.page ? "page " + source.page : "page -";
+      return `<div class="source-card">
+        <strong>${escapeHtml(source.filename || "Source")}</strong>
+        <span>${escapeHtml(sectionNumber)} ${escapeHtml(source.section || "")} &middot; ${escapeHtml(page)}</span>
+        <span>${modalityBadge(modality)}</span>
+      </div>`;
+    }
+
+    async function sendChat(userMessage) {
+      const input = document.getElementById("chat-input");
+      const button = document.getElementById("send-btn");
+      userMessage = userMessage.trim();
+      if (!userMessage) return;
+      conversationHistory.push({ role: "user", content: userMessage });
+      addMessage("user", userMessage);
+      input.value = "";
+      button.disabled = true;
+      button.innerHTML = `<i class="ti ti-loader-2"></i>Sending`;
+      const thinking = addMessage("bot", "Searching knowledge base…");
+
+      try {
+        const response = await fetch(apiUrl("/query"), {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            query: userMessage,
+            conversation_history: conversationHistory.slice(-6),
+            metadata_filters: {}
+          })
+        });
+        if (!response.ok) throw new Error("HTTP " + response.status);
+        const data = await response.json();
+        thinking.remove();
+        const answer = data.answer || "No answer returned.";
+        conversationHistory.push({ role: "assistant", content: answer });
+        addMessage("bot", answer, data);
+      } catch (error) {
+        thinking.remove();
+        addMessage("bot", "Could not reach the API at " + apiUrl("/query") + " — is the server running?");
+      } finally {
+        button.disabled = false;
+        button.innerHTML = `<i class="ti ti-send"></i>Send`;
+        input.focus();
+      }
+    }
+
+    function clearChat() {
+      conversationHistory = [];
+      const messages = document.getElementById("messages");
+      messages.innerHTML = '<div class="empty-chat" id="empty-chat">Ask anything about the Semaglutide corpus.</div>';
+      document.getElementById("chat-input").focus();
+    }
+
+    function askQuestion(question) {
+      setActiveTab("chat");
+      document.getElementById("chat-input").value = question;
+      sendChat(question);
+    }
+
+    document.querySelectorAll(".tab").forEach(function(button) {
+      button.addEventListener("click", function() {
+        setActiveTab(button.dataset.tab);
+      });
+    });
+
+    document.getElementById("chat-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      sendChat(document.getElementById("chat-input").value);
+    });
+
+    document.getElementById("clear-btn").addEventListener("click", clearChat);
+
+    function checkApiHealth() {
+      fetch(apiUrl("/health"))
+        .then(function(response) { return response.json(); })
+        .then(function() {
+          document.getElementById("api-status").innerHTML =
+            '<span style="color:#3FB950">● Live</span> · PharmaLens API';
+        })
+        .catch(function() {
+          document.getElementById("api-status").innerHTML =
+            '<span style="color:#F85149">● Offline</span> · API unreachable';
+        });
+    }
+
+    function loadCollectionStats() {
+      fetch(apiUrl("/collection/stats"))
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+          document.getElementById("chunk-count").textContent = data.total_chunks + " chunks indexed";
+        })
+        .catch(function() {
+          document.getElementById("chunk-count").textContent = "chunks unavailable";
+        });
+    }
+
+    renderMetrics();
+    renderComponents();
+    renderAblation();
+    renderFilters();
+    renderBenchmark();
+    renderQuickQuestions();
+    initChart();
+    initProgressionChart();
+    checkApiHealth();
+    loadCollectionStats();
+  </script>
+</body>
+</html>

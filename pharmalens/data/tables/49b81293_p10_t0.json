@@ -1,0 +1,62 @@
+{
+  "table_id": "49b81293_p10_t0",
+  "doc_id": "49b812930b88efda31e215a88160df9cfd39abddb37cbb7f8d8bac18c4090d4e",
+  "filename": "wegovy-epar-product-information_en.pdf",
+  "page_number": 10,
+  "headers": [
+    "MedDRA\nsystem\norgan class",
+    "Very\ncommon",
+    "Common",
+    "Uncommon",
+    "Rare",
+    "Very Rare",
+    "Not\nknown"
+  ],
+  "rows": [
+    {
+      "MedDRA\nsystem\norgan class": "Gastrointes\ntinal\ndisorders",
+      "Very\ncommon": "Vomitinga,b\nDiarrhoeaa,b\nConstipatio\nna,b\nNauseaa,b\nAbdominal\npainb,c",
+      "Common": "Gastritisb,c\nGastrooesop\nhageal reflux\ndiseaseb\nDyspepsiab\nEructationb\nFlatulenceb\nAbdominal\ndistensionb",
+      "Uncommon": "Acute\npancreatitisa\nDelayed\ngastric\nemptying",
+      "Rare": "",
+      "Very Rare": "",
+      "Not\nknown": "Intestinal\nobstructio\nn"
+    },
+    {
+      "MedDRA\nsystem\norgan class": "Hepatobilia\nry disorders",
+      "Very\ncommon": "",
+      "Common": "Cholelithiasi\nsa",
+      "Uncommon": "",
+      "Rare": "",
+      "Very Rare": "",
+      "Not\nknown": ""
+    },
+    {
+      "MedDRA\nsystem\norgan class": "Skin and\nsubcutaneo\nus tissue\ndisorders",
+      "Very\ncommon": "",
+      "Common": "Hair lossa",
+      "Uncommon": "",
+      "Rare": "Angioedem\na",
+      "Very Rare": "",
+      "Not\nknown": ""
+    },
+    {
+      "MedDRA\nsystem\norgan class": "General\ndisorders\nand\nadministrati\non site\nconditions",
+      "Very\ncommon": "Fatigueb,c",
+      "Common": "Injection site\nreactionsc",
+      "Uncommon": "",
+      "Rare": "",
+      "Very Rare": "",
+      "Not\nknown": ""
+    },
+    {
+      "MedDRA\nsystem\norgan class": "Investigatio\nns",
+      "Very\ncommon": "",
+      "Common": "",
+      "Uncommon": "Increased\namylasec\nIncreased\nlipasec",
+      "Rare": "",
+      "Very Rare": "",
+      "Not\nknown": ""
+    }
+  ]
+}

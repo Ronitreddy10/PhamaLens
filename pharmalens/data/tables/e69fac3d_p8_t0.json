@@ -1,0 +1,89 @@
+{
+  "table_id": "e69fac3d_p8_t0",
+  "doc_id": "e69fac3de3e1dab76b382cc9312ac0aebd5c746ff62e1c75b0fc24a5f9e16939",
+  "filename": "ozempic-epar-product-information_en.pdf",
+  "page_number": 8,
+  "headers": [
+    "MedDRA\nsystem organ\nclass",
+    "Very common",
+    "Common",
+    "Uncommon",
+    "Rare",
+    "Very Rare",
+    "Not known"
+  ],
+  "rows": [
+    {
+      "MedDRA\nsystem organ\nclass": "Immune\nsystem\ndisorders",
+      "Very common": "",
+      "Common": "",
+      "Uncommon": "Hypersensiti\nvityc",
+      "Rare": "Anaph\nylactic\nreactio\nn",
+      "Very Rare": "",
+      "Not known": ""
+    },
+    {
+      "MedDRA\nsystem organ\nclass": "Metabolism\nand nutrition\ndisorders",
+      "Very common": "Hypoglycaemiaa\nwhen used with\ninsulin or\nsulfonylurea",
+      "Common": "Hypoglyca\nemiaa when\nused with\nother oral\nantidiabeti\ncs (OAD)\nDecreased\nappetite",
+      "Uncommon": "",
+      "Rare": "",
+      "Very Rare": "",
+      "Not known": ""
+    },
+    {
+      "MedDRA\nsystem organ\nclass": "Nervous\nsystem\ndisorders",
+      "Very common": "",
+      "Common": "Dizziness\nHeadache",
+      "Uncommon": "Dysgeusia",
+      "Rare": "",
+      "Very Rare": "",
+      "Not known": "Dysaesthes\niad"
+    },
+    {
+      "MedDRA\nsystem organ\nclass": "Eye disorders",
+      "Very common": "",
+      "Common": "Diabetic\nretinopathy\ncomplicati\nonsb",
+      "Uncommon": "",
+      "Rare": "",
+      "Very Rare": "Non-\narteritic\nanterior\nischaemic\noptic\nneuropathy\n(NAION)",
+      "Not known": ""
+    },
+    {
+      "MedDRA\nsystem organ\nclass": "Cardiac\ndisorders",
+      "Very common": "",
+      "Common": "",
+      "Uncommon": "Increased\nheart rate",
+      "Rare": "",
+      "Very Rare": "",
+      "Not known": ""
+    },
+    {
+      "MedDRA\nsystem organ\nclass": "Gastrointesti-\nnal disorders",
+      "Very common": "Nausea\nDiarrhoea",
+      "Common": "Vomiting\nAbdominal\npain\nAbdominal\ndistension\nConstipatio\nn\nDyspepsia\nGastritis\nGastro-\noesophage\nal\nreflux\ndisease\nEructation\nF latulence",
+      "Uncommon": "Acute\npancreatitis\nDelayed\ngastric\nemptying",
+      "Rare": "",
+      "Very Rare": "",
+      "Not known": "Intestinal\nobstruction\nd"
+    },
+    {
+      "MedDRA\nsystem organ\nclass": "Hepatobiliary\ndisorders",
+      "Very common": "",
+      "Common": "Cholelithia\nsis",
+      "Uncommon": "",
+      "Rare": "",
+      "Very Rare": "",
+      "Not known": ""
+    },
+    {
+      "MedDRA\nsystem organ\nclass": "Skin and\nsubcutaneous\ntissue\ndisorders",
+      "Very common": "",
+      "Common": "",
+      "Uncommon": "",
+      "Rare": "",
+      "Very Rare": "",
+      "Not known": "Angioedem\nad"
+    }
+  ]
+}

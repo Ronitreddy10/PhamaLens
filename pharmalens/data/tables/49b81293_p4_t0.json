@@ -1,0 +1,65 @@
+{
+  "table_id": "49b81293_p4_t0",
+  "doc_id": "49b812930b88efda31e215a88160df9cfd39abddb37cbb7f8d8bac18c4090d4e",
+  "filename": "wegovy-epar-product-information_en.pdf",
+  "page_number": 4,
+  "headers": [
+    "Age (years)",
+    "BMI (kg/m2) at 95th Percentile",
+    ""
+  ],
+  "rows": [
+    {
+      "Age (years)": "",
+      "BMI (kg/m2) at 95th Percentile": "Males"
+    },
+    {
+      "Age (years)": "12",
+      "BMI (kg/m2) at 95th Percentile": "24.2"
+    },
+    {
+      "Age (years)": "12.5",
+      "BMI (kg/m2) at 95th Percentile": "24.7"
+    },
+    {
+      "Age (years)": "13",
+      "BMI (kg/m2) at 95th Percentile": "25.1"
+    },
+    {
+      "Age (years)": "13.5",
+      "BMI (kg/m2) at 95th Percentile": "25.6"
+    },
+    {
+      "Age (years)": "14",
+      "BMI (kg/m2) at 95th Percentile": "26.0"
+    },
+    {
+      "Age (years)": "14.5",
+      "BMI (kg/m2) at 95th Percentile": "26.4"
+    },
+    {
+      "Age (years)": "15",
+      "BMI (kg/m2) at 95th Percentile": "26.8"
+    },
+    {
+      "Age (years)": "15.5",
+      "BMI (kg/m2) at 95th Percentile": "27.2"
+    },
+    {
+      "Age (years)": "16",
+      "BMI (kg/m2) at 95th Percentile": "27.5"
+    },
+    {
+      "Age (years)": "16.5",
+      "BMI (kg/m2) at 95th Percentile": "27.9"
+    },
+    {
+      "Age (years)": "17",
+      "BMI (kg/m2) at 95th Percentile": "28.2"
+    },
+    {
+      "Age (years)": "17.5",
+      "BMI (kg/m2) at 95th Percentile": "28.6"
+    }
+  ]
+}

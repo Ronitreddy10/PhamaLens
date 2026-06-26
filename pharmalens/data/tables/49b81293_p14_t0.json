@@ -1,0 +1,85 @@
+{
+  "table_id": "49b81293_p14_t0",
+  "doc_id": "49b812930b88efda31e215a88160df9cfd39abddb37cbb7f8d8bac18c4090d4e",
+  "filename": "wegovy-epar-product-information_en.pdf",
+  "page_number": 14,
+  "headers": [
+    "",
+    "Semaglutide 2.4 mg",
+    "Placebo"
+  ],
+  "rows": [
+    {
+      "Semaglutide 2.4 mg": "1 306",
+      "Placebo": "655"
+    },
+    {
+      "Semaglutide 2.4 mg": "",
+      "Placebo": ""
+    },
+    {
+      "Semaglutide 2.4 mg": "105.4",
+      "Placebo": "105.2"
+    },
+    {
+      "Semaglutide 2.4 mg": "-14.9",
+      "Placebo": "-2.4"
+    },
+    {
+      "Semaglutide 2.4 mg": "-12.4 [-13.4; -11.5]*",
+      "Placebo": "-"
+    },
+    {
+      "Semaglutide 2.4 mg": "-15.3",
+      "Placebo": "-2.6"
+    },
+    {
+      "Semaglutide 2.4 mg": "-12.7 [-13.7; -11.7]",
+      "Placebo": "-"
+    },
+    {
+      "Semaglutide 2.4 mg": "83.5*",
+      "Placebo": "31.1"
+    },
+    {
+      "Semaglutide 2.4 mg": "66.1*",
+      "Placebo": "12.0"
+    },
+    {
+      "Semaglutide 2.4 mg": "47.9*",
+      "Placebo": "4.8"
+    },
+    {
+      "Semaglutide 2.4 mg": "",
+      "Placebo": ""
+    },
+    {
+      "Semaglutide 2.4 mg": "114.6",
+      "Placebo": "114.8"
+    },
+    {
+      "Semaglutide 2.4 mg": "-13.5",
+      "Placebo": "-4.1"
+    },
+    {
+      "Semaglutide 2.4 mg": "-9.4 [-10.3; -8.5]*",
+      "Placebo": "-"
+    },
+    {
+      "Semaglutide 2.4 mg": "",
+      "Placebo": ""
+    },
+    {
+      "Semaglutide 2.4 mg": "126",
+      "Placebo": "127"
+    },
+    {
+      "Semaglutide 2.4 mg": "-6.2",
+      "Placebo": "-1.1"
+    },
+    {
+      "Semaglutide 2.4 mg": "-5.1 [-6.3; -3.9]*",
+      "Placebo": "-"
+    }
+  ]
+}

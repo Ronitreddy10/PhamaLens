@@ -1,0 +1,43 @@
+doc_types:
+  EPAR:
+    description: "European Public Assessment Report / Summary of Product Characteristics"
+    regulatory_body: "EMA"
+    filename_patterns: ["*-epar-*", "*epar*product*"]
+    first_page_keywords: ["ANNEX I", "SUMMARY OF PRODUCT CHARACTERISTICS", "CHMP"]
+    section_parser: "epar_smpc"
+    lifecycle_stage: "Approval"
+  PSG:
+    description: "FDA Product-Specific Guidance for generic drug development"
+    regulatory_body: "FDA"
+    filename_patterns: ["PSG_*", "psg_*"]
+    first_page_keywords: ["Draft Guidance on", "Contains Nonbinding Recommendations", "FDA/CDER", "Recommended Studies"]
+    section_parser: "psg"
+    lifecycle_stage: "Development"
+  CitizenPetition:
+    description: "FDA Citizen Petition"
+    regulatory_body: "FDA"
+    filename_patterns: ["FDA-*-P-*"]
+    first_page_keywords: ["CITIZEN PETITION", "Division of Dockets Management"]
+    section_parser: "legal_sections"
+    lifecycle_stage: "Approval"
+  Label:
+    description: "Approved drug label / prescribing information"
+    regulatory_body: "FDA"
+    filename_patterns: ["*label*", "*prescribing*"]
+    first_page_keywords: ["HIGHLIGHTS OF PRESCRIBING INFORMATION", "FULL PRESCRIBING INFORMATION"]
+    section_parser: "fda_label"
+    lifecycle_stage: "PostMarket"
+  ClinicalStudyReport:
+    description: "Clinical study report"
+    regulatory_body: "ICH"
+    filename_patterns: ["*CSR*", "*clinical*study*report*"]
+    first_page_keywords: ["CLINICAL STUDY REPORT", "Protocol Number"]
+    section_parser: "csr"
+    lifecycle_stage: "Development"
+  Unknown:
+    description: "Unclassified pharmaceutical document"
+    regulatory_body: "Unknown"
+    filename_patterns: []
+    first_page_keywords: []
+    section_parser: "generic"
+    lifecycle_stage: "Unknown"

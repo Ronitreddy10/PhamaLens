@@ -1,0 +1,411 @@
+{
+  "k": 5,
+  "overall": {
+    "n": 50,
+    "recall_at_k": 1.0,
+    "precision_at_k": 0.74,
+    "mrr": 0.98
+  },
+  "by_type": {
+    "factual_lookup": {
+      "n": 10,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.64,
+      "mrr": 1.0
+    },
+    "numerical_table": {
+      "n": 9,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.7333333333333333,
+      "mrr": 0.9444444444444444
+    },
+    "regulatory_modality": {
+      "n": 8,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.5750000000000001,
+      "mrr": 0.9375
+    },
+    "cross_document": {
+      "n": 8,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.825,
+      "mrr": 1.0
+    },
+    "version_aware": {
+      "n": 6,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.8666666666666667,
+      "mrr": 1.0
+    },
+    "figure": {
+      "n": 4,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.85,
+      "mrr": 1.0
+    },
+    "negative": {
+      "n": 2,
+      "recall_at_k": 1.0,
+      "precision_at_k": 1.0,
+      "mrr": 1.0
+    },
+    "reference_chain": {
+      "n": 3,
+      "recall_at_k": 1.0,
+      "precision_at_k": 0.7333333333333334,
+      "mrr": 1.0
+    }
+  },
+  "details": [
+    {
+      "id": "T1_001",
+      "type": "factual_lookup",
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0
+    },
+    {
+      "id": "T1_002",
+      "type": "factual_lookup",
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0
+    },
+    {
+      "id": "T2_001",
+      "type": "numerical_table",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T2_007",
+      "type": "numerical_table",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T3_001",
+      "type": "regulatory_modality",
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 0.5
+    },
+    {
+      "id": "T3_004",
+      "type": "regulatory_modality",
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0
+    },
+    {
+      "id": "T4_001",
+      "type": "cross_document",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T4_005",
+      "type": "cross_document",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T5_002",
+      "type": "version_aware",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T6_006",
+      "type": "figure",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T8_002",
+      "type": "negative",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T8_003",
+      "type": "negative",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T1_003",
+      "type": "factual_lookup",
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0
+    },
+    {
+      "id": "T1_004",
+      "type": "factual_lookup",
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0
+    },
+    {
+      "id": "T1_005",
+      "type": "factual_lookup",
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0
+    },
+    {
+      "id": "T1_006",
+      "type": "factual_lookup",
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0
+    },
+    {
+      "id": "T1_007",
+      "type": "factual_lookup",
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0
+    },
+    {
+      "id": "T1_008",
+      "type": "factual_lookup",
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0
+    },
+    {
+      "id": "T1_009",
+      "type": "factual_lookup",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T1_010",
+      "type": "factual_lookup",
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0
+    },
+    {
+      "id": "T2_002",
+      "type": "numerical_table",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T2_003",
+      "type": "numerical_table",
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 0.5
+    },
+    {
+      "id": "T2_004",
+      "type": "numerical_table",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T2_005",
+      "type": "numerical_table",
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0
+    },
+    {
+      "id": "T2_006",
+      "type": "numerical_table",
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0
+    },
+    {
+      "id": "T2_008",
+      "type": "numerical_table",
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0
+    },
+    {
+      "id": "T2_010",
+      "type": "numerical_table",
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0
+    },
+    {
+      "id": "T3_002",
+      "type": "regulatory_modality",
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0
+    },
+    {
+      "id": "T3_003",
+      "type": "regulatory_modality",
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0
+    },
+    {
+      "id": "T3_005",
+      "type": "regulatory_modality",
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0
+    },
+    {
+      "id": "T3_006",
+      "type": "regulatory_modality",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T3_007",
+      "type": "regulatory_modality",
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0
+    },
+    {
+      "id": "T3_008",
+      "type": "regulatory_modality",
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0
+    },
+    {
+      "id": "T4_002",
+      "type": "cross_document",
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0
+    },
+    {
+      "id": "T4_003",
+      "type": "cross_document",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T4_004",
+      "type": "cross_document",
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0
+    },
+    {
+      "id": "T4_006",
+      "type": "cross_document",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T4_007",
+      "type": "cross_document",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T4_008",
+      "type": "cross_document",
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0
+    },
+    {
+      "id": "T5_001",
+      "type": "version_aware",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T5_003",
+      "type": "version_aware",
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0
+    },
+    {
+      "id": "T5_004",
+      "type": "version_aware",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T5_005",
+      "type": "version_aware",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T5_006",
+      "type": "version_aware",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T6_001",
+      "type": "figure",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    },
+    {
+      "id": "T6_002",
+      "type": "figure",
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0
+    },
+    {
+      "id": "T6_003",
+      "type": "figure",
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0
+    },
+    {
+      "id": "T7_001",
+      "type": "reference_chain",
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0
+    },
+    {
+      "id": "T7_002",
+      "type": "reference_chain",
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0
+    },
+    {
+      "id": "T7_003",
+      "type": "reference_chain",
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0
+    }
+  ]
+}

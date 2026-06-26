@@ -1,0 +1,29 @@
+{
+  "table_id": "5de11722_p4_t0",
+  "doc_id": "5de11722aad9feb489291216738ed79eb8d31e5f2f856af19e61a04a06af6abf",
+  "filename": "FDA-2025-P-3239-0001_attachment_1.pdf",
+  "page_number": 4,
+  "headers": [
+    "",
+    "based on data from\nthousands of patients.\nManufacturing process\ncontrolled to minimize\nimpurities.14",
+    "potential for contamination with\nhost cell proteins (HCPs) and\naggregates, which can act as\nadjuvants and increase\nimmunogenicity, exists without\nany required testing.15"
+  ],
+  "rows": [
+    {
+      "based on data from\nthousands of patients.\nManufacturing process\ncontrolled to minimize\nimpurities.14": "Provided in a single-patient-\nuse, pre-filled autoinjector\npen designed and validated\nfor precise, fixed-dose\ndelivery.17",
+      "potential for contamination with\nhost cell proteins (HCPs) and\naggregates, which can act as\nadjuvants and increase\nimmunogenicity, exists without\nany required testing.15": "Typically dispensed in multi-dose\nvials requiring manual\nmeasurement with a syringe, a\nmethod the FDA has linked to\ndosing errors and\nhospitalizations.19"
+    },
+    {
+      "based on data from\nthousands of patients.\nManufacturing process\ncontrolled to minimize\nimpurities.14": "The autoinjector\u2019s fixed\nneedle length and automated\ninjection mechanism are\nengineered to ensure\nconsistent subcutaneous (SC)\ndelivery.21",
+      "potential for contamination with\nhost cell proteins (HCPs) and\naggregates, which can act as\nadjuvants and increase\nimmunogenicity, exists without\nany required testing.15": "Manual injection with a syringe\nlacks controls for needle depth,\ncreating a significant risk of\ninadvertent and improper\nintramuscular (IM) or intradermal\n(ID) administration, altering\npharmacokinetics and safety.22"
+    },
+    {
+      "based on data from\nthousands of patients.\nManufacturing process\ncontrolled to minimize\nimpurities.14": "Mandatory post-market\nadverse event (AE) reporting\nby the manufacturer to the\nFDA Adverse Event\nReporting System\n(FAERS).25",
+      "potential for contamination with\nhost cell proteins (HCPs) and\naggregates, which can act as\nadjuvants and increase\nimmunogenicity, exists without\nany required testing.15": "No federal requirement for 503A\npharmacies to report AEs to the\nFDA, resulting in what the\nAgency calls likely\n\u201cunderreported\u201d adverse events\nand a critical public health blind\nspot.19"
+    },
+    {
+      "based on data from\nthousands of patients.\nManufacturing process\ncontrolled to minimize\nimpurities.14": "Risks are communicated\nthrough FDA-approved\nlabeling and, when\nnecessary, through mandated\nprograms like Risk\nEvaluation and Mitigation\nStrategies (REMS) or DHCP\nletters.26",
+      "potential for contamination with\nhost cell proteins (HCPs) and\naggregates, which can act as\nadjuvants and increase\nimmunogenicity, exists without\nany required testing.15": "No requirement for compounders\nto proactively inform prescribers\nof the unique and significant risks\nassociated with their unapproved\nproducts, creating a dangerous\ninformation asymmetry."
+    }
+  ]
+}

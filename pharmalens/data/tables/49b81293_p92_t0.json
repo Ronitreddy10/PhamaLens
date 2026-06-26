@@ -1,0 +1,32 @@
+{
+  "table_id": "49b81293_p92_t0",
+  "doc_id": "49b812930b88efda31e215a88160df9cfd39abddb37cbb7f8d8bac18c4090d4e",
+  "filename": "wegovy-epar-product-information_en.pdf",
+  "page_number": 92,
+  "headers": [
+    "Dose escalation",
+    "Weekly dose"
+  ],
+  "rows": [
+    {
+      "Dose escalation": "Week 1\u20134",
+      "Weekly dose": "0.25 mg"
+    },
+    {
+      "Dose escalation": "Week 5\u20138",
+      "Weekly dose": "0.5 mg"
+    },
+    {
+      "Dose escalation": "Week 9\u201312",
+      "Weekly dose": "1 mg"
+    },
+    {
+      "Dose escalation": "Week 13\u201316",
+      "Weekly dose": "1.7 mg"
+    },
+    {
+      "Dose escalation": "From week 17",
+      "Weekly dose": "2.4 mg"
+    }
+  ]
+}

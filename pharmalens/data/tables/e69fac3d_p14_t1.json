@@ -1,0 +1,79 @@
+{
+  "table_id": "e69fac3d_p14_t1",
+  "doc_id": "e69fac3de3e1dab76b382cc9312ac0aebd5c746ff62e1c75b0fc24a5f9e16939",
+  "filename": "ozempic-epar-product-information_en.pdf",
+  "page_number": 14,
+  "headers": [
+    "",
+    "Semaglutide\n0.5 mg",
+    "Semaglutide\n1 mg",
+    "Sitagliptin\n100 mg"
+  ],
+  "rows": [
+    {
+      "Semaglutide\n0.5 mg": "409",
+      "Semaglutide\n1 mg": "409",
+      "Sitagliptin\n100 mg": "407"
+    },
+    {
+      "Semaglutide\n0.5 mg": "",
+      "Semaglutide\n1 mg": "",
+      "Sitagliptin\n100 mg": ""
+    },
+    {
+      "Semaglutide\n0.5 mg": "8.0",
+      "Semaglutide\n1 mg": "8.0",
+      "Sitagliptin\n100 mg": "8.2"
+    },
+    {
+      "Semaglutide\n0.5 mg": "-1.3",
+      "Semaglutide\n1 mg": "-1.6",
+      "Sitagliptin\n100 mg": "-0.5"
+    },
+    {
+      "Semaglutide\n0.5 mg": "-0.8 [-0.9, -0.6]a",
+      "Semaglutide\n1 mg": "-1.1 [-1.2, -0.9]a",
+      "Sitagliptin\n100 mg": "-"
+    },
+    {
+      "Semaglutide\n0.5 mg": "69",
+      "Semaglutide\n1 mg": "78",
+      "Sitagliptin\n100 mg": "36"
+    },
+    {
+      "Semaglutide\n0.5 mg": "",
+      "Semaglutide\n1 mg": "",
+      "Sitagliptin\n100 mg": ""
+    },
+    {
+      "Semaglutide\n0.5 mg": "9.3",
+      "Semaglutide\n1 mg": "9.3",
+      "Sitagliptin\n100 mg": "9.6"
+    },
+    {
+      "Semaglutide\n0.5 mg": "-2.1",
+      "Semaglutide\n1 mg": "-2.6",
+      "Sitagliptin\n100 mg": "-1.1"
+    },
+    {
+      "Semaglutide\n0.5 mg": "",
+      "Semaglutide\n1 mg": "",
+      "Sitagliptin\n100 mg": ""
+    },
+    {
+      "Semaglutide\n0.5 mg": "89.9",
+      "Semaglutide\n1 mg": "89.2",
+      "Sitagliptin\n100 mg": "89.3"
+    },
+    {
+      "Semaglutide\n0.5 mg": "-4.3",
+      "Semaglutide\n1 mg": "-6.1",
+      "Sitagliptin\n100 mg": "-1.9"
+    },
+    {
+      "Semaglutide\n0.5 mg": "-2.3 [-3.1, -1.6]a",
+      "Semaglutide\n1 mg": "-4.2 [-4.9, -3.5]a",
+      "Sitagliptin\n100 mg": "-"
+    }
+  ]
+}
